@@ -1,0 +1,47 @@
+{
+  "name": "projects/891923177978/locations/us/products/apigee/integrations/test_string_case_conversion/versions/e93144f1-73aa-4aa4-a63c-baaf9e4a46be",
+  "updateTime": "2022-11-14T06:46:59.294Z",
+  "lockHolder": "user@test.com",
+  "createTime": "2022-11-14T06:36:37.663Z",
+  "lastModifierEmail": "user@test.com",
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }],
+    "properties": {
+      "Trigger name": "test_string_case_conversion_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/test_string_case_conversion_API_1"
+  }],
+  "taskConfigs": [{
+    "task": "FieldMappingTask",
+    "taskId": "1",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_ARRAY\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$inputStringArray$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringArrayFunction\": {\n              \"functionName\": \"FOR_EACH\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"protoValue\": {\n                  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.TransformExpression\",\n                  \"initialValue\": {\n                    \"referenceValue\": \"~x\"\n                  },\n                  \"transformationFunctions\": [{\n                    \"functionType\": {\n                      \"stringFunction\": {\n                        \"functionName\": \"TO_UPPERCASE\"\n                      }\n                    }\n                  }]\n                }\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"TO_STRING_ARRAY\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$outputStringArray$\",\n      \"fieldType\": \"STRING_ARRAY\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping"
+  }],
+  "integrationParameters": [{
+    "key": "inputStringArray",
+    "dataType": "STRING_ARRAY",
+    "defaultValue": {
+      "stringArray": {
+        "stringValues": ["one", "two", "three"]
+      }
+    },
+    "displayName": "inputStringArray"
+  }, {
+    "key": "outputStringArray",
+    "dataType": "STRING_ARRAY",
+    "displayName": "outputStringArray"
+  }]
+}

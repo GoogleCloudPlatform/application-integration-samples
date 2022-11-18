@@ -1,0 +1,231 @@
+{
+  "name": "projects/532862411978/locations/us-east1/products/apigee/integrations/sftp-get-file/versions/e318658f-e87e-422e-9581-fea2182930cb",
+  "description": "API Trigger with File name to get from an SFTP Server",
+  "updateTime": "2022-08-24T20:00:59.019Z",
+  "createTime": "2022-08-24T19:59:43.243Z",
+  "lastModifierEmail": "shaaland@google.com",
+  "triggerConfigs": [{
+    "label": "API Trigger - Get File by Name",
+    "startTasks": [{
+      "taskId": "2"
+    }],
+    "properties": {
+      "Trigger name": "sftp-get-file_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/sftp-get-file_API_1"
+  }],
+  "taskConfigs": [{
+    "task": "FieldMappingTask",
+    "taskId": "4",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$Success$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$EndResult.EndResult$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$RemoteFileName$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$EndResult.RemoteFilename$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "End : No File Found"
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "1",
+    "parameters": {
+      "connectorInputPayload": {
+        "key": "connectorInputPayload",
+        "value": {
+          "stringValue": "$`Task_1_connectorInputPayload`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\u0027,\n  \u0027connection\u0027: {\n    \u0027connectionName\u0027: \u0027projects/dynolab-153020/locations/us-east1/connections/sftp-dynolab\u0027,\n    \u0027serviceName\u0027: \u0027projects/ied10b8cf922ad563-tp/locations/us-east1/namespaces/connectors/services/runtime\u0027,\n    \u0027connectorVersion\u0027: \u0027projects/dynolab-153020/locations/global/providers/default/connectors/sftp/versions/1\u0027\n  },\n  \u0027operation\u0027: \u0027EXECUTE_ACTION\u0027\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_1_connectorOutputPayload`$"
+        }
+      },
+      "actionName": {
+        "key": "actionName",
+        "value": {
+          "stringValue": "Download"
+        }
+      }
+    },
+    "synchronousCallFailurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "nextTasks": [{
+      "taskId": "3"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "SFTP Connector Read File"
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "6",
+    "parameters": {
+      "entityType": {
+        "key": "entityType",
+        "value": {
+          "stringValue": "Root"
+        }
+      },
+      "entityId": {
+        "key": "entityId",
+        "value": {
+          "stringValue": "$`Task_6_entityId`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\u0027,\n  \u0027connection\u0027: {\n    \u0027connectionName\u0027: \u0027projects/dynolab-153020/locations/us-east1/connections/sftp-dynolab\u0027,\n    \u0027serviceName\u0027: \u0027projects/ied10b8cf922ad563-tp/locations/us-east1/namespaces/connectors/services/runtime\u0027\n  },\n  \u0027operation\u0027: \u0027GET_ENTITY\u0027\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_6_connectorOutputPayload`$"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Get File Details"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "2",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027JSON_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027{ \\\u0027RemoteFile\\\u0027 : \\\u0027$RemoteFileName$\\\u0027 }\u0027\n          }\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_JSON\u0027\n            }\n          }\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027RESOLVE_TEMPLATE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$`Task_1_connectorInputPayload`$\u0027,\n      \u0027fieldType\u0027: \u0027JSON_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "1"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Set Connector Input - Mapper"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "3",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_1_connectorOutputPayload`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_ELEMENT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027intValue\u0027: \u00270\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027Success\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$Success$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "failurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "synchronousCallFailurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "nextTasks": [{
+      "taskId": "5",
+      "condition": "$Success$ \u003d \"true\"",
+      "displayName": "Success"
+    }, {
+      "taskId": "4",
+      "condition": "$Success$ !\u003d \"true\"",
+      "displayName": "No File"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Get File Contents Mapper"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "5",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$Success$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$EndResult.EndResult$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$RemoteFileName$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$EndResult.RemoteFilename$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_1_connectorOutputPayload`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_ELEMENT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027intValue\u0027: \u00271\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027Content\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$FileContents$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_ARRAY\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_1_connectorInputPayload`.RemoteFile$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027SPLIT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027/\u0027\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$FilePathSplit$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_ARRAY\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$RemoteFileName$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$`Task_6_entityId`$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "6"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Successful File Download - Mapper"
+  }],
+  "integrationParameters": [{
+    "key": "FileContents",
+    "dataType": "STRING_VALUE",
+    "displayName": "FileContents",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "Success",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "false"
+    },
+    "displayName": "Success"
+  }, {
+    "key": "RemoteFileName",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "readme.txt"
+    },
+    "searchable": true,
+    "displayName": "RemoteFileName",
+    "inputOutputType": "IN"
+  }, {
+    "key": "FilePathSplit",
+    "dataType": "STRING_ARRAY",
+    "defaultValue": {
+      "stringArray": {
+        "stringValues": ["pub/example/readme.txt"]
+      }
+    },
+    "displayName": "FilePathSplit"
+  }, {
+    "key": "`Task_1_connectorInputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_1_connectorInputPayload`",
+    "producer": "1_1",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"RemoteFile\": {\n      \"type\": \"string\",\n      \"readOnly\": false,\n      \"description\": \"The file name on the remote host.\"\n    }\n  }\n}"
+  }, {
+    "key": "`Task_1_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_1_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_1",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\"\n  }\n}"
+  }, {
+    "key": "FirstFile",
+    "dataType": "STRING_VALUE",
+    "displayName": "FirstFile"
+  }, {
+    "key": "`Task_6_entityId`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_6_entityId`",
+    "producer": "1_6"
+  }, {
+    "key": "`Task_6_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_6_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_6",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"FilePath\": {\n      \"type\": \"string\",\n      \"readOnly\": false\n    },\n    \"Filename\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The name of the file or directory.\"\n    },\n    \"FileSize\": {\n      \"type\": [\"number\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The size of the file.\"\n    },\n    \"LastModified\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    },\n    \"IsDirectory\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false\n    },\n    \"Permissions\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    },\n    \"Owner\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    },\n    \"OwnerId\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    },\n    \"Group\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    },\n    \"GroupId\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false\n    }\n  }\n}"
+  }, {
+    "key": "EndResult",
+    "dataType": "JSON_VALUE",
+    "defaultValue": {
+      "jsonValue": "{\n  \u0027EndResult\u0027: \u0027false\u0027,\n  \u0027RemoteFilename\u0027: \u0027/pub/example/default-get-file.txt\u0027\n}"
+    },
+    "searchable": true,
+    "displayName": "EndResult",
+    "inputOutputType": "OUT",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"RemoteFilename\": {\n      \"type\": \"string\"\n    },\n    \"EndResult\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+  }]
+}

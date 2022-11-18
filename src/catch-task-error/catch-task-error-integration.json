@@ -1,0 +1,184 @@
+{
+  "name": "projects/668095722976/locations/us-west1/integrations/Error-Handline-Sample/versions/44f28641-c379-4953-a15b-294b029b01b6",
+  "updateTime": "2022-10-27T23:59:33.161Z",
+  "lockHolder": "scotthaaland@gmail.com",
+  "createTime": "2022-10-27T23:59:17.545Z",
+  "lastModifierEmail": "scotthaaland@gmail.com",
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "2"
+    }],
+    "properties": {
+      "Trigger name": "zhuht-error-handling_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/zhuht-error-handling_API_1"
+  }],
+  "taskConfigs": [{
+    "task": "FieldMappingTask",
+    "taskId": "2",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$string_array$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringArrayFunction\": {\n              \"functionName\": \"GET\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"intValue\": \"2\"\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$output_str$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "synchronousCallFailurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "nextTasks": [{
+      "taskId": "1",
+      "condition": "exists($ErrorMessage$)",
+      "displayName": "Error"
+    }, {
+      "taskId": "3",
+      "condition": "NOT exists($ErrorMessage$)",
+      "displayName": "Success"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping",
+    "description": "This mapping rule will fail with the default settings so that you can simulate a mapping failure. If you create a Variable called ErrorMessage, then it will allow you to test to see if it has been filled by an error in an Edge Condition."
+  }, {
+    "task": "EmailTask",
+    "taskId": "3",
+    "parameters": {
+      "Cc": {
+        "key": "Cc",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "TextBody": {
+        "key": "TextBody",
+        "value": {
+          "stringValue": "There were no errors. The third element in the array is { $output_str$ }"
+        }
+      },
+      "Bcc": {
+        "key": "Bcc",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "AttachmentPath": {
+        "key": "AttachmentPath",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "To": {
+        "key": "To",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "BodyFormat": {
+        "key": "BodyFormat",
+        "value": {
+          "stringValue": "text"
+        }
+      },
+      "EmailConfigInput": {
+        "key": "EmailConfigInput",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.EmailConfig\"\n}"
+        }
+      },
+      "Subject": {
+        "key": "Subject",
+        "value": {
+          "stringValue": "Error-Handling Sample Succeeded"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Send Email 1"
+  }, {
+    "task": "EmailTask",
+    "taskId": "1",
+    "parameters": {
+      "Cc": {
+        "key": "Cc",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "TextBody": {
+        "key": "TextBody",
+        "value": {
+          "stringValue": "Error Message is { $ErrorMessage$ }"
+        }
+      },
+      "Bcc": {
+        "key": "Bcc",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "AttachmentPath": {
+        "key": "AttachmentPath",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "To": {
+        "key": "To",
+        "value": {
+          "stringArray": {
+          }
+        }
+      },
+      "BodyFormat": {
+        "key": "BodyFormat",
+        "value": {
+          "stringValue": "text"
+        }
+      },
+      "EmailConfigInput": {
+        "key": "EmailConfigInput",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.EmailConfig\"\n}"
+        }
+      },
+      "Subject": {
+        "key": "Subject",
+        "value": {
+          "stringValue": "the send email task is executed"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Send Email"
+  }],
+  "integrationParameters": [{
+    "key": "output_str",
+    "dataType": "STRING_VALUE",
+    "displayName": "output_str"
+  }, {
+    "key": "ErrorMessage",
+    "dataType": "STRING_VALUE",
+    "displayName": "ErrorMessage"
+  }, {
+    "key": "string_array",
+    "dataType": "STRING_ARRAY",
+    "defaultValue": {
+      "stringArray": {
+        "stringValues": ["1", "2"]
+      }
+    },
+    "displayName": "string_array",
+    "inputOutputType": "IN"
+  }],
+  "userLabel": "Needs Email Address"
+}

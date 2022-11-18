@@ -1,0 +1,280 @@
+{
+  "name": "projects/532862411978/locations/us-east1/products/apigee/integrations/sftp-poll-path-for-file/versions/a372d509-62ff-4a2f-ab92-f4a66869e3ba",
+  "updateTime": "2022-08-30T23:09:39.158Z",
+  "lockHolder": "shaaland@google.com",
+  "createTime": "2022-08-30T22:22:14.921Z",
+  "lastModifierEmail": "shaaland@google.com",
+  "triggerConfigs": [{
+    "label": "Schedule Trigger",
+    "startTasks": [{
+      "taskId": "9"
+    }],
+    "properties": {
+      "Timer Name": "sftp-poll-path-for-file_Timer_1",
+      "Scheduled Time spec": "10 12 * * *"
+    },
+    "triggerType": "CRON",
+    "triggerNumber": "1",
+    "triggerId": "cron_trigger/sftp-poll-path-for-file_Timer_1/10+12+*+*+*"
+  }],
+  "taskConfigs": [{
+    "task": "GenericConnectorTask",
+    "taskId": "6",
+    "parameters": {
+      "listEntitiesSortByColumns": {
+        "key": "listEntitiesSortByColumns",
+        "value": {
+          "stringValue": "$`Task_6_listEntitiesSortByColumns`$"
+        }
+      },
+      "filterClause": {
+        "key": "filterClause",
+        "value": {
+          "stringValue": "$`Task_6_filterClause`$"
+        }
+      },
+      "listEntitiesPageToken": {
+        "key": "listEntitiesPageToken",
+        "value": {
+          "stringValue": "$`Task_6_listEntitiesPageToken`$"
+        }
+      },
+      "entityType": {
+        "key": "entityType",
+        "value": {
+          "stringValue": "Root"
+        }
+      },
+      "listEntitiesPageSize": {
+        "key": "listEntitiesPageSize",
+        "value": {
+          "stringValue": "$`Task_6_listEntitiesPageSize`$"
+        }
+      },
+      "listEntitiesNextPageToken": {
+        "key": "listEntitiesNextPageToken",
+        "value": {
+          "stringValue": "$`Task_6_listEntitiesNextPageToken`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\u0027,\n  \u0027connection\u0027: {\n    \u0027connectionName\u0027: \u0027projects/dynolab-153020/locations/us-east1/connections/sftp-dynolab\u0027,\n    \u0027serviceName\u0027: \u0027projects/ied10b8cf922ad563-tp/locations/us-east1/namespaces/connectors/services/runtime\u0027,\n    \u0027connectorVersion\u0027: \u0027projects/dynolab-153020/locations/global/providers/default/connectors/sftp/versions/1\u0027\n  },\n  \u0027operation\u0027: \u0027LIST_ENTITIES\u0027\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_6_connectorOutputPayload`$"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "7"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "SFTP Connector List Files "
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "9",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027Filepath LIKE \\u0027/pub/example/%\\u0027\u0027\n          }\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$`Task_6_filterClause`$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "6"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Set List Files Filter"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "7",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027JSON_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_6_connectorOutputPayload`$\u0027\n        }\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$ListOfFiles$\u0027,\n      \u0027fieldType\u0027: \u0027JSON_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_ARRAY\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$ListOfFiles$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027FOR_EACH\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027protoValue\u0027: {\n                  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.TransformExpression\u0027,\n                  \u0027initialValue\u0027: {\n                    \u0027referenceValue\u0027: \u0027~x\u0027\n                  },\n                  \u0027transformationFunctions\u0027: [{\n                    \u0027functionType\u0027: {\n                      \u0027jsonFunction\u0027: {\n                        \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n                      }\n                    },\n                    \u0027parameters\u0027: [{\n                      \u0027initialValue\u0027: {\n                        \u0027literalValue\u0027: {\n                          \u0027stringValue\u0027: \u0027FilePath\u0027\n                        }\n                      }\n                    }]\n                  }]\n                }\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING_ARRAY\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$FileNames$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_ARRAY\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027INT_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$FileNames$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringArrayFunction\u0027: {\n              \u0027functionName\u0027: \u0027SIZE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$NumberOfFiles$\u0027,\n      \u0027fieldType\u0027: \u0027INT_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "8"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Setup File List for Get File loop"
+  }, {
+    "task": "SubWorkflowForEachLoopV2Task",
+    "taskId": "8",
+    "parameters": {
+      "iterationElementMapping": {
+        "key": "iterationElementMapping",
+        "value": {
+          "stringValue": "RemoteFileName"
+        }
+      },
+      "aggregatorParameterMapping": {
+        "key": "aggregatorParameterMapping",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027EndResult\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027StatusResultsAll\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027FileContents\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027AllFilesContents\u0027\n      }\n    }\n  }]\n}"
+        }
+      },
+      "triggerId": {
+        "key": "triggerId",
+        "value": {
+          "stringValue": "api_trigger/sftp-get-file_API_1"
+        }
+      },
+      "loopMetadata": {
+        "key": "loopMetadata",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_8_loopMetadata`$"]
+          }
+        }
+      },
+      "disableEucPropagation": {
+        "key": "disableEucPropagation",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "listToIterate": {
+        "key": "listToIterate",
+        "value": {
+          "stringValue": "$FileNames$"
+        }
+      },
+      "workflowName": {
+        "key": "workflowName",
+        "value": {
+          "stringValue": "sftp-get-file"
+        }
+      },
+      "requestParameterMapping": {
+        "key": "requestParameterMapping"
+      },
+      "overrideParameterMapping": {
+        "key": "overrideParameterMapping"
+      }
+    },
+    "failurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "synchronousCallFailurePolicy": {
+      "retryStrategy": "IGNORE"
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "For Each File - Get File"
+  }],
+  "integrationParameters": [{
+    "key": "FileContents",
+    "dataType": "STRING_VALUE",
+    "displayName": "FileContents",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "Success",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "false"
+    },
+    "displayName": "Success"
+  }, {
+    "key": "EndResult",
+    "dataType": "STRING_VALUE",
+    "displayName": "EndResult",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "RemoteFileName",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "readme.txt"
+    },
+    "searchable": true,
+    "displayName": "RemoteFileName",
+    "inputOutputType": "IN"
+  }, {
+    "key": "ListOfFiles",
+    "dataType": "JSON_VALUE",
+    "defaultValue": {
+      "jsonValue": "[{\n  \u0027FilePath\u0027: \u0027/pub/example/imap-console-client.png\u0027,\n  \u0027Filename\u0027: \u0027imap-console-client.png\u0027,\n  \u0027FileSize\u0027: 19156.0,\n  \u0027LastModified\u0027: \u00272007-02-16 17:00:28.0\u0027,\n  \u0027IsDirectory\u0027: false,\n  \u0027Permissions\u0027: \u0027-rw-------\u0027,\n  \u0027Owner\u0027: \u0027demo\u0027,\n  \u0027OwnerId\u0027: \u0027\u0027,\n  \u0027Group\u0027: \u0027users\u0027,\n  \u0027GroupId\u0027: \u0027\u0027,\n  \u0027LocalFile\u0027: null\n}, {\n  \u0027FilePath\u0027: \u0027/pub/example/KeyGenerator.png\u0027,\n  \u0027Filename\u0027: \u0027KeyGenerator.png\u0027,\n  \u0027FileSize\u0027: 36672.0,\n  \u0027LastModified\u0027: \u00272007-03-19 19:52:58.0\u0027,\n  \u0027IsDirectory\u0027: false,\n  \u0027Permissions\u0027: \u0027-rw-------\u0027,\n  \u0027Owner\u0027: \u0027demo\u0027,\n  \u0027OwnerId\u0027: \u0027\u0027,\n  \u0027Group\u0027: \u0027users\u0027,\n  \u0027GroupId\u0027: \u0027\u0027,\n  \u0027LocalFile\u0027: null\n}]"
+    },
+    "displayName": "ListOfFiles",
+    "inputOutputType": "OUT",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"FilePath\": {\n        \"type\": \"string\"\n      },\n      \"LastModified\": {\n        \"type\": \"string\"\n      },\n      \"Group\": {\n        \"type\": \"string\"\n      },\n      \"Owner\": {\n        \"type\": \"string\"\n      },\n      \"LocalFile\": {\n        \"type\": \"null\"\n      },\n      \"IsDirectory\": {\n        \"type\": \"boolean\"\n      },\n      \"OwnerId\": {\n        \"type\": \"string\"\n      },\n      \"Permissions\": {\n        \"type\": \"string\"\n      },\n      \"Filename\": {\n        \"type\": \"string\"\n      },\n      \"FileSize\": {\n        \"type\": \"number\"\n      },\n      \"GroupId\": {\n        \"type\": \"string\"\n      }\n    }\n  }\n}"
+  }, {
+    "key": "FileNames",
+    "dataType": "STRING_ARRAY",
+    "displayName": "FileNames",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "`Task_8_loopMetadata`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_8_loopMetadata`",
+    "isTransient": true,
+    "producer": "1_8"
+  }, {
+    "key": "`Task_6_listEntitiesPageSize`",
+    "dataType": "INT_VALUE",
+    "displayName": "`Task_6_listEntitiesPageSize`",
+    "producer": "1_6"
+  }, {
+    "key": "`Task_6_listEntitiesPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_6_listEntitiesPageToken`",
+    "producer": "1_6"
+  }, {
+    "key": "`Task_6_listEntitiesSortByColumns`",
+    "dataType": "STRING_ARRAY",
+    "displayName": "`Task_6_listEntitiesSortByColumns`",
+    "producer": "1_6"
+  }, {
+    "key": "`Task_6_filterClause`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_6_filterClause`",
+    "producer": "1_6"
+  }, {
+    "key": "`Task_6_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_6_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_6",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"FilePath\": {\n        \"type\": \"string\",\n        \"readOnly\": false\n      },\n      \"Filename\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The name of the file or directory.\"\n      },\n      \"FileSize\": {\n        \"type\": [\"number\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The size of the file.\"\n      },\n      \"LastModified\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"IsDirectory\": {\n        \"type\": [\"boolean\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Permissions\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Owner\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"OwnerId\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Group\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"GroupId\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      }\n    }\n  }\n}"
+  }, {
+    "key": "`Task_6_listEntitiesNextPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_6_listEntitiesNextPageToken`",
+    "isTransient": true,
+    "producer": "1_6"
+  }, {
+    "key": "NumberOfFiles",
+    "dataType": "INT_VALUE",
+    "defaultValue": {
+      "intValue": "0"
+    },
+    "displayName": "NumberOfFiles"
+  }, {
+    "key": "EndResults",
+    "dataType": "JSON_VALUE",
+    "defaultValue": {
+      "jsonValue": "{\n  \u0027endresults\u0027: [{\n    \u0027RemoteFilename\u0027: \u0027/pub/example/readme.txt\u0027,\n    \u0027EndResult\u0027: \u0027true\u0027\n  }, {\n    \u0027RemoteFilename\u0027: \u0027/pub/example/imap-console-client.png\u0027,\n    \u0027EndResult\u0027: \u0027false\u0027\n  }]\n}"
+    },
+    "displayName": "EndResults",
+    "inputOutputType": "OUT",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"endresults\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"RemoteFilename\": {\n            \"type\": \"string\"\n          },\n          \"EndResult\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    }\n  }\n}"
+  }, {
+    "key": "AllFilesContents",
+    "dataType": "STRING_ARRAY",
+    "displayName": "AllFilesContents",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "StatusResultsAll",
+    "dataType": "JSON_VALUE",
+    "displayName": "StatusResultsAll",
+    "inputOutputType": "OUT"
+  }]
+}
