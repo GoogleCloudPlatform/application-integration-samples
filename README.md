@@ -1,4 +1,4 @@
-# Integration samples
+# Application Integration samples
 
 This repository contains samples for
 [Application Integration](https://cloud.google.com/application-integration/docs).
