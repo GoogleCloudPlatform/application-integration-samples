@@ -1,9 +1,4 @@
 {
-  "name": "projects/668095722976/locations/us-west1/integrations/Error-Handline-Sample/versions/44f28641-c379-4953-a15b-294b029b01b6",
-  "updateTime": "2022-10-27T23:59:33.161Z",
-  "lockHolder": "scotthaaland@gmail.com",
-  "createTime": "2022-10-27T23:59:17.545Z",
-  "lastModifierEmail": "scotthaaland@gmail.com",
   "triggerConfigs": [{
     "label": "API Trigger",
     "startTasks": [{

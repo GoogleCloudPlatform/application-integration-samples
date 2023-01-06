@@ -1,9 +1,4 @@
 {
-  "name": "projects/532862411978/locations/us-east1/products/apigee/integrations/sftp-get-file/versions/e318658f-e87e-422e-9581-fea2182930cb",
-  "description": "API Trigger with File name to get from an SFTP Server",
-  "updateTime": "2022-08-24T20:00:59.019Z",
-  "createTime": "2022-08-24T19:59:43.243Z",
-  "lastModifierEmail": "shaaland@google.com",
   "triggerConfigs": [{
     "label": "API Trigger - Get File by Name",
     "startTasks": [{
