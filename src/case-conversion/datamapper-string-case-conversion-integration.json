@@ -1,9 +1,4 @@
 {
-  "name": "projects/891923177978/locations/us/products/apigee/integrations/test_string_case_conversion/versions/e93144f1-73aa-4aa4-a63c-baaf9e4a46be",
-  "updateTime": "2022-11-14T06:46:59.294Z",
-  "lockHolder": "user@test.com",
-  "createTime": "2022-11-14T06:36:37.663Z",
-  "lastModifierEmail": "user@test.com",
   "triggerConfigs": [{
     "label": "API Trigger",
     "startTasks": [{

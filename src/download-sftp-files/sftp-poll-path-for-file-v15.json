@@ -1,9 +1,4 @@
 {
-  "name": "projects/532862411978/locations/us-east1/products/apigee/integrations/sftp-poll-path-for-file/versions/a372d509-62ff-4a2f-ab92-f4a66869e3ba",
-  "updateTime": "2022-08-30T23:09:39.158Z",
-  "lockHolder": "shaaland@google.com",
-  "createTime": "2022-08-30T22:22:14.921Z",
-  "lastModifierEmail": "shaaland@google.com",
   "triggerConfigs": [{
     "label": "Schedule Trigger",
     "startTasks": [{
