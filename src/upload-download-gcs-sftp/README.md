@@ -19,7 +19,7 @@ Each task has a description that explains what the task is used for that you can
 - `<region>` : The Region for your Connections (replace each instance of this)
 - `<sftp-connection-name>` : The SFTP Connection Name (replace each instance of this)
 - `<gcs-connection-name>` : The GCS Conenction Name (replace each instance of this)
-- `<bucketn-name>` : The GCS Bucket where you have your notifications set up (replace each instance of this)
+- `<bucket-name>` : The GCS Bucket where you have your notifications set up (replace each instance of this)
 
 ## How to create the GCS Notification to PubSub
 The GCS Notification feature will send a message to pubsub whenever a change happens to the Bucket where you have configurated the Notification.
