@@ -1,0 +1,644 @@
+{
+  "triggerConfigs": [{
+    "label": "API Trigger - GCS to SFTP",
+    "startTasks": [{
+      "taskId": "9"
+    }],
+    "properties": {
+      "Trigger name": "upload-download-gcs-sftp_API_2"
+    },
+    "triggerType": "API",
+    "triggerNumber": "2",
+    "triggerId": "api_trigger/upload-download-gcs-sftp_API_2",
+    "description": "See the input variable PubSubPayload\u0027s default value for an example payload that GCS will send to PubSub.  Change the default value to your test bucket and object to make it easier to Test from the Integration TEST button"
+  }, {
+    "label": "Copy File from SFTP to GCS",
+    "startTasks": [{
+      "taskId": "3"
+    }],
+    "properties": {
+      "Trigger name": "upload-download-gcs-sftp_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/upload-download-gcs-sftp_API_1",
+    "description": "Pass in the full FilePath to the SFTP filename using the input variable : SFTP-FilePath for this API Trigger. This integration will download the file from the SFTP server, and then upload it to GCS.  It is set for ASCII files, so if you have binary, you will need to change a few settings."
+  }, {
+    "label": "PubSub GCS Notification Trigger",
+    "startTasks": [{
+      "taskId": "11"
+    }],
+    "properties": {
+      "IP Project name": "cloud-crm-eventbus-cpsexternal",
+      "Subscription name": "<pubsub-topic-name>"
+    },
+    "triggerType": "CLOUD_PUBSUB_EXTERNAL",
+    "triggerNumber": "3",
+    "triggerId": "cloud_pubsub_external_trigger/projects/cloud-crm-eventbus-cpsexternal/subscriptions/<pubsub-topic-name>",
+    "description": "Use the GCS Notification feature to notify PubSub when a new Object is created in a bucket.  It\u0027s available via GCloud commands only (not in the UI). \nFill in BUCKET_NAME and TOPIC_NAME in this gcloud command to set up notifications.:\n\ngcloud storage buckets notifications create gs://BUCKET_NAME --topic\u003dTOPIC_NAME\n\nDocs: https://cloud.google.com/storage/docs/reporting-changes#command-line "
+  }],
+  "taskConfigs": [{
+    "task": "GenericConnectorTask",
+    "taskId": "10",
+    "parameters": {
+      "listEntitiesSortByColumns": {
+        "key": "listEntitiesSortByColumns",
+        "value": {
+          "stringValue": "$`Task_10_listEntitiesSortByColumns`$"
+        }
+      },
+      "filterClause": {
+        "key": "filterClause",
+        "value": {
+          "stringValue": "$`Task_10_filterClause`$"
+        }
+      },
+      "listEntitiesPageToken": {
+        "key": "listEntitiesPageToken",
+        "value": {
+          "stringValue": "$`Task_10_listEntitiesPageToken`$"
+        }
+      },
+      "entityType": {
+        "key": "entityType",
+        "value": {
+          "stringValue": "Objects"
+        }
+      },
+      "listEntitiesPageSize": {
+        "key": "listEntitiesPageSize",
+        "value": {
+          "stringValue": "$`Task_10_listEntitiesPageSize`$"
+        }
+      },
+      "listEntitiesNextPageToken": {
+        "key": "listEntitiesNextPageToken",
+        "value": {
+          "stringValue": "$`Task_10_listEntitiesNextPageToken`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<gcs-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/gcp/connectors/gcs/versions/1\"\n  },\n  \"operation\": \"LIST_ENTITIES\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_10_connectorOutputPayload`$"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "GCS List Bucket",
+    "description": "This just lists the Objects in the Bucket. It is helpful for debugging, but can be removed if you don\u0027t want it."
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "6",
+    "parameters": {
+      "connectorInputPayload": {
+        "key": "connectorInputPayload",
+        "value": {
+          "stringValue": "$`Task_6_connectorInputPayload`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<gcs-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/gcp/connectors/gcs/versions/1\"\n  },\n  \"operation\": \"EXECUTE_ACTION\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_6_connectorOutputPayload`$"
+        }
+      },
+      "actionName": {
+        "key": "actionName",
+        "value": {
+          "stringValue": "DownloadObject"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "7"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "GCS Download File",
+    "description": "Download the Object that was in the PubSub notification message from GCS"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "11",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$CloudPubSubMessage$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$PubSubPayload$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "9"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - PubSubPayload",
+    "description": "Map the PubSub message to the common InputVariable PubSubPayload variable so that it matches the API Trigger variable"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "9",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$PubSubPayload.attributes.bucketId$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_6_connectorInputPayload`.Bucket$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$PubSubPayload.attributes.objectId$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_6_connectorInputPayload`.ObjectFilePath$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Bucket \\u003d \\u0027\"\n          }\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"referenceValue\": \"$PubSubPayload.attributes.bucketId$\"\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"\\u0027 and Name \\u003d \\u0027\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"referenceValue\": \"$PubSubPayload.attributes.objectId$\"\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"\\u0027\"\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_10_filterClause`$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"booleanValue\": false\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_6_connectorInputPayload`.HasBytes$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "6"
+    }, {
+      "taskId": "10"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - Connector Input Variables",
+    "description": "Set up input variables for the GCS Connection task "
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "12",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"/home/uat/\"\n          }\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"referenceValue\": \"$PubSubPayload.attributes.objectId$\"\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_8_connectorInputPayload`.RemoteFile$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"booleanValue\": true\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_8_connectorInputPayload`.Overwrite$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$`Task_6_connectorOutputPayload`$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_ELEMENT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"intValue\": \"0\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_PROPERTY\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"Content\"\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$Contents$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$Contents$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_8_connectorInputPayload`.Content$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Success\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$EndState$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "8"
+    }, {
+      "taskId": "14"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - Set SFTP inputs",
+    "description": "Set the input parameters for SFTP Connector"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "7",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$`Task_6_connectorOutputPayload`$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_ELEMENT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"intValue\": \"0\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_PROPERTY\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"Success\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"TO_BOOLEAN\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$GCSDownloadSuccess$\",\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "12",
+      "condition": "$GCSDownloadSuccess$ \u003d true",
+      "displayName": "Success"
+    }, {
+      "taskId": "13",
+      "condition": "$GCSDownloadSuccess$ !\u003d true",
+      "displayName": "Failure"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - Check Status",
+    "description": "Get the Success property from the GCS DownLoad File connectorOutputPayload so that we can test the success or failure before we try to access the Content property from the payload."
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "13",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Failed\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$EndState$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "GCS Download Failed"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "16",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Success\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$EndState$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "GCS Upload Succeeded"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "17",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Failure\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$EndState$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "GCS Upload Failed"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "3",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"{ \\\"RemoteFile\\\" : \\\"$SFTP-FilePath$\\\" }\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$RemoteFileName$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"booleanValue\": false\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.HasBytes$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$RemoteFileName$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"TO_JSON\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$ResolveTemplateNameJ$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$ResolveTemplateNameJ$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"RESOLVE_TEMPLATE\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$ResolveTemplateNameJ$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$ResolveTemplateNameJ$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"TO_STRING\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$ResolveTemplateS$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$SFTP-FilePath$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.RemoteFile$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "4"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - set SFTP vars",
+    "description": "Set the input variables for the SFTP Get File by Name task."
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "4",
+    "parameters": {
+      "connectorInputPayload": {
+        "key": "connectorInputPayload",
+        "value": {
+          "stringValue": "$`Task_4_connectorInputPayload`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<sftp-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/default/connectors/sftp/versions/1\"\n  },\n  \"operation\": \"EXECUTE_ACTION\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_4_connectorOutputPayload`$"
+        }
+      },
+      "actionName": {
+        "key": "actionName",
+        "value": {
+          "stringValue": "Download"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "1"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "SFTP Get File by Name",
+    "description": "Download the file from SFTP that was passed in to the API Trigger via the variable  SFTP-FilePath"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "1",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$`Task_4_connectorOutputPayload`$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_ELEMENT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"intValue\": \"1\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_PROPERTY\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"Content\"\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_2_connectorInputPayload`.Content$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"integration-test-bucket2\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_2_connectorInputPayload`.Bucket$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"readme-\"\n          }\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"baseFunction\": {\n                \"functionType\": {\n                  \"baseFunction\": {\n                    \"functionName\": \"GET_EXECUTION_ID\"\n                  }\n                }\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"CONCAT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \".txt\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"stringFunction\": {\n              \"functionName\": \"TO_JSON\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_2_connectorInputPayload`.ObjectName$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "2"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping - Set GCS vars",
+    "description": "Set the input variables for the GCS Upload file to GCS task"
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "2",
+    "parameters": {
+      "connectorInputPayload": {
+        "key": "connectorInputPayload",
+        "value": {
+          "stringValue": "$`Task_2_connectorInputPayload`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<gcs-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/gcp/connectors/gcs/versions/1\"\n  },\n  \"operation\": \"EXECUTE_ACTION\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_2_connectorOutputPayload`$"
+        }
+      },
+      "actionName": {
+        "key": "actionName",
+        "value": {
+          "stringValue": "UploadObject"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "15"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Upload File to GCS",
+    "description": "Upload the file contents to GCS that were downloaded from SFTP"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "15",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$`Task_2_connectorOutputPayload`$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_ELEMENT\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"intValue\": \"0\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"GET_PROPERTY\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"stringValue\": \"Success\"\n              }\n            }\n          }]\n        }, {\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"TO_BOOLEAN\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$GCSUploadSuccess$\",\n      \"fieldType\": \"BOOLEAN_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "16",
+      "condition": "$GCSUploadSuccess$ \u003d true",
+      "displayName": "Success"
+    }, {
+      "taskId": "17",
+      "condition": "$GCSUploadSuccess$ !\u003d true",
+      "displayName": "Failure"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping"
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "8",
+    "parameters": {
+      "connectorInputPayload": {
+        "key": "connectorInputPayload",
+        "value": {
+          "stringValue": "$`Task_8_connectorInputPayload`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<sftp-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/default/connectors/sftp/versions/1\"\n  },\n  \"operation\": \"EXECUTE_ACTION\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_8_connectorOutputPayload`$"
+        }
+      },
+      "actionName": {
+        "key": "actionName",
+        "value": {
+          "stringValue": "Upload"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "SFTP Upload File"
+  }, {
+    "task": "GenericConnectorTask",
+    "taskId": "14",
+    "parameters": {
+      "listEntitiesSortByColumns": {
+        "key": "listEntitiesSortByColumns",
+        "value": {
+          "stringValue": "$`Task_14_listEntitiesSortByColumns`$"
+        }
+      },
+      "filterClause": {
+        "key": "filterClause",
+        "value": {
+          "stringValue": "$`Task_14_filterClause`$"
+        }
+      },
+      "listEntitiesPageToken": {
+        "key": "listEntitiesPageToken",
+        "value": {
+          "stringValue": "$`Task_14_listEntitiesPageToken`$"
+        }
+      },
+      "entityType": {
+        "key": "entityType",
+        "value": {
+          "stringValue": "home"
+        }
+      },
+      "listEntitiesPageSize": {
+        "key": "listEntitiesPageSize",
+        "value": {
+          "stringValue": "$`Task_14_listEntitiesPageSize`$"
+        }
+      },
+      "listEntitiesNextPageToken": {
+        "key": "listEntitiesNextPageToken",
+        "value": {
+          "stringValue": "$`Task_14_listEntitiesNextPageToken`$"
+        }
+      },
+      "config": {
+        "key": "config",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.connectors.GenericConnectorTaskConfig\",\n  \"connection\": {\n    \"connectionName\": \"projects/<projectId>/locations/<region>/connections/<sftp-connection-name>\",\n    \"serviceName\": \"projects/ied10b8cf922ad563-tp/locations/<region>/namespaces/connectors/services/runtime\",\n    \"connectorVersion\": \"projects/<projectId>/locations/global/providers/default/connectors/sftp/versions/1\"\n  },\n  \"operation\": \"LIST_ENTITIES\"\n}"
+        }
+      },
+      "connectorOutputPayload": {
+        "key": "connectorOutputPayload",
+        "value": {
+          "stringValue": "$`Task_14_connectorOutputPayload`$"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "SFTP List Files",
+    "description": "This task is here just for debugging, so that we can ensure that we can connect and list all of the files on the SFTP server"
+  }],
+  "integrationParameters": [{
+    "key": "`Task_4_connectorInputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_4_connectorInputPayload`",
+    "producer": "1_4",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"RemoteFile\": {\n      \"type\": \"string\",\n      \"readOnly\": false,\n      \"description\": \"The file name on the remote host.\"\n    },\n    \"HasBytes\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Whether to download content as bytes.\"\n    }\n  }\n}"
+  }, {
+    "key": "`Task_4_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_4_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_4",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\"\n  }\n}"
+  }, {
+    "key": "SFTP-FilePath",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "/readme.txt"
+    },
+    "displayName": "SFTP-FilePath",
+    "inputOutputType": "IN"
+  }, {
+    "key": "RemoteFileName",
+    "dataType": "STRING_VALUE",
+    "displayName": "RemoteFileName"
+  }, {
+    "key": "ResolveTemplateNameJ",
+    "dataType": "JSON_VALUE",
+    "displayName": "ResolveTemplateNameJ"
+  }, {
+    "key": "ResolveTemplateS",
+    "dataType": "STRING_VALUE",
+    "displayName": "ResolveTemplateS"
+  }, {
+    "key": "CloudPubSubMessage",
+    "dataType": "JSON_VALUE",
+    "displayName": "CloudPubSubMessage",
+    "isTransient": true,
+    "producer": "2_3",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"title\": \"Cloud Pub/Sub Message\",\n  \"description\": \"Message received by Cloud Pub/Sub.\",\n  \"properties\": {\n    \"data\": {\n      \"type\": \"string\",\n      \"description\": \"The message data sent by the publisher\"\n    },\n    \"attributes\": {\n      \"type\": \"object\",\n      \"description\": \"Attributes for this message\"\n    },\n    \"messageId\": {\n      \"type\": \"string\",\n      \"description\": \"ID of this message, assigned by the server when the message is published. Guaranteed to be unique within the topic.\"\n    },\n    \"publishTime\": {\n      \"type\": \"string\",\n      \"description\": \"The time at which the message was published, populated by the server when it receives the topics.publish call\"\n    },\n    \"orderingKey\": {\n      \"type\": \"string\",\n      \"description\": \"Identifies related messages for which publish order should be respected.\"\n    }\n  }\n}"
+  }, {
+    "key": "Contents",
+    "dataType": "JSON_VALUE",
+    "displayName": "Contents",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "`Task_10_listEntitiesPageSize`",
+    "dataType": "INT_VALUE",
+    "displayName": "`Task_10_listEntitiesPageSize`",
+    "producer": "1_10"
+  }, {
+    "key": "`Task_10_listEntitiesPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_10_listEntitiesPageToken`",
+    "producer": "1_10"
+  }, {
+    "key": "`Task_10_listEntitiesSortByColumns`",
+    "dataType": "STRING_ARRAY",
+    "displayName": "`Task_10_listEntitiesSortByColumns`",
+    "producer": "1_10"
+  }, {
+    "key": "`Task_10_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_10_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_10",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"Id\": {\n        \"type\": \"string\",\n        \"readOnly\": false,\n        \"description\": \"The ID of the object, including the bucket name, object name, and generation number.\"\n      },\n      \"Name\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The name of the object. Required if not specified by URL parameter.\"\n      },\n      \"Bucket\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The name of the bucket containing this object.\"\n      },\n      \"Generation\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The content generation of this object. Used for object versioning.\"\n      },\n      \"MetaGeneration\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The version of the metadata for this object at this generation. Used for preconditions and for detecting changes in metadata. A metageneration number is only meaningful in the context of a particular generation of a particular object.\"\n      },\n      \"ContentType\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Content-Type of the object data. If an object is stored without a Content-Type, it is served as application/octet-stream.\"\n      },\n      \"TimeCreated\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The creation time of the object in RFC 3339 format.\"\n      },\n      \"Updated\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The modification time of the object metadata in RFC 3339 format.\"\n      },\n      \"TimeDeleted\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The deletion time of the object in RFC 3339 format. Returned if and only if this version of the object is no longer a live version, but remains in the bucket as a noncurrent version.\"\n      },\n      \"TemporaryHold\": {\n        \"type\": [\"boolean\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Whether or not the object is subject to a temporary hold.\"\n      },\n      \"EventBasedHold\": {\n        \"type\": [\"boolean\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Whether or not the object is subject to an event-based hold.\"\n      },\n      \"RetentionExpirationTime\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The earliest time that the object can be deleted, based on a bucket\\u0027s retention policy, in RFC 3339 format.\"\n      },\n      \"StorageClass\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Storage class of the object.\"\n      },\n      \"TimeStorageClassUpdated\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The time at which the object\\u0027s storage class was last changed. When the object is initially created, it will be set to timeCreated.\"\n      },\n      \"Size\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Content-Length of the data in bytes.\"\n      },\n      \"Md5Hash\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"MD5 hash of the data; encoded using base64. For more information about using the MD5 hash, see Hashes and ETags: Best Practices.\"\n      },\n      \"MediaLink\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Media download link.\"\n      },\n      \"ContentEncoding\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Content-Encoding of the object data.\"\n      },\n      \"ContentDisposition\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Content-Disposition of the object data.\"\n      },\n      \"ContentLanguage\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Content-Language of the object data.\"\n      },\n      \"CacheControl\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Cache-Control directive for the object data. If omitted, and the object is accessible to all anonymous users, the default will be public, max-age\\u003d3600.\"\n      },\n      \"OwnerEntity\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The entity, in the form user-emailAddress.\"\n      },\n      \"OwnerEntityId\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The ID for the entity.\"\n      },\n      \"Crc32c\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte order. For more information about using the CRC32c checksum, see Hashes and ETags: Best Practices.\"\n      },\n      \"ComponentCount\": {\n        \"type\": [\"number\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Number of underlying components that make up a composite object. Components are accumulated by compose operations, counting 1 for each non-composite source object and componentCount for each composite source object. Note: componentCount is included in the metadata for composite objects only.\"\n      },\n      \"Etag\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"HTTP 1.1 Entity tag for the object.\"\n      },\n      \"CustomerEncryptionAlgorithm\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The encryption algorithm.\"\n      },\n      \"CustomerEncryptionKeySha256\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"SHA256 hash value of the encryption key.\"\n      },\n      \"KmsKeyName\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"Cloud KMS Key used to encrypt this object, if the object is encrypted by such a key.\"\n      },\n      \"CustomTime\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"CA user-specified timestamp for the object in RFC 3339 format.\"\n      }\n    }\n  }\n}"
+  }, {
+    "key": "`Task_10_listEntitiesNextPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_10_listEntitiesNextPageToken`",
+    "isTransient": true,
+    "producer": "1_10"
+  }, {
+    "key": "`Task_10_filterClause`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Bucket \u003d \u0027claims-demo-input\u0027"
+    },
+    "displayName": "`Task_10_filterClause`",
+    "producer": "1_10"
+  }, {
+    "key": "`Task_6_connectorInputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_6_connectorInputPayload`",
+    "producer": "1_6",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"Bucket\": {\n      \"type\": \"string\",\n      \"readOnly\": false,\n      \"description\": \"Bucket name where the object is located.\"\n    },\n    \"ObjectFilePath\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Object name for the object that should be retrieved. If not specified, all the objects from the specified bucket will be retrieved.\"\n    },\n    \"FolderPath\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The path, or URI, to the file that will receive the data of the object.\"\n    },\n    \"HasBytes\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Whether to download content as bytes.\",\n      \"default\": false\n    },\n    \"UpdatedEndDate\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The end of the date range to download objects. If not specified, objects will be downloaded from the specified UpdatedStartDate until the present day.\"\n    },\n    \"UpdatedStartDate\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The start of the date range to download objects. If not specified, objects will be downloaded from the beginning of the time until the UpdatedEndDate.\"\n    },\n    \"Encoding\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"If the LocalFile input is left empty, the data will be output to FileData in the specified encoding.The allowed values are NONE, BASE64.\",\n      \"default\": \"BASE64\"\n    }\n  }\n}"
+  }, {
+    "key": "`Task_6_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_6_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_6",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\"\n  }\n}"
+  }, {
+    "key": "PubSubPayload",
+    "dataType": "JSON_VALUE",
+    "defaultValue": {
+      "jsonValue": "{\n  \"data\": \"{\\n  \\\"kind\\\": \\\"storage#object\\\",\\n  \\\"id\\\": \\\"claims-demo-input/SimpleFile2.csv/1676497271498061\\\",\\n  \\\"selfLink\\\": \\\"https://www.googleapis.com/storage/v1/b/claims-demo-input/o/SimpleFile2.csv\\\",\\n  \\\"name\\\": \\\"SimpleFile2.csv\\\",\\n  \\\"bucket\\\": \\\"claims-demo-input\\\",\\n  \\\"generation\\\": \\\"1676497271498061\\\",\\n  \\\"metageneration\\\": \\\"1\\\",\\n  \\\"contentType\\\": \\\"text/csv\\\",\\n  \\\"timeCreated\\\": \\\"2023-02-15T21:41:11.510Z\\\",\\n  \\\"updated\\\": \\\"2023-02-15T21:41:11.510Z\\\",\\n  \\\"storageClass\\\": \\\"STANDARD\\\",\\n  \\\"timeStorageClassUpdated\\\": \\\"2023-02-15T21:41:11.510Z\\\",\\n  \\\"size\\\": \\\"42620\\\",\\n  \\\"md5Hash\\\": \\\"WUAiwkXXV0pfkKV1Liw4Zg\\u003d\\u003d\\\",\\n  \\\"mediaLink\\\": \\\"https://storage.googleapis.com/download/storage/v1/b/claims-demo-input/o/SimpleFile2.csv?generation\\u003d1676497271498061\\u0026alt\\u003dmedia\\\",\\n  \\\"crc32c\\\": \\\"Q5jPkQ\\u003d\\u003d\\\",\\n  \\\"etag\\\": \\\"CM3K1oK/mP0CEAE\\u003d\\\"\\n}\\n\",\n  \"attributes\": {\n    \"eventTime\": \"2023-02-15T21:41:11.510212Z\",\n    \"notificationConfig\": \"projects/_/buckets/claims-demo-input/notificationConfigs/1\",\n    \"objectGeneration\": \"1676497271498061\",\n    \"eventType\": \"OBJECT_FINALIZE\",\n    \"bucketId\": \"claims-demo-input\",\n    \"payloadFormat\": \"JSON_API_V1\",\n    \"objectId\": \"SimpleFile2.csv\"\n  },\n  \"messageId\": \"6893071526239814\",\n  \"publishTime\": \"2023-02-15T21:41:11.552Z\",\n  \"orderingKey\": \"\"\n}"
+    },
+    "displayName": "PubSubPayload",
+    "inputOutputType": "IN",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"publishTime\": {\n      \"type\": \"string\"\n    },\n    \"data\": {\n      \"type\": \"string\"\n    },\n    \"messageId\": {\n      \"type\": \"string\"\n    },\n    \"attributes\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"objectGeneration\": {\n          \"type\": \"string\"\n        },\n        \"eventTime\": {\n          \"type\": \"string\"\n        },\n        \"bucketId\": {\n          \"type\": \"string\"\n        },\n        \"eventType\": {\n          \"type\": \"string\"\n        },\n        \"notificationConfig\": {\n          \"type\": \"string\"\n        },\n        \"payloadFormat\": {\n          \"type\": \"string\"\n        },\n        \"objectId\": {\n          \"type\": \"string\"\n        }\n      }\n    },\n    \"orderingKey\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+  }, {
+    "key": "GCSDownloadSuccess",
+    "dataType": "BOOLEAN_VALUE",
+    "defaultValue": {
+      "booleanValue": false
+    },
+    "displayName": "GCSDownloadSuccess"
+  }, {
+    "key": "EndState",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Failed"
+    },
+    "displayName": "EndState",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "`Task_8_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_8_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_8",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\"\n  }\n}"
+  }, {
+    "key": "`Task_8_connectorInputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_8_connectorInputPayload`",
+    "producer": "1_8",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"Content\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"String content to upload as file.\"\n    },\n    \"ContentBytes\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Bytes content to upload as file.\"\n    },\n    \"HasBytes\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Whether to upload content as bytes.\"\n    },\n    \"RemoteFile\": {\n      \"type\": \"string\",\n      \"readOnly\": false,\n      \"description\": \"The file name on the remote host.\"\n    },\n    \"Overwrite\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Whether to overwrite Remote Files. The default value is false.\"\n    }\n  }\n}"
+  }, {
+    "key": "`Task_14_listEntitiesPageSize`",
+    "dataType": "INT_VALUE",
+    "displayName": "`Task_14_listEntitiesPageSize`",
+    "producer": "1_14"
+  }, {
+    "key": "`Task_14_listEntitiesPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_14_listEntitiesPageToken`",
+    "producer": "1_14"
+  }, {
+    "key": "`Task_14_listEntitiesSortByColumns`",
+    "dataType": "STRING_ARRAY",
+    "displayName": "`Task_14_listEntitiesSortByColumns`",
+    "producer": "1_14"
+  }, {
+    "key": "`Task_14_filterClause`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_14_filterClause`",
+    "producer": "1_14"
+  }, {
+    "key": "`Task_14_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_14_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_14",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"FilePath\": {\n        \"type\": \"string\",\n        \"readOnly\": false\n      },\n      \"Filename\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The name of the file or directory.\"\n      },\n      \"FileSize\": {\n        \"type\": [\"number\", \"null\"],\n        \"readOnly\": false,\n        \"description\": \"The size of the file.\"\n      },\n      \"LastModified\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"IsDirectory\": {\n        \"type\": [\"boolean\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Permissions\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Owner\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"OwnerId\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"Group\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      },\n      \"GroupId\": {\n        \"type\": [\"string\", \"null\"],\n        \"readOnly\": false\n      }\n    }\n  }\n}"
+  }, {
+    "key": "`Task_14_listEntitiesNextPageToken`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_14_listEntitiesNextPageToken`",
+    "isTransient": true,
+    "producer": "1_14"
+  }, {
+    "key": "`Task_2_connectorOutputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_2_connectorOutputPayload`",
+    "isTransient": true,
+    "producer": "1_2",
+    "jsonSchema": "{\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\"\n  }\n}"
+  }, {
+    "key": "`Task_2_connectorInputPayload`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_2_connectorInputPayload`",
+    "producer": "1_2",
+    "jsonSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"FolderPath\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The path to the folder that will receive the data of the object.\"\n    },\n    \"Content\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The Content to be uploaded in the bucket\"\n    },\n    \"ObjectName\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"The name of the uploaded object. It should be specified only when uploading the content as InputStream.\"\n    },\n    \"ContentBytes\": {\n      \"type\": [\"string\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Bytes content to upload as file.\"\n    },\n    \"HasBytes\": {\n      \"type\": [\"boolean\", \"null\"],\n      \"readOnly\": false,\n      \"description\": \"Whether to upload content as bytes.\",\n      \"default\": false\n    },\n    \"Bucket\": {\n      \"type\": \"string\",\n      \"readOnly\": false,\n      \"description\": \"Bucket name where the object will be uploaded.\"\n    }\n  }\n}"
+  }, {
+    "key": "GCSUploadSuccess",
+    "dataType": "BOOLEAN_VALUE",
+    "displayName": "GCSUploadSuccess"
+  }]
+}
