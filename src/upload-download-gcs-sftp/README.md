@@ -6,8 +6,9 @@ This sample integration contains two flows.
      - This has both a pubsub trigger and an API Trigger
 
 ** NOTE: This is configured for text files. To do binary files, set the "HasBytes" property to true, 
-and use ContentBytes in the data mapper instead of Contents.  See Connector docs for more details :
+and use ContentBytes in the data mapper instead of Contents.  See Connector docs and Community for more details :
 https://cloud.google.com/integration-connectors/docs/connectors/sftp/configure#examples 
+https://www.googlecloudcommunity.com/gc/Integration-Services/Application-Integration-GCS-Connector/m-p/520739#M92 
 
 
 Each task has a description that explains what the task is used for that you can see in the Integration UI.
