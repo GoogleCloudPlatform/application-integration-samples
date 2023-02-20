@@ -1,0 +1,44 @@
+{
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }],
+    "properties": {
+      "Trigger name": "filter_orders_greater_than500_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/filter_orders_greater_than500_API_1"
+  }],
+  "taskConfigs": [{
+    "task": "FieldMappingTask",
+    "taskId": "1",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$orders.orderLines$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"FILTER_ELEMENTS\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"literalValue\": {\n                \"protoValue\": {\n                  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.TransformExpression\",\n                  \"initialValue\": {\n                    \"referenceValue\": \"~x\"\n                  },\n                  \"transformationFunctions\": [{\n                    \"functionType\": {\n                      \"jsonFunction\": {\n                        \"functionName\": \"GET_PROPERTY\"\n                      }\n                    },\n                    \"parameters\": [{\n                      \"initialValue\": {\n                        \"literalValue\": {\n                          \"stringValue\": \"qty\"\n                        }\n                      }\n                    }]\n                  }, {\n                    \"functionType\": {\n                      \"jsonFunction\": {\n                        \"functionName\": \"TO_INT\"\n                      }\n                    }\n                  }, {\n                    \"functionType\": {\n                      \"intFunction\": {\n                        \"functionName\": \"GREATER_THAN\"\n                      }\n                    },\n                    \"parameters\": [{\n                      \"initialValue\": {\n                        \"literalValue\": {\n                          \"intValue\": \"500\"\n                        }\n                      }\n                    }]\n                  }]\n                }\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$flag_orders$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Data Mapping"
+  }],
+  "integrationParameters": [{
+    "key": "orders",
+    "dataType": "JSON_VALUE",
+    "defaultValue": {
+      "jsonValue": "{\n  \"orderLines\": [{\n    \"lineNumber\": 1.0,\n    \"productNumber\": 123.0,\n    \"unitPrice\": 1.0,\n    \"qty\": 1.0,\n    \"taxAmount\": 1.0\n  }, {\n    \"lineNumber\": 2.0,\n    \"productNumber\": 321.0,\n    \"unitPrice\": 10.0,\n    \"qty\": 5.0,\n    \"taxAmount\": 10.0\n  }, {\n    \"lineNumber\": 3.0,\n    \"productNumber\": 456.0,\n    \"unitPrice\": 10.0,\n    \"qty\": 1000.0,\n    \"taxAmount\": 10.0\n  }]\n}"
+    },
+    "displayName": "orders",
+    "inputOutputType": "IN",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"orderLines\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"unitPrice\": {\n            \"type\": \"number\"\n          },\n          \"qty\": {\n            \"type\": \"number\"\n          },\n          \"productNumber\": {\n            \"type\": \"number\"\n          },\n          \"lineNumber\": {\n            \"type\": \"number\"\n          },\n          \"taxAmount\": {\n            \"type\": \"number\"\n          }\n        }\n      }\n    }\n  }\n}"
+  }, {
+    "key": "flag_orders",
+    "dataType": "JSON_VALUE",
+    "displayName": "flag_orders",
+    "inputOutputType": "OUT",
+    "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"array\",\n  \"items\": {\n    \"type\": \"object\",\n    \"properties\": {\n      \"unitPrice\": {\n        \"type\": \"number\"\n      },\n      \"qty\": {\n        \"type\": \"number\"\n      },\n      \"productNumber\": {\n        \"type\": \"number\"\n      },\n      \"lineNumber\": {\n        \"type\": \"number\"\n      },\n      \"taxAmount\": {\n        \"type\": \"number\"\n      }\n    }\n  }\n}"
+  }]
+}
