@@ -1,0 +1,105 @@
+{
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }],
+    "properties": {
+      "Trigger name": "ForEachLoopDemo_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/ForEachLoopDemo_API_1"
+  }],
+  "taskConfigs": [{
+    "task": "SubWorkflowForEachLoopV2Task",
+    "taskId": "1",
+    "parameters": {
+      "iterationElementMapping": {
+        "key": "iterationElementMapping",
+        "value": {
+          "stringValue": "EmailContent"
+        }
+      },
+      "aggregatorParameterMapping": {
+        "key": "aggregatorParameterMapping"
+      },
+      "triggerId": {
+        "key": "triggerId",
+        "value": {
+          "stringValue": "api_trigger/SubIntegrationSendEmailDemo_API_1"
+        }
+      },
+      "loopMetadata": {
+        "key": "loopMetadata",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_loopMetadata`$"]
+          }
+        }
+      },
+      "disableEucPropagation": {
+        "key": "disableEucPropagation",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "listToIterate": {
+        "key": "listToIterate",
+        "value": {
+          "stringValue": "$ListOfEmailContent$"
+        }
+      },
+      "workflowName": {
+        "key": "workflowName",
+        "value": {
+          "stringValue": "SubIntegrationSendEmailDemo"
+        }
+      },
+      "requestParameterMapping": {
+        "key": "requestParameterMapping",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\",\n  \"entries\": [{\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"Recipients\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"Recipients\"\n      }\n    }\n  }, {\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"Email_Subject\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"Email_Subject\"\n      }\n    }\n  }]\n}"
+        }
+      },
+      "overrideParameterMapping": {
+        "key": "overrideParameterMapping"
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "For Each Loop"
+  }],
+  "integrationParameters": [{
+    "key": "`Task_1_loopMetadata`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_1_loopMetadata`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "Recipients",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "Recipients",
+    "inputOutputType": "IN"
+  }, {
+    "key": "Email_Subject",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "Email_Subject",
+    "inputOutputType": "IN"
+  }, {
+    "key": "ListOfEmailContent",
+    "dataType": "STRING_ARRAY",
+    "defaultValue": {
+      "stringArray": {
+        "stringValues": ["\"Content 1\"", "\"Content 2\"", "\"Content 3\"", "\"Content 4\""]
+      }
+    },
+    "displayName": "ListOfEmailContent",
+    "inputOutputType": "IN"
+  }]
+}
