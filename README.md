@@ -41,16 +41,16 @@ failed integration. For more information, see
 | Sample | Description |
 |---|---|
 | [call-rest-api](src/call-rest-api) | Sample to call a REST endpoint using a Rest Task |
-| [case-conversion](case-conversion) | Sample to convert a string using Data Mapping task |
-| [catch-task-error](catch-task-error) | Sample to create an error |
-| [concat-string-array](concat-string-array) | Sample to concat String array using Data Mpping task |
-| [download-sftp-files](download-sftp-files) | Sample to download files from SFTP server |
-| [filter-json-arrays](filter-json-arrays) | Sample to filter through JSON arrays |
-| [foreach-loop-send-email](foreach-loop-send-email) | Sample to send email using a foreach loop task that calls another sub-integration |
-| [invoke-sub-integration](invoke-sub-integration) | Sample to invoke a sub-integration |
-| [merge-json-keys](merge-json-keys) | Sample to merge JSON using Data Mapping task |
-| [remove-json-property](remove-json-property) | Sample to update JSON properties |
-| [resolve-json](resolve-json) | Sample to resolve JSON  |
-| [set-json](set-json) | Sample to create a JSON object |
-| [string-to-uppercase](string-to-uppercase) | Sample to convert a string to uppercase |
-| [upload-download-gcs-sftp](upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
+| [case-conversion](src/case-conversion) | Sample to convert a string using Data Mapping task |
+| [catch-task-error](src/catch-task-error) | Sample to create an error |
+| [concat-string-array](src/concat-string-array) | Sample to concat String array using Data Mpping task |
+| [download-sftp-files](src/download-sftp-files) | Sample to download files from SFTP server |
+| [filter-json-arrays](src/filter-json-arrays) | Sample to filter through JSON arrays |
+| [foreach-loop-send-email](src/foreach-loop-send-email) | Sample to send email using a foreach loop task that calls another sub-integration |
+| [invoke-sub-integration](src/invoke-sub-integration) | Sample to invoke a sub-integration |
+| [merge-json-keys](src/merge-json-keys) | Sample to merge JSON using Data Mapping task |
+| [remove-json-property](src/remove-json-property) | Sample to update JSON properties |
+| [resolve-json](src/resolve-json) | Sample to resolve JSON  |
+| [set-json](src/set-json) | Sample to create a JSON object |
+| [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
+| [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
