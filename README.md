@@ -40,7 +40,7 @@ failed integration. For more information, see
 
 | Sample | Description |
 |---|---|
-| [call-rest-api](call-rest-api) | Sample to call a REST endpoint using a Rest Task |
+| [call-rest-api](src/call-rest-api) | Sample to call a REST endpoint using a Rest Task |
 | [case-conversion](case-conversion) | Sample to convert a string using Data Mapping task |
 | [catch-task-error](catch-task-error) | Sample to create an error |
 | [concat-string-array](concat-string-array) | Sample to concat String array using Data Mpping task |
