@@ -1,0 +1,49 @@
+{
+    "triggerConfigs": [{
+      "label": "API Trigger",
+      "startTasks": [{
+        "taskId": "1"
+      }],
+      "properties": {
+        "Trigger name": "test_string_case_conversion_API_1"
+      },
+      "triggerType": "API",
+      "triggerNumber": "1",
+      "triggerId": "api_trigger/test_string_case_conversion_API_1"
+    }],
+    "taskConfigs": [{
+      "task": "FieldMappingTask",
+      "taskId": "1",
+      "parameters": {
+        "FieldMappingConfigTaskParameterKey": {
+          "key": "FieldMappingConfigTaskParameterKey",
+          "value": {
+            "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"JSON_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$inputJsonArray$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"jsonFunction\": {\n              \"functionName\": \"REMOVE_PROPERTY\"\n            }\n          },\n          \"parameters\": [{\n            \"initialValue\": {\n              \"referenceValue\": \"$propertyRemoved$\"\n            }\n          }]\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$outputJsonArray$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+          }
+        }
+      },
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Data Mapping"
+    }],
+    "integrationParameters": [{
+      "key": "outputJsonArray",
+      "dataType": "JSON_VALUE",
+      "displayName": "outputJsonArray"
+    }, {
+      "key": "inputJsonArray",
+      "dataType": "JSON_VALUE",
+      "defaultValue": {
+        "jsonValue": "{\n  \"students\": [{\n    \"name\": \"Abhishek\",\n    \"course\": \"Mechanical\"\n  }, {\n    \"name\": \"Chirag\",\n    \"course\": \"Civil\"\n  }, {\n    \"name\": \"Sachin\",\n    \"course\": \"Medical\"\n  }, {\n    \"name\": \"Vivek\",\n    \"course\": \"Software\"\n  }]\n}"
+      },
+      "displayName": "inputJsonArray",
+      "jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"students\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\"\n          },\n          \"course\": {\n            \"type\": \"string\"\n          }\n        }\n      }\n    }\n  }\n}"
+    }, {
+      "key": "propertyRemoved",
+      "dataType": "STRING_VALUE",
+      "defaultValue": {
+        "stringValue": "students.course"
+      },
+      "displayName": "propertyRemoved"
+    }],
+    "userLabel": "v1"
+  }
