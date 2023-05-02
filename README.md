@@ -35,3 +35,22 @@ integration. The log messages contain information that can be helpful in
 determining the status of each step in an integration, or to troubleshoot a
 failed integration. For more information, see
 [Execution logs](https://cloud.google.com/application-integration/docs/viewing-logs).
+
+### <a name="samples"></a>Samples
+
+| Sample | Description |
+|---|---|
+| call-rest-api | Sample to call a REST endpoint using a Rest Task |
+| case-conversion | Sample to convert a string using Data Mapping task |
+| catch-task-error | Sample to create an error |
+| concat-string-array | Sample to concat String array using Data Mpping task |
+| download-sftp-files | Sample to download files from SFTP server |
+| filter-json-arrays | Sample to filter through JSON arrays |
+| foreach-loop-send-email | Sample to send email using a foreach loop task that calls another sub-integration |
+| invoke-sub-integration | Sample to invoke a sub-integration |
+| merge-json-keys | Sample to merge JSON using Data Mapping task |
+| remove-json-property | Sample to update JSON properties |
+| resolve-json | Sample to resolve JSON  |
+| set-json | Sample to create a JSON object |
+| string-to-uppercase | Sample to convert a string to uppercase |
+| upload-download-gcs-sftp | Sample to upload/download to GCS/SFTP |                    |
