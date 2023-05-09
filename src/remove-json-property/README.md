@@ -23,7 +23,7 @@ If you are creating a new integration:
     iii) Click Create.
 This opens the integration in the integration designer.
 6) In the integration designer, click `Upload/download menu` and then select `Upload integration`.
-7) In the file browser dialog, select `remove-json-property`, and then click Open. A new version of the integration is created using the uploaded file.
+7) In the file browser dialog, select `remove-json-property.json`, and then click Open. A new version of the integration is created using the uploaded file.
 8) In the integration designer, click Test.
 9) Click Test integration. This runs the integration and displays the execution result in the Test Integration dialog.
 
