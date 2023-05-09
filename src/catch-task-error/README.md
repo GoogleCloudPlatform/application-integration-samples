@@ -12,12 +12,19 @@ remains empty (success).
 
 The Error Handling sample here in GitHub is an example of how this is done.
 
-1.  Download the sample .json file to your local computer with a browser
+1. Clone the repo 
+```sh
+https://github.com/GoogleCloudPlatform/application-integration-samples.git
+```
+1. Navigate to the `catch-task-error` directory
+```sh
+cd src/catch-task-error
+```
 1.  Create a new integration (you can call it ErrorHandlingSample or whatever
     you want)
 1.  Use the **Upload** button on the main ribbon at the top of the canvas to
-    import the sample <code>.json</code> file. Select **Upload**.
-1.  Select the sample <code>.json</code> file from your local drive and click
+    import the `catch-task-error.json` file. Select **Upload**.
+1.  Select the `catch-task-erro.json` file from your local drive and click
     **Open**.
 1.  Enter your email address in the two **Send Email** tasks to test it.
 

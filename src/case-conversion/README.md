@@ -10,7 +10,7 @@ To upload and run the sample integration, do the following steps:
 ```sh
 https://github.com/GoogleCloudPlatform/application-integration-samples.git
 ```
-2) Navigate to the `case-conversion` director
+2) Navigate to the `case-conversion` directory
 ```sh
 cd src/case-conversion
 ```

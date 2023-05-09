@@ -10,7 +10,7 @@ To upload and run the sample integration, do the following steps:
 ```sh
 https://github.com/GoogleCloudPlatform/application-integration-samples.git
 ```
-2) Navigate to the `call-rest-api` director
+2) Navigate to the `call-rest-api` directory
 ```sh
 cd src/call-rest-api
 ```
