@@ -5,28 +5,35 @@ This repository contains samples for
 
 ## Overview
 
-All integration samples are in the `src/` directory with the file format
-`<file_name>-integration.json`. If a sample has more than one file, all the
-files will be available in the sample's directory in `src/`.
+This repository contains sample integration code snippets that demonstrate various integration related use cases.
+Each sample is a JSON file containing all integration metadata. For information about how to download and upload an integration using Application Integration, see [Upload and download integrations](https://cloud.google.com/application-integration/docs/upload-download).
 
-A `.json` file has the metadata of an integration. You can directly upload the
-`.json` file as an integration to your project and run the integration. For more
-information, see
-[Upload an integration](https://cloud.google.com/application-integration/docs/upload-download#upload-an-integration).
+## Repository structure
 
-**Note:** All files having sample data required for some of the samples have the
-file format `<file_name>-dataset.json`.
+*   All integration samples are placed in the `src/` directory
+*   All files having sample data required for some of the samples have the
+file format `<file_name>-dataset.json` placed in the `samples` directory.
 
-## How to: Execute an integration
+```bash
+├── application-integration-samples
+│   ├── samples
+│   │   ├── bq-sample-dataset.json
+│   ├── src
+│   │   ├── <sample-folder-name-1>
+│   │   │   ├── sample-file-name.json
+│   │   │   ├── sample-flow.png
+│   │   │   └── README.md
+│   │   ├── <sample-folder-name-21>
+│   │   │   ├── sample-file-name.json
+│   │   │   ├── sample-flow.png
+├── └── └── └── README.md
+├── CONTRIBUTING.md
+└── README.md
+```
 
-To execute an integration, perform the following steps:
+## Contributing
 
-*   Click **Test** in the integration designer toolbar.
-*   In the **Test Integration** dialog, click **Test integration**.
-*   After the integration completes successfully, the **Test Integration**
-    dialog displays the completion message.
-*   To view the integration output, click **View Logs** in the **Test
-    Integration** dialog.
+See the [Contributing Guide](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/main/CONTRIBUTING.md)
 
 ## How to: View execution logs
 
@@ -54,3 +61,15 @@ failed integration. For more information, see
 | [set-json](src/set-json) | Sample to create a JSON object |
 | [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
 | [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
+
+## Getting help
+
+Please use the [issues page](https://github.com/GoogleCloudPlatform/application-integration-samples/issues) to provide feedback or submit a bug report.
+
+## Disclaimer
+
+The code samples in this repository are for demonstrative purposes only
+
+## Feedback
+
+Please feel free to fill out our [survey](https://forms.gle/qJzdCFNW7fZr33Z17) to give us feedback on the repo and its content.
