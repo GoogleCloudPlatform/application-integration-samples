@@ -20,7 +20,7 @@ Use the following folder structure for all samples:
 │   │   ├── bq-sample-dataset.json
 │   ├── src
 │   │   ├── <sample-folder-name> # replace <sample-folder-name> with the name of the parent sample folder
-│   │   │   ├── sample-file-name.json # replace <smple-file-name> with the name of the sample json file
+│   │   │   ├── sample-file-name.json # replace <sample-file-name> with the name of the sample json file
 │   │   │   ├── sample-flow.png # do not change the file name sample-flow.png
 │   ├── └── └── README.md # do not change the file name README.md
 │   ├── CONTRIBUTING.md
