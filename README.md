@@ -23,10 +23,10 @@ file format `<file_name>-dataset.json` placed in the `samples` directory.
 │   │   │   ├── sample-file-name.json
 │   │   │   ├── sample-flow.png
 │   │   │   └── README.md
-│   │   ├── <sample-folder-name-21>
+│   │   ├── <sample-folder-name-2>
 │   │   │   ├── sample-file-name.json
 │   │   │   ├── sample-flow.png
-├── ├── └── └── README.md
+│   ├── └── └── README.md
 │   ├── CONTRIBUTING.md
 └── └── README.md
 ```
