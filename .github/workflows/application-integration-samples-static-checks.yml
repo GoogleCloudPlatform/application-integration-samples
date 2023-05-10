@@ -28,11 +28,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-      - name: Check README
-        uses: ./tools/pipeline-linter
-        with:
-          pipeline-action: check-readme.sh
       - name: Check sample structure
         uses: ./tools/pipeline-linter
         with:
           pipeline-action: check-sample-structure.sh
+      - name: Check README
+        uses: ./tools/pipeline-linter
+        with:
+          pipeline-action: check-readme.sh
