@@ -17,7 +17,7 @@ Use the following folder structure for all samples:
 ```bash
 ├── application-integration-samples
 │   ├── samples
-│   │   ├── bq-sample-dataset.json
+│   │   └── bq-sample-dataset.json
 │   ├── src
 │   │   ├── <sample-folder-name> # replace <sample-folder-name> with the name of the parent sample folder
 │   │   │   ├── sample-file-name.json # replace <sample-file-name> with the name of the sample json file
