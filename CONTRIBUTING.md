@@ -41,7 +41,7 @@ Use the following guidelines for all samples:
 
 ## Pull request checklist
 
-- Sign the [Google Contributor License Agreement](https://github.com/GoogleCloudPlatform/apigee-samples/blob/main/CONTRIBUTING.md#cla).
+- Sign the [Google Contributor License Agreement](#contributor-license-agreement).
 - Follow the file naming convention and folder structure described above.
 - Ensure that your sample integration executes end-to-end successfully.
 - List the sample in the main [README](README.md) file.
