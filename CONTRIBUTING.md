@@ -34,7 +34,7 @@ where `<sample-folder-name>` is the folder containing the following sample files
 
 ## Naming convention
 
-- Use the following guidelines for all samples:
+Use the following guidelines for all samples:
 - Use all lowercase. For example, add-two-numbers.json.
 - Use hyphens, not underscores, to separate words.
 - In the filename, order the words as they might appear in the main heading of your document. For example, convert-string-to-integer.json.
