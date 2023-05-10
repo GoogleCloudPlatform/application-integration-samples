@@ -33,7 +33,7 @@ file format `<file_name>-dataset.json` placed in the `samples` directory.
 
 ## Contributing
 
-See the [Contributing Guide](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/main/CONTRIBUTING.md)
+See the [Contributing Guide](CONTRIBUTING.md)
 
 ## How to: View execution logs
 
