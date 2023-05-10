@@ -22,6 +22,12 @@ ERRORS=""
 
 for dir in "$PWD"/src/*; do
     F=$(basename -- "$dir")
+    # checking if each sample follows proper naming convention (lowercase and hyphens only)
+    if [[ $F =~ ^[a-z\-]+$ ]]; then
+      true;
+    else
+      ERRORS="$ERRORS\n[ERROR] $F does not follow naming convention (lowercase and hyphens)";
+    fi   
     # checking if each sample has the integration json 
     if [[ ! -f ""$PWD"/src/$F/$F.json" ]]
     then
