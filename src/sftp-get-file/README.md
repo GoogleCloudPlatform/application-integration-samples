@@ -10,9 +10,9 @@ server.
 1.  Create two new integrations with names `sftp-get-file` and
     `sftp-poll-path-for-file`
     1.  Open the `sftp-get-file` integration and then upload the
-        `sftp-get-file-v8.json` file.
+        `sftp-get-file.json` file.
     1.  Open the `sftp-poll-path-for-file` integration and then upload the
-        `sftp-poll-path-for-file-v14.json` file.
+        `sftp-poll-path-for-file.json` file.
 1.  In the `sftp-poll-path-for-file` integration, configure the Connectors task.
     1.  Click the `SFTP Connector List Files` connector task.
     1.  Click `Configure Task`.

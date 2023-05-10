@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright 2020 Google LLC
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,12 +20,23 @@ set -e
 
 ERRORS=""
 
-for file in "$PWD"/src/*; do
-    F=$(basename -- "$file")
-    case $F in
-        *.txt|*.md) continue;;   ##: Skip files that matched.
-        *) grep "^|" README.md | grep "$F" -q || ERRORS="$ERRORS\n[ERROR] missing root README entry for $F";;
-    esac                
+for dir in "$PWD"/src/*; do
+    F=$(basename -- "$dir")
+    # checking if each sample has the integration json 
+    if [[ ! -f ""$PWD"/src/$F/$F.json" ]]
+    then
+      ERRORS="$ERRORS\n[ERROR] $F.json file missing in $F sample.";
+    fi    
+    # checking if each sample has a README.md
+    if [[ ! -f ""$PWD"/src/$F/README.md" ]]
+    then
+      ERRORS="$ERRORS\n[ERROR] README.md file missing in $F sample.";
+    fi   
+    # checking if each sample has a sample-flow.png
+    if [[ ! -f ""$PWD"/src/$F/sample-flow.png" ]]
+    then
+      ERRORS="$ERRORS\n[ERROR] sample-flow.png file missing in $F sample.";
+    fi               
 done
 
 if [ -n "$ERRORS" ]; then
