@@ -19,17 +19,18 @@ Use the following folder structure for all samples:
 │   ├── samples
 │   │   └── bq-sample-dataset.json
 │   ├── src
-│   │   ├── <sample-folder-name> # replace <sample-folder-name> with the name of the parent sample folder
-│   │   │   ├── sample-file-name.json # replace <sample-file-name> with the name of the sample json file
-│   │   │   ├── sample-flow.png # do not change the file name sample-flow.png
+│   │   ├── <sample-name> # replace <sample-name> with the sample name
+│   │   │   ├── sample-name.json # replace <sample-name> with the sample name
+│   │   │   ├── sample-name-flow.png # replace <sample-name> with the sample name
+│   │   │   ├── ...
 │   ├── └── └── README.md # do not change the file name README.md
 │   ├── CONTRIBUTING.md
 └── └── README.md
 ```
 
-where `<sample-folder-name>` is the folder containing the following sample files:
-1) `<sample-file-name>.json`: The integration json file.
-2) `sample-flow.png`: Screenshot/image of the working integration flow.
+where `<sample-name>` is the folder containing the following sample files:
+1) `<sample-name>.json`: The integration json file.
+2) `sample-name-flow.png`: Screenshot/image of the working integration flow.
 3) `README.md`: A separate readme file containing the sample title, description, steps to execute, and any other information that you would like to highlight.
 
 ## Naming convention
