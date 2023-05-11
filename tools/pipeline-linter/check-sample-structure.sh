@@ -38,10 +38,10 @@ for dir in "$PWD"/src/*; do
     then
       ERRORS="$ERRORS\n[ERROR] README.md file missing in $F sample.";
     fi   
-    # checking if each sample has a sample-flow.png
-    if [[ ! -f ""$PWD"/src/$F/sample-flow.png" ]]
+    # checking if each sample has a png
+    if [[ ! -f ""$PWD"/src/$F/$F-flow.png" ]]
     then
-      ERRORS="$ERRORS\n[ERROR] sample-flow.png file missing in $F sample.";
+      ERRORS="$ERRORS\n[ERROR] $F-flow.png file missing in $F sample.";
     fi               
 done
 
