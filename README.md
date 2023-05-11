@@ -12,22 +12,20 @@ Each sample is a JSON file containing all integration metadata. For information 
 
 *   All integration samples are placed in the `src/` directory
 *   The `assets` directory can be used for any standalone files that are used within the samples or for our public documentation purposes
-*   All files having sample data required for some of the samples have the
-file format `<file_name>-dataset.json` placed in the `samples` directory.
 
 ```bash
 ├── application-integration-samples
 │   ├── assets
 │   │   ├── ...
 │   ├── src
-│   │   ├── <sample-folder-name-1>
-│   │   │   ├── sample-file-name.json
-│   │   │   ├── sample-file-name-flow.png
+│   │   ├── <sample-name-1>
+│   │   │   ├── sample-name.json
+│   │   │   ├── sample-name-flow.png
 │   │   │   ├── ...
 │   │   │   └── README.md
-│   │   ├── <sample-folder-name-2>
-│   │   │   ├── sample-file-name.json
-│   │   │   ├── sample-file-name-flow.png
+│   │   ├── <sample-name-2>
+│   │   │   ├── sample-name.json
+│   │   │   ├── sample-name-flow.png
 │   │   │   ├── ...
 │   ├── └── └── README.md
 │   ├── CONTRIBUTING.md
