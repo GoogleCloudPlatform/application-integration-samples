@@ -5,28 +5,36 @@ This repository contains samples for
 
 ## Overview
 
-All integration samples are in the `src/` directory with the file format
-`<file_name>-integration.json`. If a sample has more than one file, all the
-files will be available in the sample's directory in `src/`.
+This repository contains sample integration code snippets that demonstrate various integration related use cases.
+Each sample is a JSON file containing all integration metadata. For information about how to download and upload an integration using Application Integration, see [Upload and download integrations](https://cloud.google.com/application-integration/docs/upload-download).
 
-A `.json` file has the metadata of an integration. You can directly upload the
-`.json` file as an integration to your project and run the integration. For more
-information, see
-[Upload an integration](https://cloud.google.com/application-integration/docs/upload-download#upload-an-integration).
+## Repository structure
 
-**Note:** All files having sample data required for some of the samples have the
-file format `<file_name>-dataset.json`.
+*   All integration samples are placed in the `src/` directory
+*   The `assets` directory can be used for any standalone files that are used within the samples or for our public documentation purposes
 
-## How to: Execute an integration
+```bash
+├── application-integration-samples
+│   ├── assets
+│   │   ├── ...
+│   ├── src
+│   │   ├── <sample-name-1>
+│   │   │   ├── sample-name.json
+│   │   │   ├── sample-name-flow.png
+│   │   │   ├── ...
+│   │   │   └── README.md
+│   │   ├── <sample-name-2>
+│   │   │   ├── sample-name.json
+│   │   │   ├── sample-name-flow.png
+│   │   │   ├── ...
+│   ├── └── └── README.md
+│   ├── CONTRIBUTING.md
+└── └── README.md
+```
 
-To execute an integration, perform the following steps:
+## Contributing
 
-*   Click **Test** in the integration designer toolbar.
-*   In the **Test Integration** dialog, click **Test integration**.
-*   After the integration completes successfully, the **Test Integration**
-    dialog displays the completion message.
-*   To view the integration output, click **View Logs** in the **Test
-    Integration** dialog.
+See the [Contributing Guide](CONTRIBUTING.md)
 
 ## How to: View execution logs
 
@@ -35,3 +43,34 @@ integration. The log messages contain information that can be helpful in
 determining the status of each step in an integration, or to troubleshoot a
 failed integration. For more information, see
 [Execution logs](https://cloud.google.com/application-integration/docs/viewing-logs).
+
+### <a name="samples"></a>Samples
+
+| Sample | Description |
+|---|---|
+| [sample-template](src/sample-template) | Sample template |
+| [call-rest-api](src/call-rest-api) | Sample to call a REST endpoint using a Rest Task |
+| [case-conversion](src/case-conversion) | Sample to convert a string using Data Mapping task |
+| [catch-task-error](src/catch-task-error) | Sample to create an error |
+| [concat-string-array](src/concat-string-array) | Sample to concat String array using Data Mpping task |
+| [sftp-get-file](src/sftp-get-file) | Sample to get files from SFTP server |
+| [filter-json-arrays](src/filter-json-arrays) | Sample to filter through JSON arrays |
+| [foreach-loop-send-email](src/foreach-loop-send-email) | Sample to send email using a foreach loop task that calls another sub-integration |
+| [merge-json-arrays](src/merge-json-arrays) | Sample to merge JSON using Data Mapping task |
+| [remove-json-property](src/remove-json-property) | Sample to update JSON properties |
+| [resolve-json](src/resolve-json) | Sample to resolve JSON  |
+| [update-json-array](src/update-json-array) | Sample to create a JSON object |
+| [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
+| [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
+
+## Getting help
+
+Please use the [issues page](https://github.com/GoogleCloudPlatform/application-integration-samples/issues) to provide feedback or submit a bug report.
+
+## Disclaimer
+
+The code samples in this repository are for demonstrative purposes only
+
+## Feedback
+
+Please feel free to fill out our [survey](https://forms.gle/qJzdCFNW7fZr33Z17) to give us feedback on the repo and its content.
