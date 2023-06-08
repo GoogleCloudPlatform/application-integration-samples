@@ -53,6 +53,7 @@ failed integration. For more information, see
 | [case-conversion](src/case-conversion) | Sample to convert a string using Data Mapping task |
 | [catch-task-error](src/catch-task-error) | Sample to create an error |
 | [concat-string-array](src/concat-string-array) | Sample to concat String array using Data Mpping task |
+| [ecom-order-processing](src/ecom-order-processing) | Sample illustrating an e-commerce back-end scenario use case |
 | [sftp-get-file](src/sftp-get-file) | Sample to get files from SFTP server |
 | [filter-json-arrays](src/filter-json-arrays) | Sample to filter through JSON arrays |
 | [foreach-loop-send-email](src/foreach-loop-send-email) | Sample to send email using a foreach loop task that calls another sub-integration |
