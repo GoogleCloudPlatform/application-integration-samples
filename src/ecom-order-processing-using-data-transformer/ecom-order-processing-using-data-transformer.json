@@ -1,0 +1,403 @@
+{
+    "description": "This integration solves the same problem as E-commerce sample integration but using Data Transformer Script task instead of Data Mapper",
+    "triggerConfigs": [{
+      "label": "OrderProcessApiTrigger",
+      "startTasks": [{
+        "taskId": "1"
+      }],
+      "properties": {
+        "Trigger name": "ExampleIntegration-UsingDataTransformer_API_1"
+      },
+      "triggerType": "API",
+      "triggerNumber": "1",
+      "triggerId": "api_trigger/ExampleIntegration-UsingDataTransformer_API_1",
+      "position": {
+        "x": -480,
+        "y": -480
+      }
+    }, {
+      "label": "ReportExternalOrders",
+      "startTasks": [{
+        "taskId": "6"
+      }],
+      "properties": {
+        "Trigger name": "ExampleIntegration-UsingDataTransformer_API_2"
+      },
+      "triggerType": "API",
+      "triggerNumber": "2",
+      "triggerId": "api_trigger/ExampleIntegration-UsingDataTransformer_API_2",
+      "position": {
+        "x": 192,
+        "y": -496
+      }
+    }],
+    "taskConfigs": [{
+      "task": "JsonnetMapperTask",
+      "taskId": "3",
+      "parameters": {
+        "template": {
+          "key": "template",
+          "value": {
+            "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n// TEMPLATE OUTPUT\n// Json Object is expected as on output. The key of the object would be the variable whose value needs to be set.\n// Example:\n// {\n//  hello: \"world\"\n// }\nlocal line_items \u003d f.extVar(\"orders_request\").line_items;\n{\n// Add mapping here\n\"filtered_external_items\": f.filter(function(item) item.vendor \u003d\u003d \"External\", line_items),\n}"
+          }
+        },
+        "suspensionExpiration": {
+          "key": "suspensionExpiration",
+          "value": {
+            "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.SuspensionExpiration\",\n  \"expireAfterMs\": 172800000\n}"
+          }
+        }
+      },
+      "nextTasks": [{
+        "taskId": "4"
+      }],
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Filter External Items",
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": -480,
+        "y": -48
+      }
+    }, {
+      "task": "JsonnetMapperTask",
+      "taskId": "5",
+      "parameters": {
+        "template": {
+          "key": "template",
+          "value": {
+            "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n// TEMPLATE OUTPUT\n// Json Object is expected as on output. The key of the object would be the variable whose value needs to be set.\n// Example:\n// {\n//  hello: \"world\"\n// }\n{\n// Add mapping here\n\"orders_response\": {\"STATUS\": \"PROCESSING_COMPLETE\"},\n}"
+          }
+        }
+      },
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Build Response",
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": -480,
+        "y": 208
+      }
+    }, {
+      "task": "SubWorkflowForEachLoopV2Task",
+      "taskId": "4",
+      "parameters": {
+        "iterationElementMapping": {
+          "key": "iterationElementMapping",
+          "value": {
+            "stringValue": "sub_integration_input"
+          }
+        },
+        "triggerId": {
+          "key": "triggerId",
+          "value": {
+            "stringValue": "api_trigger/ExampleIntegration-UsingDataTransformer_API_2"
+          }
+        },
+        "aggregatorParameterMapping": {
+          "key": "aggregatorParameterMapping",
+          "value": {
+            "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\",\n  \"entries\": [{\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"`Task_6_responseStatus`\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"rest_call_response_status\"\n      }\n    }\n  }]\n}"
+          }
+        },
+        "loopMetadata": {
+          "key": "loopMetadata",
+          "value": {
+            "stringArray": {
+              "stringValues": ["$`Task_4_loopMetadata`$"]
+            }
+          }
+        },
+        "disableEucPropagation": {
+          "key": "disableEucPropagation",
+          "value": {
+            "booleanValue": false
+          }
+        },
+        "listToIterate": {
+          "key": "listToIterate",
+          "value": {
+            "stringValue": "$filtered_external_items$"
+          }
+        },
+        "workflowName": {
+          "key": "workflowName",
+          "value": {
+            "stringValue": "ExampleIntegration-UsingDataTransformer"
+          }
+        },
+        "requestParameterMapping": {
+          "key": "requestParameterMapping"
+        },
+        "overrideParameterMapping": {
+          "key": "overrideParameterMapping"
+        }
+      },
+      "nextTasks": [{
+        "taskId": "5"
+      }],
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "For Each Loop",
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": -480,
+        "y": 80
+      }
+    }, {
+      "task": "GenericRestV2Task",
+      "taskId": "6",
+      "parameters": {
+        "throwError": {
+          "key": "throwError",
+          "value": {
+            "booleanValue": false
+          }
+        },
+        "responseBody": {
+          "key": "responseBody",
+          "value": {
+            "stringArray": {
+              "stringValues": ["$`Task_6_responseBody`$"]
+            }
+          }
+        },
+        "disableSSLValidation": {
+          "key": "disableSSLValidation",
+          "value": {
+            "booleanValue": false
+          }
+        },
+        "httpParams": {
+          "key": "httpParams"
+        },
+        "responseHeader": {
+          "key": "responseHeader",
+          "value": {
+            "stringArray": {
+              "stringValues": ["$`Task_6_responseHeader`$"]
+            }
+          }
+        },
+        "userAgent": {
+          "key": "userAgent",
+          "value": {
+            "stringValue": ""
+          }
+        },
+        "httpMethod": {
+          "key": "httpMethod",
+          "value": {
+            "stringValue": "POST"
+          }
+        },
+        "responseStatus": {
+          "key": "responseStatus",
+          "value": {
+            "stringArray": {
+              "stringValues": ["$`Task_6_responseStatus`$"]
+            }
+          }
+        },
+        "url": {
+          "key": "url",
+          "value": {
+            "stringValue": "https://mocktarget.apigee.net/echo"
+          }
+        },
+        "useSSL": {
+          "key": "useSSL",
+          "value": {
+            "booleanValue": false
+          }
+        },
+        "urlFetchingService": {
+          "key": "urlFetchingService",
+          "value": {
+            "stringValue": "HARPOON"
+          }
+        },
+        "urlQueryStrings": {
+          "key": "urlQueryStrings"
+        },
+        "requestorId": {
+          "key": "requestorId",
+          "value": {
+            "stringValue": ""
+          }
+        },
+        "requestBody": {
+          "key": "requestBody",
+          "value": {
+            "stringValue": "$sub_integration_input$"
+          }
+        },
+        "followRedirects": {
+          "key": "followRedirects",
+          "value": {
+            "booleanValue": true
+          }
+        },
+        "additionalHeaders": {
+          "key": "additionalHeaders"
+        }
+      },
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Call REST Endpoint",
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": 192,
+        "y": -192
+      }
+    }, {
+      "task": "SuspensionTask",
+      "taskId": "2",
+      "parameters": {
+        "customMessage": {
+          "key": "customMessage",
+          "value": {
+            "stringValue": "Hello user, approval request from ExampleIntegration-UsingdataTransformer."
+          }
+        },
+        "isApproved": {
+          "key": "isApproved",
+          "value": {
+            "stringArray": {
+              "stringValues": ["$`Task_2_isApproved`$"]
+            }
+          }
+        },
+        "suspensionExpiration": {
+          "key": "suspensionExpiration",
+          "value": {
+            "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.SuspensionExpiration\",\n  \"remindAfterMs\": 86400000,\n  \"expireAfterMs\": 172800000\n}"
+          }
+        },
+        "notifications": {
+          "key": "notifications",
+          "value": {
+            "jsonValue": "{\n  \"protoValues\": [{\n    \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.Notification\",\n    \"emailAddress\": {\n      \"email\": \"change-this-to-email-id@example.com\"\n    }\n  }]\n}"
+          }
+        }
+      },
+      "nextTasks": [{
+        "taskId": "3",
+        "condition": "$`Task_2_isApproved`$ \u003d true\n\n",
+        "displayName": "Proceed if approved"
+      }],
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Approval",
+      "successPolicy": {
+        "finalState": "SUSPENDED"
+      },
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": -256,
+        "y": -192
+      }
+    }, {
+      "task": "JsonnetMapperTask",
+      "taskId": "1",
+      "parameters": {
+        "template": {
+          "key": "template",
+          "value": {
+            "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n// TEMPLATE OUTPUT\n// Json Object is expected as on output. The key of the object would be the variable whose value needs to be set.\n// Example:\n// {\n//  hello: \"world\"\n// }\nlocal line_items \u003d f.extVar(\"orders_request\").line_items;\n\n{\n// Add mapping here\n\"total_order_value\":  f.sum(f.map(function(item) item.quantity * item.price_per_unit, line_items)),\n}"
+          }
+        }
+      },
+      "nextTasks": [{
+        "taskId": "3",
+        "condition": "$total_order_value$ \u003c $threshold_order_value$\n\n",
+        "displayName": "TotalOrderValue Below Threshold"
+      }, {
+        "taskId": "2",
+        "condition": "$total_order_value$ \u003e\u003d $threshold_order_value$\n\n",
+        "displayName": "TotalOrderValue Above Threshold"
+      }],
+      "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+      "displayName": "Find Total Order Price",
+      "externalTaskType": "NORMAL_TASK",
+      "position": {
+        "x": -480,
+        "y": -320
+      }
+    }],
+    "integrationParameters": [{
+      "key": "`Task_2_isApproved`",
+      "dataType": "BOOLEAN_VALUE",
+      "displayName": "`Task_2_isApproved`",
+      "isTransient": true,
+      "producer": "1_2"
+    }, {
+      "key": "`Task_4_loopMetadata`",
+      "dataType": "JSON_VALUE",
+      "displayName": "`Task_4_loopMetadata`",
+      "isTransient": true,
+      "producer": "1_4"
+    }, {
+      "key": "`Task_6_responseHeader`",
+      "dataType": "STRING_VALUE",
+      "displayName": "`Task_6_responseHeader`",
+      "isTransient": true,
+      "producer": "1_6"
+    }, {
+      "key": "`Task_6_responseBody`",
+      "dataType": "STRING_VALUE",
+      "displayName": "`Task_6_responseBody`",
+      "isTransient": true,
+      "producer": "1_6"
+    }, {
+      "key": "orders_request",
+      "dataType": "JSON_VALUE",
+      "defaultValue": {
+        "jsonValue": "{\n  \"order_no\": \"12345\",\n  \"buyer_id\": \"raambo\",\n  \"line_items\": [{\n    \"line\": 1.0,\n    \"sku\": \"tr100\",\n    \"vendor\": \"Internal\",\n    \"quantity\": 1.0,\n    \"price_per_unit\": 10.0\n  }, {\n    \"line\": 2.0,\n    \"sku\": \"tbz\",\n    \"vendor\": \"External\",\n    \"quantity\": 24.0,\n    \"price_per_unit\": 1.0\n  }]\n}"
+      },
+      "displayName": "orders_request",
+      "inputOutputType": "IN",
+      "jsonSchema": "{\n  \"properties\": {\n    \"buyer_id\": {\n      \"type\": \"string\"\n    },\n    \"line_items\": {\n      \"items\": {\n        \"properties\": {\n          \"price_per_unit\": {\n            \"type\": \"number\"\n          },\n          \"sku\": {\n            \"type\": \"string\"\n          },\n          \"vendor\": {\n            \"type\": \"string\"\n          },\n          \"line\": {\n            \"type\": \"number\"\n          },\n          \"quantity\": {\n            \"type\": \"number\"\n          }\n        },\n        \"type\": \"object\"\n      },\n      \"type\": \"array\"\n    },\n    \"order_no\": {\n      \"type\": \"string\"\n    }\n  },\n  \"type\": \"object\",\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\"\n}"
+    }, {
+      "key": "sub_integration_input",
+      "dataType": "JSON_VALUE",
+      "defaultValue": {
+        "jsonValue": "{\n}"
+      },
+      "displayName": "sub_integration_input",
+      "inputOutputType": "IN"
+    }, {
+      "key": "total_order_value",
+      "dataType": "DOUBLE_VALUE",
+      "displayName": "total_order_value",
+      "inputOutputType": "OUT"
+    }, {
+      "key": "filtered_external_items",
+      "dataType": "JSON_VALUE",
+      "displayName": "filtered_external_items",
+      "inputOutputType": "OUT"
+    }, {
+      "key": "orders_response",
+      "dataType": "JSON_VALUE",
+      "displayName": "orders_response",
+      "inputOutputType": "OUT"
+    }, {
+      "key": "threshold_order_value",
+      "dataType": "DOUBLE_VALUE",
+      "defaultValue": {
+        "doubleValue": 100.0
+      },
+      "displayName": "threshold_order_value"
+    }, {
+      "key": "`Task_6_responseStatus`",
+      "dataType": "STRING_VALUE",
+      "defaultValue": {
+        "stringValue": ""
+      },
+      "displayName": "`Task_6_responseStatus`",
+      "inputOutputType": "OUT",
+      "isTransient": true,
+      "producer": "1_6"
+    }, {
+      "key": "rest_call_response_status",
+      "dataType": "STRING_ARRAY",
+      "displayName": "rest_call_response_status",
+      "inputOutputType": "OUT"
+    }]
+  }
+  
