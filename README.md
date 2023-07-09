@@ -54,6 +54,7 @@ failed integration. For more information, see
 | [catch-task-error](src/catch-task-error) | Sample to create an error |
 | [concat-string-array](src/concat-string-array) | Sample to concat String array using Data Mpping task |
 | [ecom-order-processing](src/ecom-order-processing) | Sample illustrating an e-commerce back-end scenario use case |
+| [ecom-order-processing-using-data-transfomer](src/ecom-order-processing-using-data-transformer) | Sample illustrating an e-commerce back-end scenario use case solved using data transformer for data mapping |
 | [sftp-get-file](src/sftp-get-file) | Sample to get files from SFTP server |
 | [filter-json-arrays](src/filter-json-arrays) | Sample to filter through JSON arrays |
 | [foreach-loop-send-email](src/foreach-loop-send-email) | Sample to send email using a foreach loop task that calls another sub-integration |
