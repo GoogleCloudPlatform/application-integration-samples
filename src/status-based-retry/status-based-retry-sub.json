@@ -1,0 +1,211 @@
+{
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }, {
+      "taskId": "6"
+    }],
+    "properties": {
+      "Trigger name": "status-based-retry-sub_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/status-based-retry-sub_API_1",
+    "position": {
+      "x": -336
+    }
+  }],
+  "taskConfigs": [{
+    "task": "GenericRestV2Task",
+    "taskId": "1",
+    "parameters": {
+      "throwError": {
+        "key": "throwError",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "responseBody": {
+        "key": "responseBody",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseBody`$"]
+          }
+        }
+      },
+      "disableSSLValidation": {
+        "key": "disableSSLValidation",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "httpParams": {
+        "key": "httpParams"
+      },
+      "responseHeader": {
+        "key": "responseHeader",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseHeader`$"]
+          }
+        }
+      },
+      "userAgent": {
+        "key": "userAgent",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "httpMethod": {
+        "key": "httpMethod",
+        "value": {
+          "stringValue": "GET"
+        }
+      },
+      "responseStatus": {
+        "key": "responseStatus",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseStatus`$"]
+          }
+        }
+      },
+      "url": {
+        "key": "url",
+        "value": {
+          "stringValue": "https://httpbin.org/status/400"
+        }
+      },
+      "useSSL": {
+        "key": "useSSL",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "urlFetchingService": {
+        "key": "urlFetchingService",
+        "value": {
+          "stringValue": "HARPOON"
+        }
+      },
+      "urlQueryStrings": {
+        "key": "urlQueryStrings"
+      },
+      "requestorId": {
+        "key": "requestorId",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "requestBody": {
+        "key": "requestBody",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "followRedirects": {
+        "key": "followRedirects",
+        "value": {
+          "booleanValue": true
+        }
+      },
+      "additionalHeaders": {
+        "key": "additionalHeaders"
+      }
+    },
+    "failurePolicy": {
+      "retryStrategy": "NONE"
+    },
+    "synchronousCallFailurePolicy": {
+      "retryStrategy": "NONE"
+    },
+    "nextTasks": [{
+      "taskId": "5"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Call REST Endpoint",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -210,
+      "y": 126
+    }
+  }, {
+    "task": "JsonnetMapperTask",
+    "taskId": "5",
+    "parameters": {
+      "template": {
+        "key": "template",
+        "value": {
+          "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\nlocal rs \u003d std.extVar(\"`Task_1_responseStatus`\");\n\n{\n// Add mapping here\n    responseCode: std.parseJson(std.split(rs, \" \")[0])\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Find Response Code",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -336,
+      "y": 252
+    }
+  }, {
+    "task": "JsonnetMapperTask",
+    "taskId": "6",
+    "parameters": {
+      "template": {
+        "key": "template",
+        "value": {
+          "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n{\n    retryCounter: std.extVar(\"retryCounter\") + 1\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Increment Retry Counter",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -462,
+      "y": 126
+    }
+  }],
+  "integrationParameters": [{
+    "key": "responseCode",
+    "dataType": "INT_VALUE",
+    "displayName": "responseCode",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "retryCounter",
+    "dataType": "INT_VALUE",
+    "displayName": "retryCounter",
+    "inputOutputType": "IN_OUT"
+  }, {
+    "key": "`Task_1_responseStatus`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "`Task_1_responseStatus`",
+    "inputOutputType": "OUT",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "`Task_1_responseHeader`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "`Task_1_responseHeader`",
+    "inputOutputType": "OUT",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "`Task_1_responseBody`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "`Task_1_responseBody`",
+    "inputOutputType": "OUT",
+    "isTransient": true,
+    "producer": "1_1"
+  }]
+}

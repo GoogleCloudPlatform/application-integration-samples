@@ -62,6 +62,7 @@ failed integration. For more information, see
 | [remove-json-property](src/remove-json-property) | Sample to update JSON properties |
 | [resolve-json](src/resolve-json) | Sample to resolve JSON  |
 | [update-json-array](src/update-json-array) | Sample to create a JSON object |
+| [status-based-retry](src/status-based-retry) | Sample to retry based on rest caller response status |
 | [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
 | [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
 
