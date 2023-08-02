@@ -1,6 +1,6 @@
 # Retry based on Rest Caller response status
 
-Using the Data Mapping task, iterate through the elements of a string array and apply transformation functions to convert each string value to uppercase.
+Integration pattern to perform retries based on http response status.
 
 ## Upload and run the sample integration
 
