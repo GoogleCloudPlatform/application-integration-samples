@@ -8,12 +8,12 @@ server.
 
 1.  Create the SFTP Connection
 1.  Create two new integrations with names `sftp-get-file` and
-    `sftp-poll-path-for-file`
+    `sftp-get-file-poll`
     1.  Open the `sftp-get-file` integration and then upload the
         `sftp-get-file.json` file.
-    1.  Open the `sftp-poll-path-for-file` integration and then upload the
-        `sftp-poll-path-for-file.json` file.
-1.  In the `sftp-poll-path-for-file` integration, configure the Connectors task.
+    1.  Open the `sftp-get-file-poll` integration and then upload the
+        `sftp-get-file-poll.json` file.
+1.  In the `sftp-get-file-poll` integration, configure the Connectors task.
     1.  Click the `SFTP Connector List Files` connector task.
     1.  Click `Configure Task`.
     1.  Click the Reset button.
@@ -48,7 +48,7 @@ server.
 
     1.  Only Text files are supported at this time. Binary files will fail to
         download.
-    1.  If you examine the log files for the `sftp-poll-path-for-file`
+    1.  If you examine the log files for the `sftp-get-file-poll`
         integration, you will see that it loops through all the files in the
         folder that you provided as input, and attempts to download each file.
         The contents of the file are made available to you in the `Contents`
