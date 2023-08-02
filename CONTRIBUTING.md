@@ -29,8 +29,8 @@ Use the following folder structure for all samples:
 ```
 
 where `<sample-name>` is the folder containing the following sample files:
-1) `<sample-name>.json`: The integration json file.
-2) `sample-name-flow.png`: Screenshot/image of the working integration flow.
+1) `<sample-name>.json`: The integration json file. If you have more than one integration json, make sure they use the same prefix as the sample. For example <sample-name>-sub.json
+2) `sample-name-flow.png`: Screenshot/image of the working integration flow. If you have more than one integration json, make sure they use the same prefix as the sample. For example <sample-name>-sub-flow.png
 3) `README.md`: A separate readme file containing the sample title, description, steps to execute, and any other information that you would like to highlight.
 
 ## Naming convention
