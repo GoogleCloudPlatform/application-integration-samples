@@ -1,0 +1,143 @@
+{
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }],
+    "properties": {
+      "Trigger name": "status-based-retry-main_API_1"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/status-based-retry-main_API_1",
+    "position": {
+      "x": -336
+    }
+  }],
+  "taskConfigs": [{
+    "task": "SubWorkflowWhileLoopV2Task",
+    "taskId": "1",
+    "parameters": {
+      "triggerId": {
+        "key": "triggerId",
+        "value": {
+          "stringValue": "api_trigger/status-based-retry-sub_API_1"
+        }
+      },
+      "aggregatorParameterMapping": {
+        "key": "aggregatorParameterMapping"
+      },
+      "loopMetadata": {
+        "key": "loopMetadata",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_loopMetadata`$"]
+          }
+        }
+      },
+      "disableEucPropagation": {
+        "key": "disableEucPropagation",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "whileCondition": {
+        "key": "whileCondition",
+        "value": {
+          "stringValue": "$retryCounter$ \u003c 2 AND $responseCode$ \u003e\u003d 400"
+        }
+      },
+      "workflowName": {
+        "key": "workflowName",
+        "value": {
+          "stringValue": "status-based-retry-sub"
+        }
+      },
+      "requestParameterMapping": {
+        "key": "requestParameterMapping",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\",\n  \"entries\": [{\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"retryCounter\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"retryCounter\"\n      }\n    }\n  }]\n}"
+        }
+      },
+      "overrideParameterMapping": {
+        "key": "overrideParameterMapping",
+        "value": {
+          "jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\",\n  \"entries\": [{\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"retryCounter\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"retryCounter\"\n      }\n    }\n  }, {\n    \"key\": {\n      \"literalValue\": {\n        \"stringValue\": \"responseCode\"\n      }\n    },\n    \"value\": {\n      \"literalValue\": {\n        \"stringValue\": \"responseCode\"\n      }\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "2",
+      "condition": "$responseCode$ \u003c 400",
+      "displayName": "Success HTTP"
+    }, {
+      "taskId": "3",
+      "condition": "$responseCode$ \u003e\u003d 400",
+      "displayName": "Failed HTTP"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "While Loop",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -336,
+      "y": 126
+    }
+  }, {
+    "task": "JsonnetMapperTask",
+    "taskId": "2",
+    "parameters": {
+      "template": {
+        "key": "template",
+        "value": {
+          "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n// TEMPLATE OUTPUT\n// Json Object is expected as on output. The key of the object would be the variable whose value needs to be set.\n// Example:\n// {\n//  hello: \"world\"\n// }\n{\n// Add mapping here\n\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Success Task",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -176,
+      "y": 256
+    }
+  }, {
+    "task": "JsonnetMapperTask",
+    "taskId": "3",
+    "parameters": {
+      "template": {
+        "key": "template",
+        "value": {
+          "stringValue": "local f \u003d import \"functions\"; // Import additional functions\n\n// TEMPLATE OUTPUT\n// Json Object is expected as on output. The key of the object would be the variable whose value needs to be set.\n// Example:\n// {\n//  hello: \"world\"\n// }\n{\n// Add mapping here\n\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Failed Task",
+    "externalTaskType": "NORMAL_TASK",
+    "position": {
+      "x": -512,
+      "y": 256
+    }
+  }],
+  "integrationParameters": [{
+    "key": "`Task_1_loopMetadata`",
+    "dataType": "JSON_VALUE",
+    "displayName": "`Task_1_loopMetadata`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "retryCounter",
+    "dataType": "INT_VALUE",
+    "defaultValue": {
+      "intValue": "0"
+    },
+    "displayName": "retryCounter"
+  }, {
+    "key": "responseCode",
+    "dataType": "INT_VALUE",
+    "defaultValue": {
+      "intValue": "999"
+    },
+    "displayName": "responseCode"
+  }]
+}
