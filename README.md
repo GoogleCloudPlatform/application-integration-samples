@@ -64,7 +64,8 @@ failed integration. For more information, see
 | [update-json-array](src/update-json-array) | Sample to create a JSON object |
 | [status-based-retry](src/status-based-retry) | Sample to retry based on rest caller response status |
 | [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
-| [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |                    |
+| [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |
+| [vertex-ai-task](src/vertex-ai-task) | Sample to work with the Vertex AI task |                   |
 
 ## Getting help
 
