@@ -5,7 +5,7 @@ This sample integration contains a flow to be used as a sub-integration for inte
 Each task has a description that explains what the task is used for that you can see in the Integration UI.
 
 ## Prerequisites
-- You must have enabled the [Vertex AI API](https://cloud.google.com/vertex-ai/docs/start/cloud-environment)in your project.
+- You must have enabled the [Vertex AI API](https://cloud.google.com/vertex-ai/docs/start/cloud-environment) in your project.
 - You must have [IAM permissions](https://cloud.google.com/application-integration/docs/predefined-iam-roles-permissions) for creating and deploying Application Integration integrations in your project.
 - You must created a [GCP Service Account](https://cloud.google.com/iam/docs/service-accounts-create) that has [permissions](https://cloud.google.com/vertex-ai/docs/general/access-control) to invoke the Vertex AI API. Create an [Autentication Profile](https://cloud.google.com/application-integration/docs/configure-authentication-profiles#service-account) of type service account with the required permissions. 
 
@@ -31,4 +31,4 @@ This opens the integration in the integration designer.
 6) In the integration designer, click `Upload/download menu` and then select `Upload integration`.
 7) In the file browser dialog, select `vertex-ai-task.json`, and then click Open. A new version of the integration is created using the uploaded file.
 8) Click on the Vertex AI - Predict task in the canvas, and under Authentication (right-hand side pannel), select the previously created Authentication Profile.
-9) In the integration designer, click Test. Add a sample prompt such as "Generate a list of pizzas" for the TextPrompt input variable.
+9) In the Integration designer, click Test. Add a sample prompt such as "Generate a list of pizzas" for the TextPrompt input variable.
