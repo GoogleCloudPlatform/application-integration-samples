@@ -8,7 +8,7 @@ Each task has a description that explains what the task is used for that you can
 
 - You must have enabled the [Vertex AI API](https://cloud.google.com/vertex-ai/docs/start/cloud-environment) in your project.
 - You must have [IAM permissions](https://cloud.google.com/application-integration/docs/predefined-iam-roles-permissions) for creating and deploying Application Integration integrations in your project.
-- You must created a [GCP Service Account](https://cloud.google.com/iam/docs/service-accounts-create) that has [permissions](https://cloud.google.com/vertex-ai/docs/general/access-control) to invoke the Vertex AI API. Create an [Autentication Profile](https://cloud.google.com/application-integration/docs/configure-authentication-profiles#service-account) of type service account with the required permissions. Please attach this Authentication Profile to the Vertex AI task in the Integration designer.
+- You must created a [GCP Service Account](https://cloud.google.com/iam/docs/service-accounts-create) that has [permissions](https://cloud.google.com/vertex-ai/docs/general/access-control) to invoke the Vertex AI API. Create an [Autentication Profile](https://cloud.google.com/application-integration/docs/configure-authentication-profiles#service-account) of type service account with the required permissions. Please attach this Authentication Profile to the Vertex AI task in the Integration designer after the Integration is imported/uploaded.
 
 ## Upload, configure and run the sample integration
 
