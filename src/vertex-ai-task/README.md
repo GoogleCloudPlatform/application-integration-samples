@@ -4,7 +4,9 @@ This sample integration contains a flow to be used as a sub-integration for inte
 
 Each task has a description that explains what the task is used for that you can see in the Integration UI.
 
-This sample uses task "Vertex AI - Predict" which only supports Text Models eg text-bison, text-unicorn. Text models are ideal for tasks that can be completed with one API response, without the need for continuous conversation.
+This sample uses task "Vertex AI - Predict" which only supports Models with Predict method eg text-bison, text-unicorn. e.g. 
+https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text#sample_request
+https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/code-chat#http_request
 
 ## Prerequisites
 
