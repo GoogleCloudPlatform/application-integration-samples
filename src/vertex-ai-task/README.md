@@ -4,6 +4,8 @@ This sample integration contains a flow to be used as a sub-integration for inte
 
 Each task has a description that explains what the task is used for that you can see in the Integration UI.
 
+This sample uses task "Vertex AI - Predict" which only supports Text Models eg text-bison, text-unicorn. Text models are ideal for tasks that can be completed with one API response, without the need for continuous conversation.
+
 ## Prerequisites
 
 - You must have enabled the [Vertex AI API](https://cloud.google.com/vertex-ai/docs/start/cloud-environment) in your project.
