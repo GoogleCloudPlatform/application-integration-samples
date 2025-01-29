@@ -1,0 +1,183 @@
+openapi: 3.0.0
+info:
+  title: User Management API
+  version: v1
+  description: |
+    # User Management API
+
+    This API provides a comprehensive set of tools for managing user information within a business department. With this API, you can:
+
+    * **Retrieve User Details:** Get detailed profiles for individual users, including their personal information, contact details, and location.
+    * **List All Users:** Fetch a paginated list of all users within the department, making it easy to manage large user bases.
+    * **Customize Data Retrieval:** Tailor your data retrieval by using query parameters to bypass caching or apply filters.
+
+    ## Key Features
+
+    * **RESTful Design:** Follows RESTful principles for predictable and easy-to-use resource endpoints.
+    * **JSON Format:** Returns data in JSON format for seamless integration with various applications.
+    * **Pagination:** Supports pagination to efficiently handle large datasets.
+    * **Filtering (Optional):** Allows you to filter user lists based on specific criteria.
+    * **Caching Control:** Provides control over caching mechanisms to balance performance and data freshness.
+
+  termsOfService: https://www.example.com/terms
+  contact:
+    name: API Support Team
+    url: https://www.example.com/support
+    email: support@example.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.htmlexpand_more
+servers:
+  - url: https://integrations.googleapis.com
+    description: Sandbox environment for testing the API.
+tags:
+  - name: Users
+    description: Operations related to managing users.
+paths:
+  /v2/projects/nodal-wall-429016-r5/locations/us-central1/integrations/big-query-integration:execute?triggerId=api_trigger/get-user-inventory:
+    post:
+      tags: 
+        - Users
+      summary: Get a list of all users and their details.
+      description: Returns a paginated list of users with their details.
+      operationId: getUsers
+      responses:
+        '200':
+          description: Successful retrieval of users.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: array
+                    description: An array of user objects.
+                    items:
+                      $ref: '#/components/schemas/User'
+                  total: 
+                    type: integer
+                    description: The total number of users (used for pagination)
+              examples:
+                MultipleUsers:
+                  value:
+                    output:
+                      - id: "572f0024-62ab-4769-915e-4de6b547d754"
+                        firstname: "Hilda"
+                        lastname: "Christiansen"
+                        age: 30
+                        zodiac: "Capricorn"
+                        birthday: "1994-01-10"
+                        phone: "+1-555-555-5555"
+                        email: "hilda.christiansen@example.com"
+                        country: "United States"
+                        city: "New York"
+                        country_code: "US"
+                        state: "NY"
+                      - id: "123e4567-e89b-12d3-a456-426614174000"
+                        firstname: "John"
+                        lastname: "Doe"
+                        age: 25
+                        zodiac: "Gemini"
+                        birthday: "1999-06-05"
+                        phone: "+1-555-123-4567"
+                        email: "john.doe@example.com"
+                        country: "United States"
+                        city: "Los Angeles"
+                        country_code: "US"
+                        state: "CA"
+                    total: 150
+  "/v2/projects/nodal-wall-429016-r5/locations/us-central1/integrations/big-query-integration:execute?triggerId=api_trigger/get-user":
+    post:
+      tags:
+        - Users
+      summary: Get details for a specific user.
+      description: Returns the details of a single user identified by their unique ID.
+      operationId: getUserById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/requestBody'
+      responses:
+        '200':
+          description: Successful retrieval of the user.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output:
+                    type: array
+                    description: An array containing the single user object.
+                    items:
+                      $ref: '#/components/schemas/User'
+              examples:
+                SingleUser:
+                  value:
+                    output:
+                      - id: "572f0024-62ab-4769-915e-4de6b547d754"
+                        firstname: "Hilda"
+                        lastname: "Christiansen"
+                        age: 30
+                        zodiac: "Capricorn"
+                        birthday: "1994-01-10"
+                        phone: "+1-555-555-5555"
+                        email: "hilda.christiansen@example.com"
+                        country: "United States"
+                        city: "New York"
+                        country_code: "US"
+                        state: "NY"
+components:
+  schemas:
+    requestBody:
+      type: object
+      description: Represents the type of integration to trigger.
+      properties:
+        entity_id:
+          type: string
+          format: uuid
+          description: The unique identifier of the user (UUID format).
+    User:
+      type: object
+      description: Represents a user within the business department.
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: The unique identifier of the user (UUID format).
+        firstname:
+          type: string
+          description: The first name of the user.
+        lastname:
+          type: string
+          description: The last name of the user.
+        age:
+          type: integer
+          description: The age of the user.expand_more
+        zodiac:
+          type: string
+          description: The zodiac sign of the user.
+        birthday:
+          type: string
+          format: date
+          description: The birthdate of the user (YYYY-MM-DD).
+        phone:
+          type: string
+          description: The phone number of the user.
+        email:
+          type: string
+          format: email
+          description: The email address of the user.
+        country:
+          type: string
+          description: The country of the user.
+        city:
+          type: string
+          description: The city of the user.
+        country_code:
+          type: string
+          description: The country code of the user.
+        state:
+          type: string
+          description: The state of the user.
+  

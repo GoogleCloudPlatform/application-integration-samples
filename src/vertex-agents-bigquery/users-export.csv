@@ -1,0 +1,501 @@
+id,firstname,lastname,age,zodiac,birthday,phone,email,country,city,country_code,state
+d0a83bad-20c6-488a-8e31-410682320b43,Clarence,Witting,0,Gemini,2023-12-17,(681) 496-1933,Clarence39@hotmail.com,Saint Pierre and Miquelon,Virgilhaven,BQ,South Dakota
+0474602c-b234-4d2c-aea7-f8e528108b0e,Elena,Collier,0,Taurus,2023-12-27,(423) 924-5736,Elena42@gmail.com,United States of America,North Aisha,SR,California
+572f0024-62ab-4769-915e-4de6b547d754,Hilda,Christiansen,0,Scorpio,2023-09-10,(229) 442-2334,Hilda.Christiansen67@gmail.com,North Macedonia,Lake Jamalfort,IT,Colorado
+4bf62c8a-7e0b-499e-8bf4-857dd018a370,Kristie,Ullrich,0,Aquarius,2023-05-14,(287) 017-1227,Kristie74@yahoo.com,Equatorial Guinea,Huelsworth,GY,Vermont
+681d9da4-fed0-4d2f-aa91-10cdcb7dcce8,Gloria,Williamson,0,Capricorn,2023-07-17,(351) 274-8662,Gloria.Williamson@yahoo.com,South Sudan,Bozeman,CY,Missouri
+243292b8-110c-477b-b572-a3fae1d607d4,Mike,Fay,0,Sagittarius,2023-06-01,(806) 272-4921,Mike95@hotmail.com,Guinea,Jadonton,SM,Missouri
+97b01da0-2dba-4922-8769-974c09a31c35,Antonio,Bashirian,0,Sagittarius,2023-09-28,(554) 492-2002,Antonio.Bashirian38@gmail.com,Micronesia,Lake Vallie,SN,Colorado
+e3043259-dc35-4987-ac20-a32ff4f5e07a,Wendy,Howell,1,Leo,2022-10-23,(316) 447-3992,Wendy7@gmail.com,Faroe Islands,Texas City,MK,Iowa
+094be634-14b3-4caa-8b53-036cb0a9b6c5,Darlene,Cassin,1,Aries,2022-09-14,(246) 147-7464,Darlene.Cassin79@hotmail.com,India,Woodland,BG,Arkansas
+28bac730-74ce-4168-a351-2f00d68da648,Jasmine,Gleichner,1,Aries,2023-01-16,(069) 938-0257,Jasmine_Gleichner72@gmail.com,Cyprus,Gerdaberg,SG,Indiana
+372a4135-bdf0-4715-a746-a2fb2bdfb6d5,Mathew,Bahringer,1,Virgo,2022-11-14,(262) 438-1308,Mathew_Bahringer92@hotmail.com,Austria,Virgilbury,TK,Ohio
+14d5251c-46b1-4312-8e1f-a5167dc55a96,Roy,Wiza,1,Cancer,2022-05-21,(276) 159-2523,Roy27@hotmail.com,Republic of Korea,Tempe,MU,Kansas
+ba82eeea-606f-4875-bdcc-08168579a878,Dixie,Wilderman,1,Cancer,2023-01-27,(671) 673-7404,Dixie_Wilderman@hotmail.com,Cayman Islands,East Heather,MM,Oregon
+5f1608df-e541-47d2-b52d-d3c055ece627,Loren,Leannon,1,Pisces,2022-08-04,(134) 077-8322,Loren.Leannon59@gmail.com,Reunion,West Garettcester,GY,Nebraska
+03dce349-cfab-4983-a18a-feb2164c8f12,Kristine,Schiller-Hermiston,1,Taurus,2023-02-12,(361) 754-3967,Kristine_Schiller-Hermiston71@yahoo.com,Ethiopia,North Lavadatown,IQ,Idaho
+ed660354-cabb-4abe-96f3-fd68002c8ef0,Brandi,Bayer,1,Scorpio,2023-03-20,(815) 715-6995,Brandi81@gmail.com,India,Grahamstead,HR,Kansas
+afa4b985-07f2-4de0-8007-4f98e83585f3,Billy,Connelly,1,Scorpio,2023-01-15,(220) 396-9418,Billy_Connelly67@hotmail.com,Lao People's Democratic Republic,Weberstead,TZ,New Jersey
+5ec8dac7-660f-45e0-9ccc-af0017a11ad7,Sonya,Torphy,1,Aquarius,2023-03-07,(240) 345-5697,Sonya75@gmail.com,Chad,Gusikowskicester,CY,Montana
+efa8a4ab-682f-4f45-b406-cb6a4989bd5a,Lynn,Considine,1,Capricorn,2023-01-31,(137) 946-9871,Lynn_Considine33@yahoo.com,Mongolia,Long Beach,MN,Minnesota
+ce681a02-616f-4234-a225-965e69059ec8,Jon,McClure,2,Aries,2021-09-23,(607) 747-4393,Jon.McClure@hotmail.com,Haiti,Hirthefield,MW,Connecticut
+3338688c-5d4f-479e-9a15-003e508a1b68,Bryan,Mayert,2,Aries,2021-11-17,(832) 256-6958,Bryan.Mayert@hotmail.com,Georgia,Novaview,VU,Minnesota
+23c8501e-ded6-4f93-b94c-305d536dbd06,Charlotte,Turner,2,Gemini,2022-04-17,(308) 907-8057,Charlotte7@hotmail.com,Namibia,New York,EC,Oklahoma
+c6405c16-d731-4f3b-892f-aa528b3384ef,Michele,Hayes,2,Pisces,2022-01-18,(608) 939-5471,Michele19@hotmail.com,Falkland Islands (Malvinas),Rossieberg,AW,Kansas
+99cbb3fb-4119-477b-99c3-7cc94d1ffa29,Kirk,Gutmann,2,Pisces,2022-01-27,(154) 887-5174,Kirk_Gutmann88@gmail.com,Bosnia and Herzegovina,Dothan,KR,South Carolina
+915354b1-89c2-40e2-b4b1-1857e21c51ac,Carroll,Borer,2,Pisces,2021-07-17,(044) 156-0645,Carroll10@hotmail.com,Australia,South Danielle,SK,Michigan
+2f7f9f4a-5afa-4a78-abc3-b3d10108eb59,Doris,Jast,2,Taurus,2021-04-29,(749) 341-5928,Doris68@yahoo.com,Central African Republic,New Darrylfurt,ZA,Florida
+82cdeaf4-b83d-4f8b-95f5-a1107963eaec,Juanita,Huels,2,Taurus,2021-11-27,(689) 532-5658,Juanita.Huels67@yahoo.com,Burundi,Fullerton,TL,Vermont
+b6d0cb35-ef54-461d-8c06-6d4ff94ed206,Santiago,Heaney,2,Taurus,2021-11-24,(198) 726-7230,Santiago_Heaney56@gmail.com,United Kingdom,Broderickfield,BF,West Virginia
+31aa2e41-4b87-404a-8548-7e494794c264,Natasha,Schultz,2,Aquarius,2021-09-21,(685) 710-7286,Natasha.Schultz58@gmail.com,Slovenia,Port Karliboro,DE,Idaho
+a7547a89-d2b1-46de-87ab-83d71917f35e,Jeffrey,Grimes,2,Aquarius,2021-08-21,(068) 546-7459,Jeffrey_Grimes@yahoo.com,Pakistan,Paulastead,TF,Iowa
+a059a3e9-925a-4ea8-8374-686efc050a18,Byron,Schuppe-Koch,2,Aquarius,2021-12-27,(347) 302-6370,Byron.Schuppe-Koch@hotmail.com,Equatorial Guinea,North Audreychester,BA,Kentucky
+411539b2-1071-4381-b629-8577cec7caf0,Rochelle,Keebler,2,Capricorn,2022-04-02,(813) 741-2519,Rochelle_Keebler@hotmail.com,Turkey,Homenickberg,CC,Louisiana
+e82c9ee6-bde5-4fcf-9d1a-f0b938ea5087,Paula,Waters,3,Virgo,2020-06-25,(570) 288-6877,Paula.Waters52@gmail.com,United States Minor Outlying Islands,North Drakechester,PR,Wisconsin
+03280088-f1bf-473b-9a1d-a58d95dafe2d,Danny,Fadel,3,Cancer,2021-01-14,(717) 017-8565,Danny_Fadel55@hotmail.com,Zimbabwe,Castro Valley,ZW,New Hampshire
+633ac291-ea50-49d9-b9c8-e0a3db8b8c88,Vincent,Watsica,3,Pisces,2020-08-20,(340) 764-2450,Vincent_Watsica@yahoo.com,Gabon,Juwanside,LU,Utah
+43e31ac3-02c7-4a57-8d2a-d03d60976b35,Marvin,Hand,3,Taurus,2021-04-12,(210) 779-5948,Marvin43@yahoo.com,Ghana,Rogerfort,MT,Illinois
+10f13fb7-a00e-4f19-8449-f3f854d4fac7,Kim,Monahan,3,Scorpio,2020-12-12,(648) 113-6911,Kim.Monahan94@hotmail.com,Timor-Leste,Camarillo,MM,New Hampshire
+4f25e31d-c06f-4693-be80-3f21c7491b59,Kellie,Hoppe,3,Scorpio,2021-03-19,(592) 422-6862,Kellie45@hotmail.com,Georgia,Micheleberg,AR,Ohio
+964f5514-f123-4d0b-bc20-87f7e18595d3,Carrie,Murray,3,Sagittarius,2020-11-19,(198) 127-9365,Carrie.Murray35@gmail.com,Timor-Leste,South Blaketon,RW,Montana
+30c3239b-387a-4e89-8ccd-aabbbb255833,Darrell,Zboncak,4,Leo,2020-02-09,(067) 884-0975,Darrell72@hotmail.com,Saint Martin,Fort Shawn,ER,North Carolina
+1cfd95bb-2b6d-40ab-85b1-cf22b3ba7950,Sandra,Schimmel,4,Aries,2019-05-16,(352) 554-4339,Sandra69@gmail.com,Thailand,Bartellshire,NI,Oregon
+b4ce11fd-a9a0-4634-b1ff-64f84654ed26,Cameron,Littel,4,Cancer,2019-07-01,(649) 190-9502,Cameron_Littel81@yahoo.com,Marshall Islands,New Rochelle,KW,Missouri
+4c0b619d-7ec1-4b14-8cf7-478c70066fdd,Amber,Zemlak,4,Cancer,2019-06-23,(272) 919-8312,Amber.Zemlak55@yahoo.com,Central African Republic,Fort Pattie,SH,Minnesota
+fb7e4d18-5fee-4867-b16d-ce68d141eeda,Vincent,Wuckert,4,Cancer,2019-06-20,(407) 871-7348,Vincent_Wuckert@hotmail.com,Cote d'Ivoire,West Abigale,KW,Utah
+7ddcb75e-b95d-42cd-92e5-7511503fcf92,Mable,Nader,4,Gemini,2019-10-08,(577) 886-0043,Mable_Nader73@yahoo.com,Saint Barthelemy,Hattiesburg,TT,Florida
+409b082b-b364-4661-84ca-bfe270052a82,Guillermo,Grant,4,Gemini,2019-06-15,(090) 179-3616,Guillermo_Grant@yahoo.com,Wallis and Futuna,South Jessieport,MU,Virginia
+7cf8dfeb-6372-48ba-8479-f6ef02bfa70f,Wilbert,Mitchell,4,Gemini,2019-05-09,(024) 288-6948,Wilbert.Mitchell@yahoo.com,Saint Lucia,Toms River,GT,Maine
+819e5835-5fec-444f-b0a4-ea1dd6ee0b1b,Dale,Schroeder,4,Gemini,2020-02-19,(606) 064-7055,Dale72@yahoo.com,Tuvalu,Port Vickybury,PM,North Carolina
+720f821e-bd80-4270-b774-5014a76037a8,Susan,Jones,4,Pisces,2019-11-02,(646) 521-2315,Susan_Jones76@yahoo.com,Antarctica,Lambertbury,US,Nebraska
+eba47b0c-5944-481b-a896-65dd83605752,Isabel,Moore,4,Taurus,2019-05-27,(733) 841-6454,Isabel14@yahoo.com,Montserrat,Roycester,HU,Massachusetts
+f1d223f6-d226-4a7a-8fa3-583be03eae25,Susan,Kulas,4,Aquarius,2020-04-11,(411) 916-5347,Susan_Kulas46@yahoo.com,Cameroon,Frederickborough,BW,New Jersey
+50c5b5c5-a3e1-4f97-a540-ff073d1967ca,Julian,Kuphal,4,Aquarius,2020-03-05,(782) 673-6619,Julian_Kuphal81@hotmail.com,France,Millcreek,AU,Arizona
+03d7d6ef-454a-475e-8d2e-f97b5c14de94,Maryann,McDermott,4,Capricorn,2019-09-12,(217) 268-5854,Maryann_McDermott96@hotmail.com,Slovenia,Judahstad,BE,Iowa
+077ead64-4147-4eb6-a942-ef4f8064068b,Charlene,Schroeder,4,Sagittarius,2019-05-21,(460) 030-8400,Charlene.Schroeder39@gmail.com,France,North Lenoraport,TF,New York
+a1cabf79-75e1-4a1a-974c-5abd9262ce3b,Doyle,Fisher,5,Leo,2018-05-24,(186) 904-6187,Doyle81@yahoo.com,Botswana,New Reed,JE,Illinois
+f076522a-5ab7-4db2-8ec3-6b3f2e9f7704,Anne,Swaniawski,5,Aries,2018-05-03,(490) 518-2719,Anne_Swaniawski98@hotmail.com,Czechia,Elinoreburgh,AD,Arizona
+5778c64a-e36d-4bb5-9449-42ebdfb40eae,Carmen,Rolfson,5,Libra,2018-12-17,(618) 614-5204,Carmen95@yahoo.com,North Macedonia,Norman,IS,Idaho
+81be5ce2-656f-46ae-84ae-94ca0ae0152f,Marie,Legros,5,Libra,2019-04-18,(673) 892-5150,Marie_Legros@hotmail.com,New Caledonia,West Rachael,DK,Tennessee
+d1379933-9604-4158-bd1b-a7189fcac18a,Salvatore,Jenkins,5,Libra,2019-01-22,(392) 734-6362,Salvatore_Jenkins@hotmail.com,Barbados,Skokie,LC,Wyoming
+5693b3f9-81f7-4ca7-ae67-509ad8b82a57,Nelson,Mertz,5,Libra,2018-05-15,(796) 616-9837,Nelson9@gmail.com,Uganda,Volkmanton,NU,Wisconsin
+3840cd64-459e-4599-a535-6ea06b37d7ef,Jeanette,Jenkins,5,Cancer,2019-03-16,(140) 261-3420,Jeanette91@hotmail.com,Tanzania,Port Cobystad,CL,Virginia
+27df9a16-2fb6-498d-9518-1f4049bf4123,Lindsey,Kihn,5,Cancer,2018-09-26,(879) 840-8542,Lindsey92@yahoo.com,Faroe Islands,Manntown,BV,Montana
+6ed5c052-a3fc-43fe-8387-d13cc31fe669,Sheri,Stokes,5,Gemini,2018-05-12,(009) 007-9839,Sheri1@gmail.com,Haiti,New Ericashire,GE,New Hampshire
+3fb77747-97a8-4d5d-a713-e8143459dc66,Sonya,Kohler,5,Scorpio,2019-01-18,(308) 115-4249,Sonya_Kohler@yahoo.com,Czechia,East Ashtonworth,PF,Texas
+b7f5f7bf-4187-4049-bfa1-e076b50ce930,Craig,Brakus,5,Scorpio,2018-12-28,(180) 496-7878,Craig47@gmail.com,Democratic People's Republic of Korea,Marvinborough,SC,Ohio
+45e72e83-e24e-4fde-9a5f-d7728cecfd18,Felipe,Kessler,5,Scorpio,2019-01-01,(010) 433-6818,Felipe_Kessler@gmail.com,Bermuda,Kalebview,CL,Washington
+37673ad9-cdde-4d62-98af-12149c8614f4,Annie,Sawayn,6,Libra,2017-10-05,(399) 936-3200,Annie_Sawayn59@gmail.com,Democratic Republic of the Congo,Youngstown,VG,New Hampshire
+72d9b5e8-3ffb-4b9c-b4a7-059a085521ef,Kate,Klein,6,Virgo,2017-11-01,(658) 209-1030,Kate.Klein@hotmail.com,Mongolia,West Keelyberg,IT,South Dakota
+377d4564-03e5-43ac-afc4-6a0f5973d1f1,Alexander,Deckow,6,Gemini,2018-03-04,(279) 429-2202,Alexander.Deckow81@yahoo.com,Mauritius,Uptonborough,NG,Idaho
+80e461bf-6afe-4699-b037-8a76cdecf436,Matthew,Bauch,6,Pisces,2017-06-12,(801) 884-2684,Matthew.Bauch@gmail.com,Australia,Aldaview,SH,Kentucky
+da2d672e-27fd-4f18-b8f8-2a901a198eb3,Terry,Schumm,6,Aquarius,2017-05-17,(073) 280-1264,Terry.Schumm@hotmail.com,Estonia,West Hollisland,NZ,West Virginia
+ea85f7ef-13bd-4032-8987-1d93b7de9e49,Ebony,Cartwright,6,Capricorn,2017-06-05,(843) 305-4880,Ebony37@gmail.com,Lithuania,Lake Maxwellfurt,SJ,Wisconsin
+ba667e24-8ef3-49b7-adc1-f33ed27a395e,Rochelle,Erdman,6,Sagittarius,2018-03-24,(158) 674-3608,Rochelle_Erdman65@hotmail.com,Guernsey,West Herbertburgh,GP,Maryland
+ac492314-31c8-4c34-8a72-ac62cfb3cace,Kari,Krajcik,7,Leo,2016-07-25,(293) 141-6247,Kari_Krajcik@gmail.com,Barbados,South Jaylonstad,NU,Kentucky
+b6129785-a39b-477d-b308-0b8a32434270,Rene,Satterfield,7,Leo,2016-12-17,(048) 580-8781,Rene.Satterfield@yahoo.com,France,Lake Horacioshire,CY,Michigan
+36a8025d-1d70-4863-b8e4-2895c8e6ce80,Toni,Collier,7,Aries,2016-10-09,(112) 017-6633,Toni19@yahoo.com,Ukraine,Carterton,MV,Washington
+fc9d9d60-035f-4882-b12f-d6078461b033,Gina,Goyette,7,Aries,2016-09-19,(416) 157-3062,Gina58@gmail.com,El Salvador,Armanitown,SA,Arizona
+08dfae52-f4b3-4c89-aa4d-eece2b773bc0,Robin,Cormier,7,Libra,2017-03-05,(341) 485-0004,Robin.Cormier29@yahoo.com,Brazil,Cristianport,BR,Utah
+7d25b60d-3670-4162-90a7-14f9dde05e66,Freddie,Pagac,7,Cancer,2017-01-21,(428) 117-0989,Freddie_Pagac@gmail.com,Croatia,Jakobburgh,DE,Delaware
+0a257607-e2f7-48d8-8fba-2a7c7dbced07,Jeannie,Sporer,7,Gemini,2016-11-29,(378) 538-6452,Jeannie.Sporer55@yahoo.com,Cameroon,Port Stacyville,LK,Vermont
+ae3ad86a-b2ab-4c46-90bd-119af1642fd5,Ruth,Erdman,7,Taurus,2017-01-21,(257) 615-0727,Ruth_Erdman52@yahoo.com,Cyprus,Lake Dinofurt,VE,Alaska
+fd5af98f-3a7b-4810-bc8e-bea62472e8d8,Kari,Marvin,7,Taurus,2017-04-08,(277) 057-1185,Kari42@hotmail.com,Denmark,Irondequoit,VA,Delaware
+b1c47e93-7ab5-43a5-9147-374ee4d92a46,Vernon,Wiegand,7,Capricorn,2016-11-08,(316) 349-3523,Vernon_Wiegand@gmail.com,Ukraine,Lake Kaitlin,FI,Michigan
+01002d73-ca94-4962-8e6f-06882a67d442,Jimmie,Parisian,7,Capricorn,2016-07-02,(034) 990-4409,Jimmie.Parisian78@gmail.com,Republic of Korea,South Remington,BG,North Dakota
+dc2d4c57-7adb-42d8-b2cb-fc70ecc63757,Johnnie,Reynolds,7,Sagittarius,2016-09-07,(310) 032-3519,Johnnie.Reynolds23@gmail.com,Japan,Deckowland,MH,Mississippi
+454a3a4e-63f1-4a8a-93c6-43cd6cfb2c65,Alonzo,Klocko,7,Sagittarius,2016-11-20,(180) 278-9479,Alonzo_Klocko70@gmail.com,Libyan Arab Jamahiriya,Maystead,BY,Texas
+788ab0d5-0d2e-4f2b-b60f-1d674f522845,Stacy,Stark,8,Aries,2015-12-17,(084) 300-1126,Stacy.Stark11@hotmail.com,Cyprus,New Antwon,VE,South Carolina
+90950d0e-9492-41cc-88c0-9f0d5c94e369,Viola,Jerde,8,Aries,2016-02-06,(535) 032-2403,Viola32@gmail.com,Burkina Faso,East Sydneyhaven,JM,Iowa
+1f94d20c-6347-4c7c-a2ae-87e524c42589,April,Wyman,8,Virgo,2016-03-15,(193) 639-5553,April.Wyman@hotmail.com,Falkland Islands (Malvinas),Finnfort,KY,Alaska
+530f3b51-6081-4a08-b0ee-16b972255e0d,Ramona,Cassin,8,Virgo,2015-07-19,(868) 260-7106,Ramona31@gmail.com,Nicaragua,Dooleyburgh,TM,Pennsylvania
+052944bc-9aa4-4d46-ab2e-66e778590aec,Iris,Monahan,8,Scorpio,2016-01-17,(740) 967-4806,Iris.Monahan@gmail.com,Somalia,Rubyefort,MZ,South Carolina
+14964f6b-f043-4558-89e9-517ae0bd4b46,Georgia,Hills-Schuppe,8,Scorpio,2016-01-22,(103) 865-9212,Georgia_Hills-Schuppe21@gmail.com,Marshall Islands,Fort Nichole,SO,Arkansas
+a7c54e82-2e44-445f-ae12-aa426399d050,Lorena,Shields,8,Capricorn,2016-03-02,(635) 222-0292,Lorena92@gmail.com,Belarus,Spinkaberg,NZ,California
+28910e52-8b8a-4307-9bb5-f49c70c3e90c,Deanna,Medhurst,8,Sagittarius,2015-06-28,(346) 942-2006,Deanna.Medhurst@gmail.com,Jersey,Lake Brandyn,PR,Mississippi
+76d1fc08-5f28-45f3-92b2-664eb2810fcf,Georgia,Batz,9,Leo,2014-09-20,(094) 200-2664,Georgia.Batz@yahoo.com,Jamaica,Lake Libbie,BR,Arizona
+551d3599-1b48-404b-b1ea-a022265ee524,Gail,Parisian,9,Leo,2014-07-04,(395) 089-0486,Gail_Parisian@gmail.com,Libyan Arab Jamahiriya,Fort Declan,LK,New Jersey
+26699960-4c4d-4102-aee8-790c9ef92b72,Rolando,Dooley,9,Leo,2014-10-31,(124) 443-8049,Rolando.Dooley88@yahoo.com,Democratic People's Republic of Korea,Rutherfordside,VC,Nebraska
+d03f7d0f-18e5-4e43-a670-df415bb0fc9b,Israel,Cummerata,9,Libra,2014-06-07,(745) 262-1386,Israel.Cummerata29@hotmail.com,Philippines,New Jeramy,KE,Montana
+c0b38b8e-95df-40f4-a8e9-48f8b07d35ba,Tracy,Lind,9,Virgo,2014-07-30,(081) 784-3715,Tracy_Lind@hotmail.com,Saint Barthelemy,Barnstable Town,EC,Idaho
+1cb5055a-aabf-4775-9f4b-5f544e369929,Florence,Crist-Rodriguez,9,Virgo,2014-06-18,(888) 802-7197,Florence.Crist-Rodriguez@gmail.com,Paraguay,Hassiefurt,SO,Alabama
+261aa067-879a-405a-a283-6673f45d80aa,Katie,Terry,9,Cancer,2014-05-10,(795) 244-8383,Katie_Terry@yahoo.com,South Georgia and the South Sandwich Islands,Greenwood,HM,Iowa
+88580361-ddec-47d0-8265-55dc44d28240,Kayla,Shields,9,Cancer,2014-12-12,(564) 127-5739,Kayla59@hotmail.com,Sri Lanka,Port Nettiehaven,ST,North Carolina
+8d7026df-0665-4b73-9a26-371071ffc758,Dolores,Ritchie,9,Pisces,2014-08-17,(506) 030-2441,Dolores_Ritchie@yahoo.com,Lebanon,Karsonview,TJ,Florida
+90a9a67e-03f1-457c-b6fb-45252599f891,Corey,Zulauf,9,Taurus,2014-05-07,(272) 483-6240,Corey_Zulauf@gmail.com,Indonesia,Gusikowskifurt,US,Ohio
+68ce735b-a1e3-4aa5-bd6d-4354f1f721ec,Timothy,Beatty,9,Taurus,2014-05-20,(293) 277-7923,Timothy28@gmail.com,Venezuela,Camilastead,MH,Minnesota
+902abb5f-faf8-402e-b672-d3a315958fee,Priscilla,Zemlak,9,Taurus,2015-01-11,(169) 273-0306,Priscilla91@yahoo.com,Hungary,New Mariettaworth,GA,Louisiana
+431e392b-2c7c-4d18-a695-c4a33b9af74b,Harold,Wintheiser,9,Capricorn,2014-11-23,(821) 762-4464,Harold_Wintheiser44@yahoo.com,Honduras,North Cora,MF,Texas
+9fce1414-e443-4680-b7b8-4f050bed2067,Carroll,Leannon-Kozey,9,Capricorn,2015-01-17,(361) 007-1954,Carroll_Leannon-Kozey48@yahoo.com,Norway,East Aubree,BB,Alabama
+5fac1a92-79f9-444f-a8d2-841ea671d7f8,Lonnie,O'Hara,9,Capricorn,2014-06-15,(742) 782-1359,Lonnie.OHara48@yahoo.com,Burkina Faso,Krischester,PF,New Hampshire
+00288584-7480-4954-9a6b-65e091265e07,Karla,Collier,9,Sagittarius,2014-12-19,(066) 963-7429,Karla_Collier71@hotmail.com,United Arab Emirates,Russelton,TZ,Vermont
+c72e0799-32ac-4f5d-b68e-f654fc5fbfff,Lyle,Kemmer,9,Sagittarius,2014-06-07,(813) 095-7702,Lyle_Kemmer8@gmail.com,South Africa,Harveyhaven,PL,Montana
+87c70b97-e6a8-4838-bf5a-28c29a7a3b26,Noah,Murazik,10,Leo,2013-07-15,(433) 013-8198,Noah72@hotmail.com,Myanmar,Stammview,LR,Minnesota
+7f74f91d-81d1-42e7-a1ae-4a08129890ec,Violet,Abshire,10,Libra,2013-05-01,(411) 030-1175,Violet8@yahoo.com,French Polynesia,Lake Trentonfurt,YT,Alabama
+cfeb227a-0c36-41f3-b881-c5002e9fdfe0,Amanda,Little,10,Virgo,2013-07-04,(689) 556-6992,Amanda74@gmail.com,Guinea-Bissau,Klockochester,IQ,Hawaii
+d3a3adc6-a5f0-4626-b466-fb293ff215a7,Richard,Nitzsche,10,Pisces,2014-04-18,(502) 468-7306,Richard.Nitzsche76@gmail.com,Somalia,New Mateoberg,AU,Louisiana
+cda5261f-857b-44f8-bc28-cd360c9b9b44,Rosie,Barton,10,Taurus,2013-05-18,(756) 141-9529,Rosie.Barton@hotmail.com,Honduras,Stefanstad,AR,Washington
+ca0ea1d4-731a-4fe2-b97a-109239cd458e,Elisa,Gulgowski,10,Scorpio,2014-04-02,(547) 105-6952,Elisa22@yahoo.com,Eritrea,North Myrtie,VC,Washington
+11fa29ef-e6ef-4eb1-8f28-5ba2562a119d,Rebecca,Nolan,10,Aquarius,2013-09-14,(762) 940-5366,Rebecca.Nolan69@yahoo.com,United Kingdom,Bodefort,KM,New Hampshire
+346a3267-6c2d-4787-9032-7924238fb725,Lillie,Mayer,10,Aquarius,2013-11-17,(545) 589-2255,Lillie52@hotmail.com,Pitcairn Islands,Marysville,ET,Maine
+90fce577-0d5e-4775-a939-4acf6cfd4531,Douglas,Corwin,10,Capricorn,2013-11-29,(646) 579-5763,Douglas.Corwin@gmail.com,Eswatini,West Enaview,SC,Ohio
+662e07e2-f6ec-4ad8-940d-48d9df410c5c,Diana,Gleason,10,Sagittarius,2013-10-25,(597) 373-7953,Diana_Gleason@hotmail.com,Djibouti,Gilbertfort,SN,Montana
+8733a372-dd8e-4a4f-982b-df5057c2ed42,Judith,Douglas,11,Leo,2012-10-04,(529) 119-2570,Judith65@yahoo.com,Saint Martin,Austin,AS,Indiana
+c5b174bc-f8f0-4eef-8eb6-e888166cdddc,Kenny,Howe,11,Leo,2012-05-06,(535) 328-1707,Kenny.Howe@yahoo.com,Tunisia,East Jason,LY,Colorado
+20510750-3070-477b-bc8e-29952c7b80b3,Eleanor,Hoppe,11,Aries,2012-08-23,(247) 437-5101,Eleanor_Hoppe24@yahoo.com,Wallis and Futuna,New Elbert,BR,Nevada
+e8219f6a-96f3-4ac3-b5e1-e8a5cad34aea,Jim,Doyle,11,Libra,2012-12-16,(723) 406-0231,Jim_Doyle@hotmail.com,French Guiana,South Kariane,VE,Indiana
+38aaa5e5-8123-4fcd-a70b-f857bb4d5be1,Stacy,Larson,11,Scorpio,2012-06-21,(039) 717-5726,Stacy24@hotmail.com,Tanzania,Orange,CA,New York
+e1c9c793-d584-4d5b-ae1c-df190f231628,Gregory,Murphy,11,Scorpio,2012-09-08,(185) 157-3842,Gregory64@gmail.com,Niger,North Camren,LT,Montana
+f2757767-4142-4e04-a457-d4a6b146b46a,Clyde,Jacobi,11,Scorpio,2013-04-03,(096) 453-1160,Clyde_Jacobi58@yahoo.com,Djibouti,Livonia,TZ,Mississippi
+5d8a3feb-bf99-43e5-b9c8-1d47d191188b,Vicky,Zemlak,11,Aquarius,2013-03-23,(161) 735-1559,Vicky_Zemlak@yahoo.com,Gibraltar,Kasandramouth,AF,New Jersey
+2d942ea8-7465-4175-8451-2c89e17f3eb1,Kim,Klocko,11,Sagittarius,2012-10-11,(452) 129-9731,Kim39@gmail.com,Tunisia,Owensboro,DJ,Wisconsin
+83a6232e-0dc0-4f28-a595-897e61a43ca8,Damon,Anderson,12,Leo,2011-09-13,(323) 065-8174,Damon.Anderson@gmail.com,Bulgaria,South Estevanville,AO,Oregon
+a53918f0-3eab-4c00-96be-bc1389ce9948,Carroll,Herzog,12,Libra,2011-08-06,(829) 927-9030,Carroll_Herzog@gmail.com,Sweden,South Marshall,SS,Massachusetts
+927042d0-b45d-4350-962e-50693794ad03,Dixie,Fahey,12,Virgo,2012-01-21,(759) 464-0897,Dixie92@hotmail.com,United Arab Emirates,Coryport,BH,Maine
+289afb58-dd01-48de-8c01-d64e41df472e,Ernestine,Spencer,12,Gemini,2011-08-29,(222) 806-3393,Ernestine_Spencer95@gmail.com,North Macedonia,Hoffman Estates,VU,Montana
+c77b69f5-7db4-4981-b487-5cf6cc6b7dc1,Brittany,Deckow,12,Pisces,2011-12-20,(403) 062-8572,Brittany.Deckow@hotmail.com,Israel,Eribertobury,EG,Indiana
+ab07824c-40a4-473b-ac92-1e469cb6cded,Linda,Wintheiser,12,Pisces,2011-05-01,(566) 592-1733,Linda19@hotmail.com,Pitcairn Islands,North Robertshire,ZM,Massachusetts
+51006eed-eca6-4f14-bde4-dfc7384b86b2,Lionel,Walsh,12,Aquarius,2011-10-20,(610) 584-0293,Lionel_Walsh@hotmail.com,Mauritania,Schusterton,TK,Michigan
+590ea263-0e13-49c8-8137-eafa5fd9b8ff,Ervin,D'Amore,12,Aquarius,2011-10-05,(066) 867-0640,Ervin54@hotmail.com,Bahrain,South Keenan,ST,Florida
+24538087-be6b-4e64-a68d-041d29715910,Cynthia,Borer,13,Libra,2010-08-01,(370) 264-6226,Cynthia.Borer@yahoo.com,Martinique,North Zackarystad,IM,Wisconsin
+6e21b690-27e5-4811-b937-4845ba8d7485,Henrietta,Graham,13,Virgo,2010-09-11,(618) 275-3449,Henrietta.Graham67@hotmail.com,Singapore,Kyleport,JO,Oregon
+9a1e17d1-f0f6-4937-978a-207baa0d8fdf,Lindsey,Wolff,13,Virgo,2011-01-26,(261) 729-6366,Lindsey.Wolff@hotmail.com,Sweden,Watsicaborough,DJ,Maryland
+b69da6e9-5b1d-44f8-9995-0e93341a3447,Edith,Gleichner,13,Taurus,2010-05-26,(505) 080-7498,Edith.Gleichner@yahoo.com,El Salvador,Handmouth,CL,Georgia
+e8a4ddd8-834a-4af8-9c19-a612f4cde967,Annie,Conroy,13,Aquarius,2010-12-14,(797) 861-8701,Annie43@hotmail.com,Guam,Rialto,MV,Alaska
+0c6f7b19-2d3f-4612-8193-ee63ccd515e0,Timmy,Fritsch-Legros,14,Leo,2009-05-20,(617) 244-4821,Timmy99@hotmail.com,Malta,New Simeonfield,TL,Indiana
+d32aa65e-fb86-4ba5-9711-55f9ba07a5c1,Kim,Graham,14,Leo,2010-03-27,(111) 054-9734,Kim.Graham@gmail.com,Fiji,Jerroldshire,TH,Massachusetts
+a4b34fa0-6504-421d-a994-67bcab16eb31,Rose,Veum,14,Aries,2009-10-20,(229) 548-1107,Rose.Veum@hotmail.com,Sri Lanka,Lake Kenfield,VE,California
+74cd1283-3fe5-44b8-9ccf-685aa34eb9df,Arturo,Herman,14,Virgo,2009-08-15,(457) 396-6533,Arturo_Herman56@hotmail.com,Argentina,Parkerfurt,TG,Utah
+81b615e6-18d3-4e82-9881-cdc15378b4ca,Jonathan,Moore,14,Cancer,2009-07-08,(844) 030-3100,Jonathan_Moore90@yahoo.com,Burundi,New Perry,DK,Montana
+2af2ec04-0af4-4ed5-b282-7390a3db5e7b,Rita,Davis,14,Cancer,2009-05-26,(225) 084-2128,Rita30@yahoo.com,Anguilla,Sunrise Manor,RW,Virginia
+ccd094fc-f311-4297-8945-7cb4e1262e1e,Samuel,Kris,14,Cancer,2010-03-03,(877) 859-7112,Samuel.Kris@hotmail.com,Guyana,New Mabelleland,NI,Colorado
+2f30ee69-2bfc-4115-a855-4fb59649250a,Juana,Wintheiser,14,Scorpio,2009-05-31,(461) 111-0257,Juana39@yahoo.com,Mauritania,Fort Shermanhaven,SV,Alabama
+aefe87db-883b-42c8-a301-7fa5f89a4dc3,Marian,Kreiger,14,Aquarius,2009-11-20,(655) 198-3272,Marian_Kreiger@hotmail.com,Zambia,Danielfurt,CY,Minnesota
+b48b6fee-df7f-4013-8bd4-2b10e2c77b45,Gerardo,Simonis,14,Aquarius,2010-03-17,(739) 016-2610,Gerardo.Simonis13@yahoo.com,Saint Kitts and Nevis,East Dayana,MA,New Jersey
+78ad17ed-a10c-4fd3-9bdc-84e33f06e5a7,Ebony,Crist,14,Sagittarius,2010-01-11,(850) 752-3694,Ebony75@yahoo.com,Saudi Arabia,Ashleeview,ID,Florida
+210f7995-ff82-4bc8-a0c8-8d88690cfd51,Gerardo,Will,14,Sagittarius,2009-10-13,(599) 122-4288,Gerardo82@yahoo.com,Falkland Islands (Malvinas),West Des Moines,TZ,Montana
+18d9dd09-8b99-4ea7-8a0f-aa30f210a21e,Charles,McClure,15,Aries,2009-02-20,(649) 886-1918,Charles53@gmail.com,India,Pfannerstillstead,FJ,Michigan
+3c863bb3-6f62-40ec-ac36-996dd34a7d71,Karla,Hand,15,Aries,2008-07-12,(045) 603-1796,Karla.Hand53@hotmail.com,Honduras,Cristianboro,UM,Virginia
+2048f103-97f9-4fc3-b810-6a1eaf59ad34,Derek,Miller,15,Aries,2008-07-24,(860) 947-5443,Derek61@hotmail.com,Mali,Schulistbury,SN,New Jersey
+6120b83b-361a-4ac4-a755-407a47f40a8f,Denise,Stark,15,Aries,2009-04-10,(514) 820-0572,Denise.Stark@gmail.com,Croatia,Ofeliatown,AO,Colorado
+73f41f1c-e817-4895-9a86-262e0377f0fd,Rhonda,Towne,15,Libra,2008-05-23,(518) 049-7489,Rhonda_Towne@hotmail.com,Haiti,South Tierrachester,UZ,South Carolina
+1e62dc57-e763-46fc-9815-cbb153f10ec2,Anita,Emard,15,Libra,2008-05-27,(162) 108-0464,Anita.Emard95@gmail.com,Malaysia,Boscocester,KR,North Carolina
+fa8eb117-d7be-4800-ab51-b87f5dae5759,Reginald,Wilderman,15,Gemini,2009-04-03,(695) 649-6679,Reginald_Wilderman46@yahoo.com,Vietnam,East Stantonside,MM,Iowa
+158ce907-b2c7-49c0-91f2-dc9624a52760,Gail,Deckow,15,Pisces,2008-06-28,(319) 184-4785,Gail_Deckow@yahoo.com,Djibouti,Kohlerboro,LK,Indiana
+61964dc8-a6c9-4a3f-9047-bea4eb2f1fa3,Dwight,Renner,15,Pisces,2008-10-01,(152) 053-7041,Dwight_Renner@gmail.com,Cyprus,Adamsworth,DK,Utah
+81d4d19b-5d65-4c75-9150-2bec7ffd0aac,Phillip,Lockman,15,Taurus,2008-08-23,(831) 502-4610,Phillip82@hotmail.com,Papua New Guinea,North Eula,LR,Tennessee
+ef54d24f-707e-4124-80f3-9686e7bf712a,Nicolas,Weber,15,Taurus,2008-05-05,(313) 388-7333,Nicolas_Weber@hotmail.com,Sierra Leone,Yuma,MR,Virginia
+69778b22-0aaa-4ac7-ae20-b12c9831ed22,Ginger,Schneider,15,Scorpio,2008-10-26,(120) 772-0358,Ginger.Schneider84@yahoo.com,"Bonaire, Sint Eustatius and Saba",Fort Collins,VE,Iowa
+d74b6fef-6e2b-4ad7-98de-fdd10e085f4a,Spencer,Jaskolski,15,Capricorn,2009-03-01,(163) 966-8006,Spencer.Jaskolski@yahoo.com,Madagascar,Pearland,KM,Iowa
+b1fe352c-447b-457e-9971-a01a028741cc,Verna,Klocko,15,Sagittarius,2009-03-09,(693) 993-9163,Verna_Klocko61@hotmail.com,Netherlands,Riverside,KR,South Carolina
+556182be-c196-4eda-8c6e-808b134204cc,Dan,Reynolds,16,Leo,2007-05-24,(583) 890-0444,Dan_Reynolds95@hotmail.com,Western Sahara,Lake Vadaburgh,HK,Pennsylvania
+746450ab-db3b-4825-bd6e-1ceb208da3f4,Sheila,Cartwright,16,Leo,2008-01-26,(641) 845-8478,Sheila_Cartwright87@hotmail.com,Uruguay,Calebport,PE,Kentucky
+2457c774-cb00-4d42-bb31-1ba5b680f173,Ramiro,Lueilwitz,16,Libra,2007-11-12,(327) 896-9128,Ramiro21@hotmail.com,Romania,Oak Park,EC,Alabama
+6d7d8075-4802-48b7-b2e8-90c1bf4cdbed,Santiago,Jerde,16,Libra,2007-10-05,(549) 677-7178,Santiago_Jerde0@hotmail.com,Bangladesh,Pittsburg,SM,New Jersey
+b6828f8f-64e9-4fbb-b080-80324ac52dd9,Gene,Mante,16,Libra,2007-08-13,(047) 758-0845,Gene_Mante@gmail.com,Cape Verde,Theachester,GS,Mississippi
+594786a8-7124-4de9-9675-f5da87e2de3a,Kay,Fadel,16,Virgo,2007-09-11,(797) 805-5190,Kay.Fadel6@yahoo.com,Iraq,Fort Alexandre,KM,Kansas
+53cfc5db-2480-489d-828a-edf6a8957d00,Abel,Johnson,16,Cancer,2008-02-29,(042) 841-5800,Abel.Johnson76@gmail.com,Tajikistan,Leuschkechester,AF,Missouri
+3acdd268-51bf-4886-88c4-789b139ef945,Sharon,Price,16,Cancer,2008-02-01,(644) 064-1000,Sharon.Price9@gmail.com,Belarus,Myrlborough,TM,Oregon
+519affd0-f20d-491e-a233-dd3ab5d0521b,Virgil,Green,16,Gemini,2008-04-15,(319) 362-7352,Virgil.Green92@gmail.com,Monaco,Gregoryburgh,TD,Connecticut
+0bcae56c-c08f-44d5-8669-7310042110f5,Caroline,Wiegand,16,Gemini,2007-05-23,(492) 994-0118,Caroline.Wiegand@hotmail.com,Guyana,East Jeanie,TJ,Nevada
+024f4d70-f43b-44b2-9b0c-b110690dc904,Vanessa,Leuschke,16,Pisces,2008-03-24,(322) 503-5506,Vanessa.Leuschke92@yahoo.com,Sao Tome and Principe,Fort Forrestcester,GR,Oklahoma
+e99ba2fb-91da-4b72-a954-95577f7e03ca,Jean,Hauck,16,Scorpio,2008-03-19,(141) 982-4602,Jean.Hauck53@gmail.com,Niue,Aurora,ZM,Mississippi
+bdc0a4fe-78a7-4080-92e8-a1e98715883d,Wesley,Rempel,16,Scorpio,2007-11-19,(232) 032-1521,Wesley.Rempel30@yahoo.com,Bulgaria,Lake Velva,GE,Virginia
+f792b1d0-2f52-4749-ae2c-d3aa95c2b0b2,Ed,Gerhold,16,Scorpio,2007-10-09,(671) 988-8864,Ed95@gmail.com,Romania,Orland Park,MG,Georgia
+9ab3575b-faf5-46a5-8b50-7cfbb560e864,Rhonda,Murazik,16,Aquarius,2007-10-22,(492) 585-1964,Rhonda_Murazik91@gmail.com,Mayotte,Port Hilbert,GU,Iowa
+58dd7e8a-b21c-4e67-b613-2d3eb213eae0,Joshua,MacGyver,16,Aquarius,2007-07-02,(590) 805-9569,Joshua.MacGyver@gmail.com,Congo,Kubcester,DO,Illinois
+926dce07-ae8c-4521-bf68-d39cee8a33e1,Elijah,Hoeger,16,Capricorn,2007-12-27,(622) 456-4556,Elijah_Hoeger@gmail.com,Bangladesh,Dale City,GI,Tennessee
+ace227f6-975b-4b26-958f-8f7e87fd1bc5,Omar,Gibson,16,Capricorn,2008-01-26,(354) 232-3581,Omar.Gibson12@gmail.com,Japan,Lake Glendaberg,AD,New Hampshire
+1bf54386-219c-4ddb-9f37-159af3785d21,Edmund,Kunde,17,Leo,2006-07-14,(664) 524-0105,Edmund_Kunde@gmail.com,San Marino,Noeliaberg,CG,Rhode Island
+7d3234fa-1ed6-46bd-8ebd-5d7ea6e9d922,Belinda,Metz,17,Leo,2007-02-13,(705) 896-1218,Belinda93@hotmail.com,Cuba,San Buenaventura (Ventura),VE,Alaska
+822f6a69-57fe-4504-bf97-80c6620672d2,Marie,Barrows,17,Leo,2007-01-31,(493) 673-7442,Marie98@gmail.com,Republic of Korea,Ottisfurt,UY,Wisconsin
+c6c030a8-0f62-4e63-a117-f9b6bbb80d3c,Pedro,Hilpert-Frami,17,Aries,2006-12-26,(417) 535-2217,Pedro.Hilpert-Frami46@yahoo.com,Albania,Florissant,SS,Kansas
+e730931c-f645-42f7-9f9a-4d237726fcdb,Claude,Koss,17,Aries,2007-04-05,(829) 149-6443,Claude98@gmail.com,Colombia,Johnsonbury,TJ,Utah
+04a8c330-b6b4-4ce3-a1bb-823edd30aba4,Joan,Jacobi,17,Libra,2007-02-23,(107) 368-6341,Joan65@gmail.com,Ireland,Weimannhaven,TZ,Colorado
+cbde8d84-8043-4a93-a2a7-f06a9b5ebff9,Garrett,Mann,17,Virgo,2006-06-22,(538) 808-3121,Garrett.Mann11@gmail.com,Switzerland,Fayton,GA,Michigan
+dbd1a302-d667-4036-b622-ec58141c4765,Estelle,Jakubowski,17,Virgo,2006-12-09,(718) 078-7389,Estelle_Jakubowski93@gmail.com,Greenland,Wymanside,KR,Arkansas
+5bc7343b-508c-4217-9fbd-18d08b1ecce0,Amanda,Miller,17,Gemini,2006-08-07,(442) 437-1076,Amanda.Miller63@hotmail.com,Taiwan,East Cullen,CD,Arkansas
+45e542fe-8d08-44b1-a5c6-4c7b8ad86ebc,Brent,Bednar,17,Gemini,2007-03-20,(115) 861-9978,Brent.Bednar61@yahoo.com,Italy,Robertsport,RE,Delaware
+eeabb898-0b28-40c7-86b5-64b7ef9757cd,Bessie,Hyatt,17,Pisces,2007-03-15,(379) 413-7963,Bessie90@yahoo.com,Kenya,Halvorsonton,PM,Kentucky
+a9a353cb-25aa-4618-afe3-65c0463b6cc4,Ivan,King,17,Pisces,2006-09-18,(006) 555-1801,Ivan94@gmail.com,Rwanda,Tamarac,ET,Michigan
+55827aa2-04ff-4573-a110-f0c364e609e7,Orlando,Leuschke,17,Aquarius,2006-04-27,(422) 394-6278,Orlando10@yahoo.com,Poland,Country Club,MW,Arkansas
+e9782091-151d-4309-81b7-ebe168460167,Wilfred,Rippin,17,Capricorn,2006-12-09,(532) 758-3993,Wilfred80@hotmail.com,Republic of Korea,Lake Orphahaven,SI,Alabama
+4299c7cf-458f-45c2-a0aa-295013e7f263,Tyler,Kulas,18,Leo,2005-05-02,(602) 474-5726,Tyler40@yahoo.com,Faroe Islands,Lake Thurman,GN,Oregon
+4d50dfba-f643-43ac-a15f-c398ba85625b,Doyle,Spencer,18,Aries,2006-03-30,(533) 006-9487,Doyle.Spencer@yahoo.com,Tonga,Baytown,US,Oklahoma
+ac167284-230a-49e4-8c58-288fc6eaf14f,Sophia,Kihn-Boyle,18,Cancer,2006-04-07,(216) 959-0856,Sophia69@yahoo.com,Tonga,Eileenfurt,KY,Minnesota
+3a324a1d-6b2d-417b-a3b4-3ebf44e9de4d,Darren,Bartoletti,18,Cancer,2005-11-18,(180) 552-8979,Darren_Bartoletti@hotmail.com,Uruguay,Cronatown,BL,West Virginia
+d46c0595-5176-4f3c-b1fc-116abd57262d,Ryan,O'Conner,18,Pisces,2005-08-13,(110) 643-3621,Ryan85@yahoo.com,Hungary,Runolfssonborough,YT,Arkansas
+1dfc0e29-6f80-4247-a713-31c07f799bb4,Shelia,Corwin,18,Pisces,2005-07-02,(381) 200-2234,Shelia_Corwin61@gmail.com,Norway,Port Cynthiaside,TG,Texas
+20b656ec-27c4-436f-ab76-b6e9662c83ec,Shelley,Ritchie,18,Taurus,2005-09-12,(299) 661-4461,Shelley93@gmail.com,Norfolk Island,Alexandrinefort,PW,Oklahoma
+185f391f-2a3e-46de-b180-d4e2ea7fbbb5,Aaron,Yost,18,Taurus,2005-08-02,(679) 139-1484,Aaron73@yahoo.com,Nepal,Port Gordon,PR,North Dakota
+bd5ab00c-f883-4bda-88d9-6884a9c9b5a2,Faith,Streich,18,Scorpio,2006-02-04,(102) 889-8934,Faith87@hotmail.com,Moldova,Loweville,ZA,Pennsylvania
+2a0bfaa6-d20c-4aa7-88fa-01b77e9b85d2,Freda,Krajcik-Lueilwitz,18,Sagittarius,2005-07-18,(454) 954-4593,Freda.Krajcik-Lueilwitz@hotmail.com,Georgia,Kettering,MY,Kentucky
+f348d7bc-dff6-4faf-90e1-eaa460800ccc,Miriam,Becker,19,Leo,2004-11-19,(529) 610-7016,Miriam.Becker59@gmail.com,Republic of Korea,Quigleyworth,SC,Alaska
+0e60ee1c-60b3-4f1f-9c41-accd91627944,Mario,Wuckert,19,Aries,2004-09-14,(644) 853-7041,Mario76@yahoo.com,Grenada,East Matildafort,NF,Missouri
+62c8d8b5-501a-44e1-a7cb-a1cc2bf53ec7,Trevor,Schowalter,19,Cancer,2004-06-30,(004) 041-1696,Trevor.Schowalter@hotmail.com,Belgium,South Leoshire,AT,Arkansas
+875c1ad5-9e7f-4e20-9be5-1ff7bc12be6f,Alberta,Ratke,19,Pisces,2005-03-26,(235) 238-6760,Alberta.Ratke62@hotmail.com,Kenya,Laurettaton,NL,Texas
+18358007-ab43-42d6-9393-211d9727eb5d,Lynda,Orn,19,Pisces,2005-01-25,(015) 676-6029,Lynda.Orn22@yahoo.com,Equatorial Guinea,Houstonworth,UA,Nebraska
+2698a63e-20eb-4f2f-a7a1-5e4c1c2b7df9,Cesar,Kessler,19,Taurus,2005-01-16,(799) 788-6708,Cesar.Kessler@yahoo.com,Belgium,Trevormouth,ET,Montana
+19b97534-6b07-4bfb-8119-09f31c4347ad,Vera,Mosciski,19,Taurus,2004-12-24,(392) 677-9235,Vera.Mosciski@yahoo.com,Cote d'Ivoire,Nikolauscester,JM,Arkansas
+f61d3f7b-f9b3-48d0-af01-3ceb0db461c3,Colin,Bartell,19,Taurus,2004-10-08,(446) 347-8963,Colin_Bartell@hotmail.com,Tonga,Lake Aleen,LV,Maine
+3b3b645f-5855-43d0-abab-e108ea41f941,Pete,Koss,19,Scorpio,2004-07-15,(030) 080-2617,Pete_Koss43@gmail.com,Wallis and Futuna,Alizehaven,ML,Georgia
+169110c8-ae82-4bd7-bfd6-06d1a9234d71,Lorene,Kiehn,19,Scorpio,2004-10-15,(198) 989-3337,Lorene_Kiehn@gmail.com,Zimbabwe,West Maidafort,LR,Missouri
+d4788404-6154-4b51-8de5-3cc9dd67a7d5,Alonzo,Vandervort,19,Aquarius,2005-04-04,(824) 512-8075,Alonzo.Vandervort@hotmail.com,Saint Kitts and Nevis,Spokane Valley,UA,Rhode Island
+969d6347-4798-4257-a646-d4c2974f13aa,Ruby,Bartell,19,Sagittarius,2004-11-15,(742) 589-4335,Ruby7@yahoo.com,Uganda,Lehi,BT,Ohio
+cf39c4ef-7edb-486a-adb6-68bb78320a3a,Rick,Lemke,19,Sagittarius,2004-08-06,(893) 174-1146,Rick.Lemke39@yahoo.com,Nicaragua,Eldastead,TL,Utah
+b0b18f56-652c-49a2-a199-4459ceabc473,Sandy,Kris-Turcotte,20,Aries,2003-12-28,(001) 318-0536,Sandy_Kris-Turcotte94@yahoo.com,Switzerland,Suffolk,TR,Oklahoma
+c20f781e-53cb-4853-8c12-f0736cd7b759,Karen,Powlowski,20,Virgo,2003-11-27,(400) 925-5724,Karen50@gmail.com,Nepal,Chazside,VA,Oklahoma
+c08aa1a0-39ff-4ae8-9768-705e094f5780,Nadine,Wehner,20,Cancer,2004-02-22,(016) 393-0222,Nadine58@gmail.com,Saudi Arabia,Tacoma,SR,Arkansas
+c3ac0d4e-d845-4257-9ad3-947e70bdd687,Brandi,Tremblay,20,Pisces,2003-06-28,(775) 604-5911,Brandi62@hotmail.com,Samoa,East Bethanyfort,SD,Michigan
+39c8475c-6fd7-4012-9688-d005387b9051,Amy,Okuneva,20,Taurus,2003-06-08,(452) 423-8310,Amy_Okuneva@yahoo.com,Burundi,Britneyborough,CD,Utah
+1f961948-24e8-4933-b08d-d4b2662042ba,Joey,Schiller,20,Taurus,2004-02-15,(070) 465-8603,Joey.Schiller@yahoo.com,Vietnam,Malloryfield,GG,Montana
+3245ba69-6306-4fdd-912b-c8308e79058c,Theodore,Mohr,20,Scorpio,2004-03-11,(050) 510-9395,Theodore74@gmail.com,Gabon,West Jordan,NR,New Mexico
+d334a5d5-7d5e-40ad-8c09-7a8baac127fc,Santiago,Wisozk,20,Aquarius,2003-10-02,(478) 917-9091,Santiago_Wisozk@yahoo.com,Syrian Arab Republic,Port Cathrineshire,HK,South Dakota
+aa1ffce3-6298-47bb-a67a-2879bda44f84,Randall,Towne,20,Capricorn,2003-11-08,(427) 457-3348,Randall50@hotmail.com,Kuwait,Fort Katelinchester,TO,Louisiana
+520dfb3d-0892-41f9-83f4-b04992b5868f,Terry,Fadel,20,Sagittarius,2003-12-16,(023) 647-7697,Terry.Fadel@yahoo.com,Bangladesh,Wisokyburgh,AS,Minnesota
+53003c23-b042-4ff9-855b-db7454492e6e,Greg,Mueller,21,Leo,2002-11-26,(461) 317-1178,Greg.Mueller62@gmail.com,Tanzania,Gregborough,LK,Vermont
+a0ba11bc-0299-4aa1-b62c-424af9c03b79,Kimberly,Harris,21,Leo,2003-02-25,(838) 914-3069,Kimberly_Harris@yahoo.com,Puerto Rico,Olympia,RW,Georgia
+219a8c82-5936-4991-90e4-a4da076861fb,Russell,O'Kon,21,Libra,2002-07-31,(047) 071-4107,Russell.OKon70@yahoo.com,Serbia,Janestad,SK,Maine
+41a1d759-bdb9-43c1-8308-6ce40ed469b6,Norman,Hilpert,21,Libra,2002-12-14,(670) 717-2374,Norman38@gmail.com,Honduras,Port Kathlynberg,CG,Kansas
+0366ff37-af74-4172-9e1d-f77c285c4c39,Erick,Olson,21,Virgo,2002-07-18,(634) 911-4437,Erick97@gmail.com,Luxembourg,Schoenstad,PL,South Dakota
+452a2e44-3a87-411c-bce6-d810cd9d131f,Susan,Welch,21,Virgo,2003-03-11,(848) 983-7146,Susan51@yahoo.com,Cote d'Ivoire,East Devyn,UZ,Nebraska
+638623a7-d3c4-47ac-9f87-8032b683e66d,Jody,Lebsack,21,Cancer,2002-08-02,(567) 364-3794,Jody68@yahoo.com,Botswana,Burnsville,GE,North Carolina
+40723ecc-022b-47c2-aaa6-e5aee746381b,Erik,Nicolas,21,Pisces,2002-05-06,(580) 704-7169,Erik_Nicolas@hotmail.com,Pitcairn Islands,New Jaquanport,CH,Oregon
+fb8e4cd1-0831-4302-b7f1-f0d3c31ad7dd,Eula,Runolfsdottir,21,Taurus,2003-02-06,(728) 040-9055,Eula.Runolfsdottir@yahoo.com,Tuvalu,Helmerside,MD,Virginia
+7c0ad67a-ab48-4fc1-b4d3-1c2e67944200,Christian,Bartoletti,21,Taurus,2002-08-02,(244) 839-4349,Christian42@hotmail.com,Sudan,South Adela,TG,Montana
+6d3d2db4-60bd-4f6f-b0bb-9a42077f210d,Jackie,Ruecker,21,Sagittarius,2003-03-27,(711) 432-7979,Jackie_Ruecker@hotmail.com,Togo,Ontario,CM,Idaho
+2d08fac2-73d2-4f4a-9859-1f23b6eef21f,Juanita,King,22,Taurus,2001-09-15,(567) 835-6223,Juanita.King@yahoo.com,Malaysia,Collinscester,NG,Pennsylvania
+9b208b72-cd12-4788-a12b-00727f1bf3ef,Arturo,Turner,22,Aquarius,2001-10-02,(298) 200-1195,Arturo_Turner@yahoo.com,Andorra,West Lorenza,MS,Washington
+88f7018e-7f34-491b-a9ec-a15d62b7a59a,Emma,Torp,22,Aquarius,2002-01-25,(787) 410-0808,Emma37@gmail.com,Norfolk Island,Fort Theodore,JP,Kansas
+cf756146-da7e-42b1-abd4-8fe897862fae,Mabel,Davis,22,Sagittarius,2002-03-13,(827) 566-1353,Mabel_Davis@yahoo.com,North Macedonia,Hoegerfurt,AF,Alabama
+eebd00d5-6366-4fe3-9d4f-433e69d87a74,Irma,Ankunding,22,Sagittarius,2001-08-20,(498) 700-8068,Irma76@yahoo.com,Myanmar,San Juan,PN,Texas
+b40bf08b-5939-405e-8c80-868900187bc2,Micheal,Braun,22,Sagittarius,2001-12-07,(338) 756-7846,Micheal_Braun@gmail.com,Germany,Fort Jorgeworth,PN,Georgia
+676e77af-51e5-4ffd-94ef-bc46d7f1b35f,Horace,Ullrich,23,Leo,2000-07-17,(844) 391-4133,Horace.Ullrich@gmail.com,United Kingdom,Lake Chadburgh,ZA,Connecticut
+2ac71287-1dd2-446b-bbbc-19f433cc4dbf,April,Ferry,23,Leo,2001-02-14,(328) 280-6791,April_Ferry@gmail.com,"Virgin Islands, U.S.",South Kendrickside,TZ,Michigan
+3fae1591-7609-484b-b2bf-1a360b8ca30c,Victoria,Medhurst,23,Aries,2001-02-22,(633) 958-0884,Victoria_Medhurst93@hotmail.com,El Salvador,Leschchester,AE,Iowa
+1d9be2fe-7e8f-422c-b1a1-1cc88a050704,Judy,Lowe,23,Libra,2000-10-12,(726) 987-4944,Judy61@gmail.com,Turkmenistan,West Deondre,JP,Louisiana
+f7255dd8-5c82-4fb3-8b3c-348ef7b52319,Sheri,Schmidt,23,Virgo,2000-09-16,(606) 688-8335,Sheri.Schmidt@gmail.com,Netherlands,Fort Magdalenfurt,IS,New York
+19c45362-d9f5-461c-9a03-1646f71579ac,Wilfred,Treutel,23,Pisces,2001-01-22,(049) 579-5622,Wilfred47@yahoo.com,Japan,Framingham,CC,South Dakota
+4e045f32-c785-451d-9707-ca51912a39ce,Sherman,Pagac,23,Pisces,2000-05-16,(085) 403-6480,Sherman_Pagac@hotmail.com,Kazakhstan,Lake Rogelio,HK,Wyoming
+c0e1cd66-0339-47d6-b91d-0aabfbfd77ed,Benny,Bayer,23,Taurus,2000-12-19,(899) 825-5788,Benny79@gmail.com,Iceland,Port Andymouth,MO,Oregon
+95afe552-cac6-4163-9b5f-b7c1502f2b03,Arnold,Weimann,23,Taurus,2000-05-14,(088) 576-9512,Arnold0@hotmail.com,Kazakhstan,New Garthmouth,BH,Maryland
+f87c11d1-bf51-4bf6-832d-97da898fdd62,Gina,Jast,23,Capricorn,2001-03-21,(796) 166-1480,Gina_Jast62@hotmail.com,Nicaragua,Fort Aimeestead,MV,Delaware
+b2c79fb0-c2eb-4ec4-8178-ad8f94762d4d,Eva,Kohler,23,Sagittarius,2001-03-20,(160) 926-4917,Eva.Kohler@yahoo.com,Namibia,New Conner,YE,Wisconsin
+605f6d2a-929e-4ae3-a283-924e419bf29c,Kristopher,Brown,24,Leo,1999-06-05,(508) 337-5961,Kristopher.Brown@yahoo.com,Afghanistan,Russelborough,IN,Alabama
+0c19b65c-b069-480a-bbbb-d42ff1ccc2fa,Taylor,Corkery,24,Aries,1999-10-07,(544) 995-1681,Taylor.Corkery74@yahoo.com,Faroe Islands,Lavernecester,BQ,South Carolina
+175adcec-cf88-4347-8a59-d125c79e5edf,Rita,Hahn,24,Libra,1999-08-04,(512) 377-7966,Rita.Hahn@hotmail.com,Norway,Madelynburgh,PH,Colorado
+e76cbaf0-894a-4f71-8bdf-0215f01fa7fd,Rufus,Braun,24,Virgo,1999-07-16,(285) 343-2916,Rufus57@yahoo.com,Malta,Warner Robins,DZ,Mississippi
+2e9db8bd-5875-49cf-8111-4115e2b79508,Margarita,Boehm,24,Virgo,1999-09-02,(448) 604-0896,Margarita61@gmail.com,Bahrain,Lake Schuyler,RE,Oklahoma
+61c151c3-c31f-4dee-83a5-1babf3e6580c,Angelina,West,24,Pisces,1999-07-07,(465) 345-8485,Angelina_West@yahoo.com,French Polynesia,Kilbackside,KW,Louisiana
+6a0e8d0a-3dae-4e19-a06e-56ec6ba5321f,Joy,Zemlak,24,Pisces,1999-08-20,(045) 738-3789,Joy56@gmail.com,Venezuela,Palm Springs,GF,Connecticut
+0211f53b-95b3-4f2e-9251-d51abc4a883b,Helen,Renner,24,Taurus,1999-11-27,(045) 762-7684,Helen49@yahoo.com,Uruguay,Mesquite,BI,Idaho
+25ba8ea1-355c-42a3-a6cd-81289eabfb86,Wilbur,Gulgowski,24,Scorpio,1999-10-07,(861) 131-1123,Wilbur_Gulgowski3@gmail.com,Heard Island and McDonald Islands,South Nicklausmouth,GD,Alaska
+4e011b2e-46e1-4abb-a4af-907dac186ac1,Brett,Wiegand-Lemke,24,Aquarius,2000-03-15,(264) 598-0919,Brett.Wiegand-Lemke33@yahoo.com,Cote d'Ivoire,Minneapolis,AO,Wyoming
+b892add7-785d-4893-ac81-48ec6e0ed7f7,Beatrice,Bednar,24,Aquarius,1999-12-20,(198) 802-9036,Beatrice.Bednar@yahoo.com,Micronesia,Port Gardner,GH,Idaho
+9b8ad5f5-e636-4d22-9390-c5dd6ce43742,Crystal,Jacobi,24,Aquarius,2000-03-02,(457) 215-6541,Crystal.Jacobi55@yahoo.com,Cambodia,New Madonna,NA,Kansas
+ccecb712-1b27-492d-9239-dea8513c889b,Melinda,Wintheiser,24,Aquarius,1999-10-08,(130) 967-5363,Melinda.Wintheiser@gmail.com,Reunion,Sauerborough,KP,Connecticut
+03b4a4f9-d252-4c87-ac92-4771aa8dd40d,Marcus,Aufderhar,24,Capricorn,1999-05-25,(853) 954-7135,Marcus_Aufderhar@hotmail.com,Uganda,North Ardithfort,GI,Washington
+b01d774d-555a-4fb4-90f3-5d28b47a9bdd,Paula,Hansen,25,Leo,1999-03-10,(797) 425-2067,Paula37@gmail.com,Lebanon,Federal Way,WF,Florida
+da5f5a9c-aa85-45fa-896e-43a98fc9c723,Milton,Shields,25,Aries,1998-08-03,(478) 564-2945,Milton35@yahoo.com,Bahamas,Brandon,TJ,Michigan
+6871c7f7-0d0f-4a14-b176-f3e627300e3a,Matt,Nikolaus,25,Aries,1998-12-20,(857) 348-0297,Matt58@yahoo.com,Belize,Krisbury,PY,Maine
+8e1ac974-73ce-463c-9c69-6aa136ba8d16,Jill,Ratke,25,Virgo,1998-12-01,(472) 496-6310,Jill95@gmail.com,Malta,Palo Alto,MF,New Hampshire
+f6c2e488-a63b-4766-ae19-d1b1020ac3f1,Nicholas,Bogan,25,Virgo,1999-01-22,(169) 996-4791,Nicholas31@yahoo.com,Faroe Islands,Gorczanyboro,AW,Ohio
+adc4d2ae-ce74-4dbb-81a9-afbe4d76c0f6,Cindy,Gusikowski,25,Virgo,1998-07-22,(137) 570-0341,Cindy.Gusikowski86@gmail.com,Madagascar,Jewelborough,BJ,Arizona
+d5aea2d7-a3bb-4981-86b7-3f977924b5b4,Evelyn,Marvin,25,Gemini,1999-03-26,(318) 110-2398,Evelyn75@hotmail.com,Micronesia,West Royce,AF,Michigan
+2313360a-1211-4d3e-84ac-bb1495382a93,Melanie,Cole,25,Gemini,1998-11-13,(328) 679-9325,Melanie62@yahoo.com,Nicaragua,Fort Leliafort,ST,Washington
+6111e84e-78ec-4540-bcb5-61d4b95043df,Elijah,Anderson,25,Gemini,1998-06-01,(029) 887-7266,Elijah.Anderson1@hotmail.com,Niger,Millcreek,PW,New York
+44d3c511-c5b0-4188-bc94-4b3b9506c2da,Faith,Fadel,25,Pisces,1999-04-11,(505) 681-0324,Faith.Fadel@hotmail.com,Namibia,DeKalb,HR,Indiana
+10143e6b-bf36-4763-9fdc-3b0260a5b5c0,Ronnie,Brakus,25,Pisces,1998-11-13,(245) 391-1780,Ronnie_Brakus@gmail.com,Nepal,Oletashire,YE,Georgia
+174a0be5-a27e-46bc-9447-9ef3eea4a87f,Susie,Runolfsdottir,25,Scorpio,1999-04-14,(483) 231-9035,Susie90@gmail.com,"Virgin Islands, U.S.",Davie,NP,Michigan
+5f4eed53-c3d8-4b13-97ac-47d71b3a1eca,Annie,Mayer,25,Aquarius,1998-05-01,(592) 007-2209,Annie.Mayer@hotmail.com,Mozambique,Carrollcester,PF,Ohio
+43b5f2ba-29da-4893-a77d-b565d0869460,Glenn,Bergnaum,25,Aquarius,1998-07-25,(190) 909-1086,Glenn79@gmail.com,Mayotte,West Shanon,CH,Georgia
+69665e54-c01d-4950-89f6-5b89a164d2b3,Elsie,Raynor,25,Capricorn,1998-08-02,(382) 468-5329,Elsie_Raynor21@yahoo.com,Samoa,Alfordton,VU,North Carolina
+6fff46ed-6d12-4f3f-8d23-d8072617e6cc,Bryant,Ondricka,25,Sagittarius,1998-05-18,(705) 521-5514,Bryant_Ondricka@hotmail.com,Trinidad and Tobago,Hirthehaven,NU,Massachusetts
+e11c5176-0fca-406c-9c94-9f66c35bdace,Latoya,Olson,26,Leo,1997-10-18,(442) 454-9327,Latoya.Olson@yahoo.com,Uzbekistan,Fort Barbarafurt,UY,Illinois
+f00733c3-21d3-436b-8997-85781ff4f1cc,Tara,McLaughlin,26,Virgo,1997-12-17,(096) 493-9064,Tara.McLaughlin@yahoo.com,Angola,Damienland,MY,Montana
+90686a63-118a-4d6b-974e-c32d94421619,Isabel,Marks,26,Virgo,1997-07-07,(769) 191-2781,Isabel.Marks49@hotmail.com,Ireland,Madison,RU,New York
+dd544504-5d3d-47e0-8ba8-c81cb6951d68,Rita,Hartmann,26,Virgo,1997-06-21,(227) 287-1634,Rita.Hartmann@gmail.com,Portugal,Padbergcester,CI,Delaware
+e0d5665d-4dc4-4102-b297-bc13817c43a7,Lynette,Mann,26,Virgo,1997-11-22,(017) 722-5432,Lynette.Mann@yahoo.com,Kuwait,East Lydashire,VG,Pennsylvania
+f88556e0-1638-4f1f-8829-ecca72e45997,Olga,McLaughlin,26,Cancer,1997-08-11,(134) 057-8854,Olga88@hotmail.com,United Arab Emirates,Mohrchester,IQ,Alabama
+fa5f8e47-8b7d-4747-bae1-d3737aa43126,Gene,Langworth,26,Taurus,1998-01-14,(203) 938-6685,Gene_Langworth78@gmail.com,Wallis and Futuna,Temple,MP,Arizona
+ad31d152-bc7c-4357-9af2-a0df1bc68689,Josh,Blick,26,Taurus,1997-06-23,(394) 043-7475,Josh.Blick24@gmail.com,Micronesia,Waelchiton,UY,Missouri
+d627436a-b034-4c96-bf39-be69f0f4c865,Donna,Lebsack,26,Scorpio,1998-02-09,(118) 790-0574,Donna.Lebsack@hotmail.com,Romania,Macihaven,TC,Vermont
+2a4af3ff-9cd2-4466-ab42-47cb8a1ea36b,Marsha,Swift,26,Aquarius,1997-12-13,(166) 163-9426,Marsha.Swift93@yahoo.com,United Arab Emirates,New Irwin,SG,Nevada
+61175ca2-7c77-450d-902c-890fde5f628e,Guy,Hoppe,26,Capricorn,1997-12-10,(062) 549-1892,Guy_Hoppe@hotmail.com,Romania,Bobbiemouth,DZ,California
+e23c4834-2983-4e7d-98c8-208504b9e02f,Grace,Quigley,26,Capricorn,1997-06-22,(759) 394-4452,Grace_Quigley13@hotmail.com,Zambia,Saginaw,US,South Carolina
+b55cd4dd-cc26-418c-83d7-769691c07837,Ruth,Rosenbaum,26,Capricorn,1998-04-11,(106) 141-2445,Ruth.Rosenbaum58@gmail.com,Montenegro,Lynchburg,NE,North Dakota
+895e62a3-b278-4cfe-8c72-66cbe5b244af,Bonnie,Nienow,26,Sagittarius,1997-10-01,(140) 993-8303,Bonnie86@gmail.com,"Virgin Islands, U.S.",Annandale,AX,Colorado
+35b6b063-cc48-419d-b82a-19a2f9fd8a04,Israel,Doyle,27,Pisces,1996-06-13,(823) 794-4923,Israel.Doyle@gmail.com,Tunisia,Weissnatcester,MO,Georgia
+108f089d-320c-49c2-962d-e3d3d20039a7,Ginger,Sauer,27,Pisces,1996-12-07,(120) 390-4168,Ginger.Sauer67@yahoo.com,Tanzania,Lake Kaleychester,AX,Texas
+25b6b8ed-1b66-47e3-b8d7-b107866527ec,Erin,Muller,27,Taurus,1996-11-11,(443) 248-5270,Erin22@yahoo.com,Bolivia,Port Kasandrafort,VI,Oregon
+a8ed1bea-4400-4660-a2df-047089349608,Becky,Christiansen,27,Taurus,1997-03-24,(110) 721-5150,Becky.Christiansen36@gmail.com,Afghanistan,South Linatown,GH,Arkansas
+7aea0f00-0fd9-46cd-b05b-0c04944310fa,Latoya,Durgan,27,Scorpio,1996-07-11,(287) 394-6559,Latoya.Durgan@gmail.com,Cote d'Ivoire,Dannyside,TH,Michigan
+890c1493-cf6a-453c-bd9f-12e0a96b8c23,Caleb,Howell,27,Scorpio,1996-07-20,(884) 306-3101,Caleb_Howell67@gmail.com,Zimbabwe,Dillonhaven,SA,Oklahoma
+1bdde0dc-f558-41f5-b534-fae6ff1a3e13,Constance,Rolfson,27,Scorpio,1996-09-02,(591) 253-1347,Constance26@yahoo.com,Estonia,Paucekboro,BF,Oregon
+8ef3652b-887a-45c5-b091-a483bf128c73,Terence,Leffler,27,Aquarius,1996-06-05,(762) 310-7876,Terence.Leffler@hotmail.com,Benin,Vickiebury,GE,Arizona
+72f91bfa-8ac7-4e28-b465-84f275b57958,Beulah,Boyer,27,Capricorn,1997-03-31,(022) 048-1779,Beulah.Boyer39@hotmail.com,Cape Verde,Modesto,VN,Washington
+ae4a7551-77bf-493a-a734-ee0761ae84f6,Lora,Bartell-Kreiger,27,Sagittarius,1996-06-15,(182) 874-6722,Lora.Bartell-Kreiger60@yahoo.com,Uruguay,Baytown,ST,Montana
+017d7698-b275-462b-9cee-9bfc2aa4b4a4,Iris,Beahan-Leffler,27,Sagittarius,1996-10-15,(845) 587-2020,Iris.Beahan-Leffler@yahoo.com,Maldives,Cupertino,CZ,South Carolina
+fbd1fb8e-e03c-447f-b33f-f053560aecf6,Elvira,Cartwright,28,Leo,1995-08-08,(099) 250-6136,Elvira.Cartwright65@gmail.com,Cyprus,Heidenreichstad,CU,Virginia
+fe723b71-0280-41d9-8630-d089aed27c68,Ellis,Boyer,28,Leo,1996-03-11,(624) 296-2334,Ellis.Boyer30@yahoo.com,Kuwait,West Caitlyn,BF,Connecticut
+e2f254af-4b22-4e7c-8284-fb54e4b7732c,Nichole,Fadel-Luettgen,28,Leo,1996-01-05,(658) 872-7800,Nichole_Fadel-Luettgen15@gmail.com,Nauru,East Vitoshire,MZ,Delaware
+2f4c51a0-a50a-451a-8f7a-0a7fb6aadf40,Ed,Pagac,28,Aries,1995-07-30,(300) 317-2858,Ed_Pagac31@hotmail.com,North Macedonia,Coconut Creek,ML,Maryland
+2c3d236d-2dbb-4c4a-ad10-e8ddc1883c87,Mike,Wolff,28,Libra,1995-05-02,(186) 746-0666,Mike_Wolff42@hotmail.com,Malawi,New Thaddeusfield,GN,Hawaii
+065d02f8-bf97-4a16-9dd7-0885834fe79e,Wendy,Mante,28,Virgo,1996-02-12,(027) 403-2051,Wendy_Mante@yahoo.com,Ghana,Fort Gracieville,ZM,Ohio
+93f0f5a6-beec-44de-a557-1e0a803aca31,Tiffany,Davis,28,Virgo,1995-08-23,(523) 212-5329,Tiffany34@hotmail.com,Chile,Vellacester,NR,Missouri
+633c21c1-5b6a-4321-9972-c76bb8c5d7c2,Peter,Lueilwitz,28,Virgo,1995-10-05,(079) 267-1461,Peter_Lueilwitz99@yahoo.com,Congo,Dooleytown,FJ,Montana
+9745f6a4-1257-4aa9-8dbc-622972eb6275,Randall,Nolan-Olson,28,Virgo,1995-07-02,(718) 072-5095,Randall31@hotmail.com,Brazil,Kautzerview,AR,Virginia
+0f227cd9-5da1-450b-9249-9aec4b1dfc96,Hope,Hodkiewicz,28,Taurus,1995-10-01,(190) 631-8328,Hope81@gmail.com,Mexico,West Madeline,OM,West Virginia
+b1e35f68-285e-41af-aa3c-d5ca3073652b,Desiree,Bahringer,28,Scorpio,1995-12-06,(814) 078-5721,Desiree11@hotmail.com,Benin,Joliet,MQ,Montana
+9ec3d73c-82bc-4875-ad9e-6daf96b1e287,Alberta,Macejkovic,28,Aquarius,1995-10-21,(857) 352-1423,Alberta_Macejkovic50@gmail.com,Timor-Leste,Ames,MW,Maryland
+2f7c9ec5-acc3-48d9-88b6-b95693f135cb,Carlton,Lubowitz,28,Aquarius,1996-01-26,(200) 152-3595,Carlton.Lubowitz24@yahoo.com,Bolivia,Azusa,YT,Wyoming
+4185ac82-05d9-475f-a854-bcc16eec1b0b,Jimmie,Reilly,28,Capricorn,1996-03-28,(009) 192-0898,Jimmie_Reilly@gmail.com,Democratic People's Republic of Korea,West Khalil,GG,Pennsylvania
+f768cb58-654f-4821-8276-9e9c91720135,Leona,Labadie,28,Capricorn,1996-03-19,(163) 371-2352,Leona_Labadie69@yahoo.com,Dominica,East Tracy,MQ,North Dakota
+4df640b3-bf15-4170-8535-0d0cadac38a4,Garry,Casper,28,Capricorn,1996-02-03,(040) 892-4523,Garry21@hotmail.com,Saint Helena,Edgardomouth,GU,Vermont
+9c229d1f-b577-43d1-bea1-e4d139ec56b6,Minnie,Kessler,28,Sagittarius,1996-04-11,(798) 164-5755,Minnie_Kessler@yahoo.com,Bulgaria,Rochester Hills,AF,Oklahoma
+e7b5fa34-64b7-494a-9dad-29fe10cfc04b,Kelly,Walsh,28,Sagittarius,1995-12-21,(606) 532-7892,Kelly_Walsh80@yahoo.com,Italy,Blockcester,HK,Kentucky
+c6a2c197-af87-469a-9f95-7954e1042b95,Marc,Auer,29,Aries,1995-04-02,(333) 561-8863,Marc79@yahoo.com,Tokelau,West Arvillaside,NI,Wisconsin
+69af96ae-5c1d-4578-bc01-c6411b57cd61,Corey,Moore,29,Aries,1994-10-01,(365) 025-2182,Corey94@gmail.com,Cameroon,North Beverly,MX,West Virginia
+624e5f64-31d1-437d-8aa2-a92eff46b25f,Sam,Bergnaum,29,Cancer,1995-03-28,(497) 591-3699,Sam82@gmail.com,Cameroon,New Marjoryfield,AQ,North Carolina
+38b446eb-8afe-456a-a055-58a0e92a1716,Edmund,Kub-Dooley,29,Cancer,1994-08-31,(606) 401-0975,Edmund2@gmail.com,Kyrgyz Republic,East Ellaside,ZA,Pennsylvania
+2f728a3c-76c2-4c53-9e9e-68603086d6f8,Iris,Kovacek,29,Taurus,1995-03-17,(132) 641-7362,Iris59@yahoo.com,Croatia,West Gilbertoville,BV,Florida
+afdc3f21-0d10-4334-a850-329d5bcd839f,Leona,Cummings,29,Taurus,1994-07-11,(858) 070-5199,Leona98@hotmail.com,Eritrea,Methuen Town,RE,Maryland
+2d80a042-8fe9-410f-8050-858b9b362a80,Ramona,Haley,29,Capricorn,1994-10-01,(863) 962-3264,Ramona91@gmail.com,Zimbabwe,Mount Vernon,NG,Wisconsin
+3231ab88-a796-4e81-8baa-e56d91dc33d5,Stephen,Pouros,30,Aries,1993-06-16,(591) 544-3466,Stephen58@gmail.com,Sudan,San Francisco,NP,Iowa
+37137792-f0c7-4740-9e50-5638ce761083,Kellie,Ebert,30,Aries,1993-10-22,(121) 553-3323,Kellie18@hotmail.com,Tajikistan,Raynorchester,MW,Utah
+a0ea4df2-3efa-410f-bbbe-4fbf2ebcbee3,Tracey,Kling,30,Pisces,1993-07-16,(550) 844-2670,Tracey_Kling@gmail.com,Azerbaijan,Jonesport,MV,Indiana
+bc73a4f7-a639-4bc2-9fd0-8f795ec22628,Olive,Larkin,30,Taurus,1994-04-10,(253) 897-3046,Olive_Larkin9@hotmail.com,Niue,Tulare,ST,South Carolina
+79e70d5e-2a5b-4c8f-a7e2-b26ebd351535,Lauren,Lesch,30,Taurus,1993-11-22,(856) 706-4997,Lauren_Lesch66@gmail.com,Cocos (Keeling) Islands,Port Hillarychester,MF,Georgia
+abe540a7-7200-4c6f-872d-c4ae705b950d,Barry,Wintheiser,30,Taurus,1994-04-05,(529) 552-4873,Barry_Wintheiser28@yahoo.com,Tokelau,Brisatown,BM,Massachusetts
+dfbd58f6-e5b3-48c8-9828-20e6316f9076,Devin,Kris,30,Taurus,1993-12-28,(367) 173-0799,Devin96@hotmail.com,Saint Kitts and Nevis,Deckowton,RO,Wisconsin
+c05775a6-56e0-461b-9edd-f57730d757bb,Tyler,Mohr,30,Scorpio,1993-09-29,(193) 555-2146,Tyler_Mohr58@gmail.com,Dominica,Millerville,CK,Nebraska
+fa5d3d46-041c-4339-83d9-382f9ac60a6d,Kristina,Conn,30,Scorpio,1993-12-14,(200) 719-7979,Kristina67@hotmail.com,Latvia,Fort Maxwell,CD,South Dakota
+2d46f090-dacb-4374-bb41-7f22f047d62d,Jon,Herzog,30,Aquarius,1994-02-17,(769) 869-6514,Jon_Herzog@gmail.com,Mongolia,East Tyraland,LA,Montana
+832e31a5-4fbc-4c73-8888-0206346133c9,Benjamin,Harvey,30,Capricorn,1993-08-26,(727) 683-2851,Benjamin.Harvey@gmail.com,Japan,North June,DK,Kansas
+5ab61e5b-57af-40b8-b258-9607b37f3b08,Santiago,Reichert,30,Sagittarius,1994-03-03,(616) 908-6010,Santiago63@yahoo.com,Germany,Fort Beau,GI,Texas
+99f69ca2-c250-45f6-ad07-4cb85f04b9ab,Joan,Sanford,30,Sagittarius,1994-04-15,(569) 898-6049,Joan.Sanford78@hotmail.com,Iceland,Annamaeside,CC,Florida
+98751512-2a9d-445b-aa0b-70db9464172e,Dominic,Herman,31,Leo,1993-04-14,(098) 346-3268,Dominic9@gmail.com,Costa Rica,Fort Marcelina,SY,Connecticut
+8eebdb46-116f-4bbe-a691-1a71c7248f06,Roosevelt,Koepp,31,Leo,1992-08-04,(283) 660-0314,Roosevelt.Koepp24@hotmail.com,Wallis and Futuna,Lake Ebonyworth,SZ,New Jersey
+8d215720-446c-488c-838a-8a95849428d0,Christian,Cremin,31,Virgo,1992-06-06,(726) 535-4700,Christian41@yahoo.com,Montserrat,Port Charlotte,MP,Oregon
+25c95839-54cc-4edd-bea8-6001582a2f5e,Jeanette,Quitzon,31,Gemini,1992-09-20,(108) 285-8518,Jeanette.Quitzon39@hotmail.com,Belgium,Aliceborough,FM,Pennsylvania
+3ec520d0-ccfd-488c-b672-f7054509222b,Marcella,Weimann,31,Pisces,1992-11-11,(124) 273-7988,Marcella42@yahoo.com,Barbados,New Trudiestead,BO,Texas
+ff18ff87-ad06-4318-a93a-9f4c80d820ca,Brian,Rodriguez,31,Taurus,1993-01-27,(551) 837-0188,Brian80@hotmail.com,Holy See (Vatican City State),Stantonfield,DO,Wyoming
+8beaf4e9-facd-4ee6-a00f-461ea958d9f9,Gregory,Renner,31,Taurus,1992-12-02,(109) 439-1270,Gregory_Renner75@hotmail.com,Tunisia,Prosaccobury,AT,Alaska
+9adbf069-7abf-45e5-aa0b-afa3e3e0527a,Marlene,Ziemann,31,Scorpio,1993-03-12,(370) 853-7995,Marlene_Ziemann69@hotmail.com,Saint Pierre and Miquelon,South Jaronstead,IO,Oregon
+b3ee4570-0c89-4ed8-b812-e85be41f3900,Tricia,Boehm,31,Aquarius,1992-08-28,(488) 409-2035,Tricia_Boehm68@gmail.com,Ecuador,Port Chadstead,SV,Iowa
+c79ddfb8-c6be-4321-ad57-1276f7e09b92,Paul,Rempel,31,Aquarius,1993-04-07,(560) 156-8515,Paul_Rempel@yahoo.com,Norway,Otiliacester,IQ,Iowa
+575913af-56ff-48a1-86f6-7df8a92a022e,Janice,Glover,32,Leo,1991-09-03,(386) 466-3515,Janice_Glover@gmail.com,China,North Chaunceyborough,GP,Georgia
+c44e1cd9-b37a-483e-a881-13123e7c3382,Nicholas,Thompson,32,Aries,1991-05-31,(594) 450-3274,Nicholas_Thompson18@hotmail.com,Sri Lanka,Gailtown,TL,Idaho
+e67f768c-2894-4c79-b7cc-6ff6dccce4e4,Carla,Pfeffer,32,Virgo,1992-02-10,(019) 035-6282,Carla.Pfeffer5@gmail.com,Palau,St. George,EG,Kansas
+66508ed9-d018-4d20-8e6e-8a17a386a50f,Terrance,Buckridge,32,Gemini,1992-03-06,(088) 964-3158,Terrance52@hotmail.com,Dominican Republic,New Rosaleemouth,SY,Hawaii
+d65e3a61-cf8f-4881-ad0f-676426103c15,Erin,Sawayn,32,Pisces,1991-05-04,(104) 584-3837,Erin20@hotmail.com,Nauru,Hettingerberg,TH,Louisiana
+d15ef8c0-36db-4584-80d0-4619c2c161d6,Tracey,Schimmel,32,Pisces,1992-04-15,(622) 336-4741,Tracey22@yahoo.com,United Arab Emirates,Jammieland,SC,Missouri
+9cc87066-9a2a-4234-99b0-0c18e45deb9e,Danielle,Brekke,32,Pisces,1992-03-31,(341) 247-9439,Danielle_Brekke54@yahoo.com,Slovenia,New Christyborough,ML,Kentucky
+871851b7-ba47-45b2-bee6-c168c54025a5,Lisa,Wintheiser,32,Pisces,1991-11-03,(367) 882-3048,Lisa_Wintheiser19@hotmail.com,Botswana,Shoreline,PS,Iowa
+1aebbb12-206b-4fb6-9a88-7bf6b7b97965,Wesley,Herman,32,Taurus,1992-03-17,(813) 301-2052,Wesley_Herman70@hotmail.com,South Africa,Monserrateburgh,ZM,Wisconsin
+9c2a70a8-3f0a-4371-90a2-9b821fb658f7,Lucas,Bogisich,32,Scorpio,1991-09-17,(816) 812-7786,Lucas.Bogisich@hotmail.com,Nepal,Gilliantown,GM,Maine
+680e46f1-5599-49d4-8db2-fc0c591a50d6,Kelli,Trantow,32,Scorpio,1991-07-06,(220) 505-6077,Kelli91@gmail.com,Lithuania,Fort Lindamouth,MW,Iowa
+c8c771b6-554c-4722-8825-2718bbbc7475,Jennie,Ledner-Kemmer,32,Aquarius,1991-10-11,(078) 496-1620,Jennie_Ledner-Kemmer55@hotmail.com,Montserrat,West Wilsontown,SZ,Pennsylvania
+e58c9970-071b-42fe-865a-53e39e04029b,Lorenzo,Boyle,32,Aquarius,1992-04-08,(889) 691-1045,Lorenzo.Boyle@hotmail.com,Brunei Darussalam,West Jarrettton,WS,New Hampshire
+b5ab67a0-798e-4973-a763-ba832589c344,Daryl,Deckow-Hamill,32,Sagittarius,1992-03-30,(037) 482-6650,Daryl99@yahoo.com,Chad,Lednermouth,TJ,Wisconsin
+b467cd16-46d6-4720-be20-76bb220d7fdf,Eunice,Erdman-Raynor,33,Leo,1990-06-07,(605) 043-0189,Eunice_Erdman-Raynor19@hotmail.com,"Virgin Islands, U.S.",West Nora,CH,Virginia
+1ef04f9d-0842-4c62-b182-1f97713b8f0f,Shelly,Blick,33,Aries,1990-08-30,(806) 058-0991,Shelly45@hotmail.com,Malaysia,North Fritzfield,MW,Georgia
+d060b0f2-1f39-44ba-823c-ed7eb13a944e,Adam,Von,33,Libra,1991-03-26,(034) 063-5483,Adam_Von60@gmail.com,Madagascar,West Clementineberg,BB,Michigan
+7a441d87-a7f4-42d2-963f-0c470c8e46cf,Bradford,Vandervort,33,Gemini,1990-06-08,(107) 612-3054,Bradford39@gmail.com,Zambia,Oakland,AE,Maryland
+d6056fa3-551a-45cb-9362-e3cb05f008f6,Taylor,Fadel,33,Taurus,1991-03-23,(289) 938-1341,Taylor53@gmail.com,United States Minor Outlying Islands,Harberland,SS,Minnesota
+d745f0ba-1dc3-4737-bf93-e0f7dd8302ed,Frank,Powlowski,33,Scorpio,1990-07-20,(341) 315-1179,Frank.Powlowski43@hotmail.com,Thailand,Littelview,SY,Minnesota
+315c8af0-4929-4dd8-9ce6-099fbdf5e7f4,Calvin,Cummings,33,Aquarius,1990-09-29,(512) 175-5189,Calvin86@gmail.com,Isle of Man,West Ottistown,HR,Wisconsin
+041436fd-6cd4-4982-bce7-21ea22c33bf5,Dean,Wintheiser,33,Capricorn,1990-05-17,(500) 459-9489,Dean_Wintheiser@gmail.com,French Polynesia,New Rosa,AI,New York
+16decc0b-6703-41d1-ad89-5d857d1b678e,Ray,Rodriguez,33,Capricorn,1990-11-20,(572) 752-4755,Ray.Rodriguez@hotmail.com,Thailand,North Tyrique,CZ,Nevada
+699e052f-bdc4-4ef7-86f1-6a1b3e712860,Eunice,Von,33,Sagittarius,1991-01-28,(862) 422-5378,Eunice_Von@gmail.com,Saint Barthelemy,New Robb,GL,Louisiana
+e37c4cc0-117e-48f4-b2fd-59da0f3e8918,Dennis,White,34,Leo,1989-08-20,(837) 382-9495,Dennis_White@gmail.com,Cote d'Ivoire,Jamircester,SZ,California
+2349aaef-1c5d-4cd0-a047-4de3a9ede142,Cristina,Stoltenberg,34,Leo,1989-07-23,(088) 564-9197,Cristina.Stoltenberg26@hotmail.com,Wallis and Futuna,Destinyfurt,CN,Wyoming
+25e810b9-15da-4bd7-8e08-155cb5a226af,Daryl,Nolan,34,Leo,1989-07-23,(503) 268-8709,Daryl_Nolan@yahoo.com,Iran,Fritschfort,NL,Iowa
+fb2f46bf-9f8b-4fc1-aaf8-23c8aa77ed6f,Jake,Hamill,34,Aries,1989-08-20,(684) 450-9397,Jake_Hamill58@yahoo.com,Sri Lanka,West Oceaneview,MU,Iowa
+f7e1711b-8378-4868-b326-3b758da9f491,Loren,Davis,34,Libra,1989-11-04,(212) 320-9669,Loren66@gmail.com,Niue,New Benjamin,TN,Wyoming
+c2e59887-921d-4940-ba97-002ef60c094e,Cecil,Jerde,34,Libra,1990-02-10,(466) 362-5749,Cecil_Jerde@gmail.com,Bangladesh,Koeppton,SK,Minnesota
+9bd78a9c-56a6-4d59-b140-211d241e940e,Mercedes,Grimes,34,Gemini,1989-09-17,(858) 196-0604,Mercedes_Grimes37@hotmail.com,Malaysia,Zulaufstad,VU,Washington
+1a51e620-b432-4eb5-8b1f-51daeeda8545,Grant,Hills,34,Scorpio,1989-11-05,(470) 266-3931,Grant.Hills19@yahoo.com,Hong Kong,Tressaland,GT,New York
+de59b5aa-0206-4429-9032-ef09def91f4f,Victoria,Schowalter,34,Scorpio,1989-12-25,(704) 679-1550,Victoria.Schowalter64@yahoo.com,Lesotho,Fort Nathanael,CZ,Minnesota
+443efef9-b85f-4bc9-b7ca-1ac4baecb17e,Sidney,Nader,34,Scorpio,1989-12-08,(844) 413-0744,Sidney15@yahoo.com,Trinidad and Tobago,Fort Federicoville,KP,New Jersey
+142d2373-3241-454c-92cb-040e37ba941a,Randolph,Bahringer,34,Scorpio,1989-12-10,(761) 489-8500,Randolph.Bahringer@yahoo.com,Syrian Arab Republic,Santa Ana,IE,Nebraska
+6faf3e74-9f97-4b7a-be96-c7454cf70727,Jimmie,Leannon,34,Capricorn,1989-06-24,(037) 159-5871,Jimmie_Leannon@hotmail.com,Somalia,Stehrview,GH,Minnesota
+e747125b-8f27-466a-8aef-609d8944bf65,Johnnie,Nolan,34,Sagittarius,1990-03-23,(232) 535-9261,Johnnie_Nolan57@yahoo.com,Ghana,Bryonfort,AX,Massachusetts
+893aecdc-78ac-46fd-b57d-80647e030580,Brian,Senger,34,Sagittarius,1989-11-19,(107) 808-5320,Brian.Senger@yahoo.com,Mali,Justonfield,AW,Massachusetts
+90bd8c57-e239-44a6-806a-3a1b546ebf2c,Wm,Blick,34,Sagittarius,1989-08-24,(663) 710-8975,Wm_Blick78@gmail.com,Paraguay,Framimouth,BO,Idaho
+e99a5375-7004-4c61-9ad4-0a239322729b,Vicky,Upton,35,Virgo,1988-06-01,(431) 866-5199,Vicky.Upton50@hotmail.com,Finland,Ernestinestad,KZ,Wisconsin
+2f019a3d-30d9-48d5-9591-834bae21d734,Rufus,King,35,Gemini,1989-03-15,(277) 283-3939,Rufus13@yahoo.com,Mayotte,Lake Mae,PM,Nebraska
+cd3971f3-55ea-4c13-a86a-d811263317e8,Erika,Conroy-Little,35,Taurus,1988-10-10,(082) 175-6375,Erika_Conroy-Little48@yahoo.com,Cote d'Ivoire,Mesa,AO,Illinois
+67dadd52-08ef-481b-bd21-784f02c79b30,Tracey,Block,35,Taurus,1989-02-05,(464) 052-4393,Tracey.Block76@gmail.com,Senegal,New Derrick,AF,Pennsylvania
+88a3aaa9-5669-4788-a885-bb1eadd34a2b,Gilberto,Dickens,35,Taurus,1988-08-15,(858) 365-3419,Gilberto_Dickens@gmail.com,Togo,Grahamborough,CX,Wyoming
+3b79a6a2-c544-44d3-b0ed-d9f49ea84dd9,Willis,Berge,35,Capricorn,1988-10-11,(152) 879-2551,Willis_Berge@gmail.com,Samoa,South Dawsonboro,GP,Iowa
+389bd5e8-56a8-4c4c-8ffb-fd27635bc532,Arlene,Collier,35,Capricorn,1988-06-27,(045) 933-5505,Arlene.Collier@hotmail.com,China,South Haroldburgh,BS,Michigan
+344c8e47-4a65-4c0a-b1c0-db82948c76d7,Shari,Romaguera,36,Leo,1987-07-31,(624) 041-3434,Shari24@yahoo.com,South Africa,Stantonmouth,BY,North Carolina
+8971f4c3-48cb-4201-8bba-b2264a3a33dd,Craig,Turner,36,Aries,1987-09-05,(404) 984-4867,Craig74@yahoo.com,Moldova,Battle Creek,YE,Kansas
+1077b19b-ade3-4b37-b442-71427c7a45f2,Rick,Stoltenberg,36,Virgo,1988-04-15,(015) 376-0171,Rick_Stoltenberg@hotmail.com,Singapore,Kulashaven,MU,Kentucky
+54811712-55d1-4441-b22b-5dc050d68d6c,Craig,Corwin,36,Virgo,1987-08-30,(655) 441-8284,Craig_Corwin7@hotmail.com,Cayman Islands,Stefaniestad,CF,Nebraska
+c8f71259-8d9d-49c9-91e5-cef14687bfa4,Claire,Lemke,36,Virgo,1987-12-17,(285) 473-9882,Claire3@gmail.com,Greenland,Port Sienna,PG,South Carolina
+8f0bff36-7503-492e-80bb-5eb49dba42cb,Alejandro,Kohler,36,Cancer,1987-06-17,(007) 631-7005,Alejandro_Kohler42@gmail.com,Jordan,Meghanboro,PG,Rhode Island
+ea46921a-0978-42d5-b670-9592714cc385,Philip,Ryan,36,Cancer,1987-05-31,(891) 543-5758,Philip90@gmail.com,United States Minor Outlying Islands,Yorba Linda,AX,California
+14ab73e5-0335-4a20-8cf6-24099ddee740,Guillermo,Pacocha,36,Scorpio,1988-03-04,(056) 790-6566,Guillermo_Pacocha23@hotmail.com,Belgium,Smithmouth,MP,New Hampshire
+584031f7-ade9-4a10-9d49-9633106323b5,Jeanne,Rempel,36,Scorpio,1987-11-30,(035) 179-3922,Jeanne.Rempel98@yahoo.com,Turkmenistan,Ornboro,TK,Oklahoma
+0b5f0831-0bac-4aba-9c94-9d72b9ee51c9,Jared,Moen,36,Aquarius,1987-07-28,(275) 715-2904,Jared_Moen26@gmail.com,Azerbaijan,Genechester,CL,New York
+d057177c-8448-4ae8-ab2b-71a0d77b6bf9,Esther,Cartwright,37,Leo,1987-01-29,(376) 857-1446,Esther_Cartwright86@hotmail.com,Egypt,North Maymie,BE,North Carolina
+61cd0922-3d44-4483-9f51-a5a30adbd79f,Abel,Kshlerin,37,Leo,1986-06-19,(723) 680-0923,Abel.Kshlerin@yahoo.com,Comoros,Sawaynport,EE,Illinois
+847bd292-f871-4d21-9821-4b5a9b27846b,Timothy,Lesch,37,Aries,1986-11-07,(191) 533-8883,Timothy_Lesch9@hotmail.com,Vietnam,New Jude,MX,Massachusetts
+2c31b29c-56f6-4174-a342-866112028e1c,Rose,Cronin-Rath,37,Aries,1987-03-30,(413) 585-2457,Rose.Cronin-Rath38@gmail.com,Liechtenstein,Shanahancester,FK,Ohio
+91603a7b-3428-4771-a765-05b19e51ed7d,Ollie,Kutch,37,Libra,1986-11-05,(846) 811-6111,Ollie.Kutch24@yahoo.com,Fiji,Johnstonville,VU,New Mexico
+4b4f2aef-3c88-4c8a-b920-b52137824347,Nick,Hickle,37,Virgo,1986-10-28,(420) 704-6145,Nick75@yahoo.com,Oman,Port Cassandra,VG,North Carolina
+635ac29d-d961-4918-ab5b-4997585398f6,Franklin,Jaskolski,37,Virgo,1986-12-12,(479) 086-5592,Franklin.Jaskolski@gmail.com,Japan,Janyworth,PG,New Hampshire
+ced7c816-c993-4320-bbf2-731746d30d9d,Valerie,White,37,Cancer,1986-11-19,(115) 345-3409,Valerie83@hotmail.com,Reunion,East Willowstead,ID,Texas
+1d389e6e-776b-44f5-bf21-45a05f0898ea,Patrick,Altenwerth,37,Gemini,1987-02-14,(591) 550-6148,Patrick.Altenwerth54@yahoo.com,"Virgin Islands, British",Roswell,BD,Arkansas
+1311ec29-5bc5-40ea-8955-9ae3f56b0811,Marcos,Dibbert,37,Gemini,1986-08-21,(522) 766-0589,Marcos_Dibbert@yahoo.com,Sudan,East Bufordworth,CK,Illinois
+1a8bc4a2-98ce-46aa-a4ce-55918786edd8,Rudy,Hane,37,Pisces,1986-11-25,(468) 250-2243,Rudy_Hane77@gmail.com,Guatemala,Destineebury,KI,Maryland
+2c401114-136d-4469-9d7f-492bd4be25b5,Veronica,Johnston,37,Taurus,1987-03-14,(006) 506-8418,Veronica89@gmail.com,South Sudan,Romaguerafurt,GA,Washington
+b06ac6bc-aa48-4d70-8139-21d230285c4f,Ralph,Harvey,37,Scorpio,1986-09-25,(399) 211-6021,Ralph_Harvey29@gmail.com,Turkey,Sipesboro,NA,Maine
+6a917ede-c129-4411-b514-f0efac64d406,Jody,Walter,37,Scorpio,1986-05-07,(283) 718-7031,Jody.Walter@hotmail.com,Curacao,West Rogersworth,UM,Delaware
+90827883-520c-47b6-8a9a-5dc057bb0dc6,Cesar,Cummings,37,Capricorn,1986-05-27,(364) 143-8949,Cesar_Cummings@yahoo.com,Azerbaijan,New Lilianatown,SL,North Dakota
+c40c84f8-4245-4252-8d3d-0fdadbdf4db4,Doyle,Gutkowski,37,Capricorn,1986-05-28,(772) 695-2173,Doyle.Gutkowski98@hotmail.com,Serbia,Bernardboro,VN,Illinois
+a0d08d89-95b2-4d93-95d3-0a5eb1ea324c,Moses,Blick,37,Capricorn,1986-06-28,(016) 999-2383,Moses_Blick@gmail.com,Norfolk Island,Tamiami,SJ,Kansas
+4fe62cf4-eff1-4fdc-b4d6-126fa58a9e2c,Javier,Runolfsson,37,Sagittarius,1987-02-02,(761) 267-5962,Javier8@hotmail.com,"Virgin Islands, British",Dunwoody,LY,Delaware
+5a16dd07-bfd6-41a3-a35b-b33c30714ab1,Nicolas,Schinner,38,Libra,1986-04-22,(310) 824-0234,Nicolas_Schinner@yahoo.com,Haiti,Ferryview,AT,Oklahoma
+08d450d2-aa34-453b-aa30-a83d7c76656c,Ed,Green,38,Libra,1986-04-25,(671) 567-5765,Ed27@yahoo.com,United Arab Emirates,Walshville,BW,New York
+38bd0757-d7fb-446c-b1d5-f5885a486670,Ben,Howe,38,Virgo,1986-02-26,(618) 026-2447,Ben.Howe92@hotmail.com,Brunei Darussalam,New Ellenland,MX,Nevada
+e7a514be-ffcb-4a8b-adef-bc028be79b37,Cathy,Hammes,38,Virgo,1985-05-02,(012) 090-1223,Cathy.Hammes@yahoo.com,Mongolia,New Caitlynville,IS,Oregon
+e8961082-d4d3-46d9-a57e-dec7a4836176,Margarita,Borer,38,Virgo,1986-01-12,(480) 917-3635,Margarita_Borer89@hotmail.com,Jordan,Lomaville,IE,Arizona
+b30d757c-5025-4b2f-8385-9ea01985380d,Kathy,Rohan,38,Virgo,1985-08-07,(676) 058-1309,Kathy40@hotmail.com,Eswatini,Hauckstead,GQ,Oklahoma
+d8438ab8-648d-4966-a756-66eaaac02e60,Miranda,Cassin,38,Taurus,1985-07-24,(313) 728-2150,Miranda58@gmail.com,Kuwait,South Berneiceport,FM,Michigan
+7d5cb8ea-b7e5-400e-b103-e6cda5ee1b8a,Florence,Bruen,38,Scorpio,1985-12-22,(852) 091-0842,Florence12@yahoo.com,Nauru,Mylesbury,TO,Missouri
+faa2cca1-9f9f-4678-ae34-b98afcd5ddc8,Moses,Flatley,38,Scorpio,1985-08-17,(819) 559-6650,Moses29@hotmail.com,Bahamas,East Francoberg,SA,New Mexico
+ccc2e6db-dab2-4947-8cc3-78fb3466095d,Dean,Little,38,Sagittarius,1985-08-11,(135) 134-9218,Dean.Little57@hotmail.com,Ireland,Port Lindaville,IQ,North Carolina
+924690e8-bbd8-49ad-bc46-d4db3564a443,Beth,Hackett,38,Sagittarius,1985-05-11,(495) 334-3050,Beth_Hackett@hotmail.com,Pakistan,West Jordyshire,VU,South Carolina
+b6ba86b9-b8d2-42e3-8146-c6cee250d0e7,Mattie,Pfeffer,39,Leo,1985-04-26,(334) 202-8551,Mattie.Pfeffer@yahoo.com,Trinidad and Tobago,Annacester,AZ,Indiana
+0e0938c8-fc27-48b8-bea8-83b32dbb0dcf,Meghan,Mayer,39,Aries,1984-10-20,(838) 129-7921,Meghan0@gmail.com,"Bonaire, Sint Eustatius and Saba",Florissant,GU,Louisiana
+1b5809a1-c378-4bbb-89a5-ff69e93d0fc2,Lori,Littel,39,Pisces,1985-02-09,(567) 377-7333,Lori_Littel73@yahoo.com,Palestine,Mishawaka,CL,Massachusetts
+835c4030-84a1-4f03-89aa-5297a1900bd3,Heidi,Trantow,39,Pisces,1984-10-22,(144) 048-2244,Heidi87@hotmail.com,Lesotho,Brekkestead,TT,Rhode Island
+a81c9876-b598-43a6-83d0-0effdff72714,Sarah,Carter,39,Pisces,1984-07-02,(152) 172-1194,Sarah.Carter@hotmail.com,Cameroon,Bauchstead,UG,Arkansas
+82ee6e60-0b4e-4456-b703-5330afc196e0,Sonya,Crooks,39,Taurus,1984-05-02,(340) 712-0106,Sonya.Crooks@hotmail.com,Saint Helena,Normal,SB,West Virginia
+a747b6f8-1eb7-4069-b9e5-6e25ac41d929,Albert,Reinger,39,Aquarius,1984-09-23,(495) 185-1172,Albert33@hotmail.com,Kuwait,Feilshire,LK,Oregon
+9a4b1186-7117-4aa8-be14-ea5d970996fa,Kathy,Feil,39,Sagittarius,1984-11-03,(804) 959-3716,Kathy_Feil84@gmail.com,Samoa,Everett,AL,Wyoming
+26022c03-48c5-452e-b263-a0074312ae8d,Terence,Pollich-Bechtelar,40,Leo,1984-01-25,(329) 743-2563,Terence37@yahoo.com,Cayman Islands,New Derek,GP,California
+e47c7127-1ed2-489c-a7a4-1afa13fe763e,Trevor,Price,40,Libra,1984-02-20,(686) 668-0837,Trevor33@gmail.com,Chad,Fort Myers,UM,Arizona
+633c2e1f-25dd-439c-8aa7-d28ac3ca7333,Silvia,Skiles,40,Pisces,1983-05-13,(185) 655-5668,Silvia_Skiles41@gmail.com,Croatia,New Monica,PE,Connecticut
+7c2f6c74-c3b1-4ab8-9673-8bb36623f2fd,May,Schuster,40,Pisces,1983-12-09,(851) 886-3257,May_Schuster@yahoo.com,Cape Verde,Terryberg,FK,Oregon
+f8e4fc76-34f4-46cc-a955-93edcf87e354,Jeremiah,Sanford,40,Aquarius,1983-08-16,(476) 721-7587,Jeremiah_Sanford45@gmail.com,Sri Lanka,Mikelberg,CW,Oklahoma
+9b9f332d-6057-466d-abf8-0e70ead5bd98,Mae,Kuhic,40,Capricorn,1983-10-12,(341) 981-8592,Mae.Kuhic93@gmail.com,Falkland Islands (Malvinas),New Neoma,GP,New York
+de995c37-dd72-4123-80e2-d6489c2dc594,Bessie,Lubowitz,40,Capricorn,1983-09-29,(729) 605-3211,Bessie8@yahoo.com,British Indian Ocean Territory (Chagos Archipelago),South Leoniestad,BR,Alabama
+caade92f-df47-42f3-a737-f8417dd3b813,Vanessa,Hudson,40,Sagittarius,1983-08-18,(444) 926-8131,Vanessa.Hudson46@gmail.com,Brazil,Rogahnbury,AG,Texas
+f20f925d-c1b2-46c7-8ebc-c9fbd3006574,Shirley,Larson,41,Aries,1982-06-10,(406) 904-5652,Shirley_Larson@yahoo.com,Djibouti,Wichita,NO,Connecticut
+fc9be5e6-ef5c-4ad7-836d-e293669caecd,Sheri,Collier,41,Libra,1982-08-26,(761) 810-1244,Sheri74@gmail.com,Christmas Island,South Hassanfield,TN,Indiana
+a19b8ac6-6abd-4909-b71f-fc8199cf996c,Alexis,Moore,41,Cancer,1982-06-02,(151) 657-3486,Alexis_Moore@gmail.com,Tokelau,Juliusworth,LC,New York
+99ef21c7-678a-483e-ab62-0ca405fb060e,Doreen,Hahn,41,Cancer,1982-10-01,(187) 800-3359,Doreen.Hahn@yahoo.com,Bahamas,New Jesusshire,IR,South Carolina
+b8af7fb6-49b3-468f-9472-53d9061a731f,Valerie,Nikolaus,41,Gemini,1982-10-15,(667) 964-6243,Valerie98@yahoo.com,Tanzania,Hermanberg,LC,New Jersey
+21ed3f99-0176-4685-af00-2ce7bcd718c9,Patti,Monahan,41,Gemini,1982-05-31,(453) 381-5058,Patti.Monahan28@hotmail.com,Mauritania,Langfurt,TM,Missouri
+6f3a0c5d-e0f1-4502-b198-16505c96a355,Melvin,Wyman,41,Aquarius,1982-11-18,(417) 260-4589,Melvin52@gmail.com,Colombia,Franeckiburgh,KE,New York
+0bdf0a8c-0b1d-440a-95c6-286e743d8c9f,Dustin,King,41,Capricorn,1982-05-31,(052) 975-4233,Dustin_King@hotmail.com,Burundi,New Milford,SE,New Hampshire
+30e9ca5d-2984-4740-b94d-5a24b11f3f33,Lynne,Medhurst,41,Capricorn,1982-12-30,(381) 451-5473,Lynne_Medhurst@yahoo.com,Djibouti,Kovacekfurt,GB,New Jersey
+957e1e47-d374-4348-bd91-bb8265a526f3,Angel,Ankunding,41,Capricorn,1982-05-23,(670) 000-1185,Angel63@gmail.com,Holy See (Vatican City State),Goyetteworth,TO,California
+f69c4697-1285-45ec-be38-ac12826dd44b,Charlene,Grimes,42,Cancer,1981-07-21,(303) 026-8762,Charlene_Grimes17@yahoo.com,Wallis and Futuna,Kesslermouth,TH,Kentucky
+53db2d9c-0da8-4161-87fa-b56540f29c6f,Freda,Rutherford,42,Cancer,1982-02-02,(073) 191-3900,Freda.Rutherford@gmail.com,Djibouti,Potomac,SN,Idaho
+3a353a05-60a1-46dd-a4bc-94f5c5c8c9a8,Yvonne,Schumm-Fisher,42,Gemini,1981-08-24,(411) 427-3816,Yvonne.Schumm-Fisher@hotmail.com,Kyrgyz Republic,Buddytown,AS,Maryland
+98eee27f-14e4-4c72-a190-faef616ba6fd,Cecelia,Corwin,42,Taurus,1981-10-17,(190) 141-0595,Cecelia_Corwin87@yahoo.com,Germany,Destanyport,HM,Vermont
+d00911ac-7f52-43a5-b9a9-e231c5c4eb41,Mathew,Hauck,42,Taurus,1982-03-19,(188) 340-1805,Mathew.Hauck20@yahoo.com,Malawi,Port Burdettechester,GF,Nevada
+dec9fe02-9f5c-45d6-9318-a238bb538abe,Marie,Boyer,42,Capricorn,1981-08-03,(341) 267-7984,Marie66@hotmail.com,Antarctica,New Trudieberg,GH,Idaho
+ae8faa67-d5fa-44c1-822c-e371fcd869a6,Owen,Shields,42,Capricorn,1981-06-29,(425) 839-4798,Owen.Shields@yahoo.com,France,North Arne,IS,South Carolina
+ceec05b1-caac-4e79-bb98-6acdce428319,Opal,Hilpert,42,Capricorn,1982-02-13,(293) 516-5147,Opal.Hilpert17@gmail.com,India,New Loyceton,KR,New Jersey
+fb806455-d02d-427b-bba1-a3aeb6b4240a,Norma,Ebert,42,Sagittarius,1981-09-06,(835) 512-7546,Norma0@hotmail.com,Paraguay,Galveston,HT,New Jersey
+4ade4712-a774-4e3a-9a1f-12417b679652,Marc,Bode,43,Leo,1980-07-17,(727) 272-5385,Marc_Bode@yahoo.com,Iceland,Satterfieldshire,AX,Maine
+3704264e-c8e6-4112-bb87-7ef18f890ff0,Phyllis,Bartoletti,43,Aries,1981-02-07,(696) 136-0959,Phyllis.Bartoletti@gmail.com,Oman,East Chrisfurt,EC,Nebraska
+05d6019f-baff-4df0-b9e4-888646428200,Dexter,Hilll,43,Aries,1980-07-10,(824) 869-0658,Dexter.Hilll@yahoo.com,Mongolia,Hilmaborough,PW,Rhode Island
+763acc7f-04b1-4172-9c85-c967a74904ef,Delbert,Pfannerstill,43,Libra,1980-07-03,(880) 189-7519,Delbert83@hotmail.com,Democratic People's Republic of Korea,West Birdie,DO,Indiana
+8b8df712-98a6-400e-ab58-26159528f898,Judith,Nicolas,43,Cancer,1980-09-19,(312) 748-1803,Judith.Nicolas32@gmail.com,Norway,East Gabe,SE,Washington
+6efaec20-10ab-4f2a-b965-0f566f455671,Jeffrey,Haley,43,Gemini,1980-10-24,(125) 206-5855,Jeffrey.Haley90@yahoo.com,Mauritius,Lake Alvina,KN,Maine
+a5abc0e6-a340-4437-8b85-317bfd67d158,Garrett,Blick,43,Gemini,1981-01-30,(503) 523-4802,Garrett31@hotmail.com,Sao Tome and Principe,Lake Ansel,YE,Oregon
+967e9921-9022-40c3-8268-1dfcae7b5b74,Dolores,Cummings,43,Gemini,1980-10-14,(112) 636-1047,Dolores.Cummings69@hotmail.com,Bahrain,Delano,SD,Vermont
+0c1974e2-467b-4351-8ecb-1abbc09b9d32,Lee,Schimmel,43,Scorpio,1980-11-24,(188) 401-6427,Lee.Schimmel86@gmail.com,Tuvalu,Abeville,SV,Maryland
+be250cec-89ee-4a13-a414-6f18e9ece46a,Nancy,Metz,43,Capricorn,1981-02-11,(783) 990-9343,Nancy.Metz@yahoo.com,Falkland Islands (Malvinas),Germaineton,PS,North Carolina
+3e218b71-0ddd-4d62-a62b-93ecb73034aa,Lena,Hagenes,43,Capricorn,1981-03-22,(655) 700-9225,Lena_Hagenes@yahoo.com,Rwanda,Turcotteborough,YE,Maine
+412041fe-1488-4c27-a7ce-a6237002cbb6,Sammy,Bailey,43,Sagittarius,1980-11-06,(239) 158-1143,Sammy.Bailey6@hotmail.com,Micronesia,Lombard,HR,Michigan
+dddb3bb2-2458-4c45-81e8-b5fc9af79da6,Luz,Brown,44,Leo,1980-01-10,(815) 408-9105,Luz.Brown31@gmail.com,China,Maryville,GU,Ohio
+c1ab720b-8b64-46e5-8d19-23a194384720,Clint,Rippin,44,Capricorn,1980-04-19,(483) 904-1573,Clint.Rippin@gmail.com,Fiji,Garden Grove,TZ,West Virginia
+23fc412c-02be-4c81-938e-5fa29adb7e54,Erik,Jacobs,44,Sagittarius,1980-03-02,(009) 317-7353,Erik_Jacobs71@gmail.com,Moldova,Lake Imelda,CG,Montana
