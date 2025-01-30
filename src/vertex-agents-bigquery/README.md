@@ -14,7 +14,7 @@ In this technical demonstration, we will explore the functionalities of the nati
 
 The demonstration will cover the following:
 
-![Solutions](images/solutions.png)
+![Solutions](images/vertex-agents-bigquery-solution-flow.png)
 
 * **Vertex AI Agent:** Configuring an agent that uses an OpenAPI Specification to access data and responds to questions about the information stored in BigQuery.
 * **Application Integration:** Native connectivity. Configuring a simple way of integrating with the data platform and restructuring data to accommodate it for its consumption.
@@ -26,7 +26,7 @@ The following dependencies are required for the demo:
 | File     | Description |
 |:----------:|:-------------|
 | users-export.csv    | Sample data for bigquery table. |
-| big-query-integration.json    | The integration flow responsible for native connectivity to BigQuery (and 100+ other platforms and apps 🤩)      |
+| vertex-agents-bigquery.json    | The integration flow responsible for native connectivity to BigQuery (and 100+ other platforms and apps 🤩)      |
 | user_management_api.yaml    | OpenAPI Specification file of the integration.      |
 | user-management-agent-app.zip    | An Vertex AI Agent application, bundled and ready to be tested. |
 
