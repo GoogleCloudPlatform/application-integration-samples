@@ -66,6 +66,7 @@ failed integration. For more information, see
 | [string-to-uppercase](src/string-to-uppercase) | Sample to convert a string to uppercase |
 | [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |
 | [vertex-ai-task](src/vertex-ai-task) | Sample to work with the Vertex AI task |                   |
+| [vertex-agents-bigquery](src/vertex-agents-bigquery) | Using Application Integration & Vertex Agents to activate BigQuery Data |                   |
 
 ## Getting help
 
