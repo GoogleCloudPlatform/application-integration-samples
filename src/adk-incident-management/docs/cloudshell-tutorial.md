@@ -6,7 +6,7 @@ This agent sample showcases the utilization of dynamic identity propagation with
 
 ### Agent Architecture
 
-![architecture](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/adk-sample/src/adk-incident-management/adk-incident-management-arch-flow.png?raw=true)
+![architecture](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/main/src/adk-incident-management/adk-incident-management-arch-flow.png?raw=true)
 
 ## Setup and Installation
 
