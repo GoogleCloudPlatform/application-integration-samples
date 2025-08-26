@@ -58,30 +58,36 @@ Let's get started!
 
 1. Navigate to the 'adk-incident-management' directory in the Cloud shell.
 ```sh
-cd adk-incident-management
+cd src/adk-incident-management
 ```
 2. Edit the provided sample `env.sh` file, and set the environment variables there.
 
-Click <walkthrough-editor-open-file filePath="adk-incident-management/env.sh">here</walkthrough-editor-open-file> to open the file in the editor
+Click <walkthrough-editor-open-file filePath="src/adk-incident-management/env.sh">here</walkthrough-editor-open-file> to open the file in the editor
 
 Then, source the `env.sh` file in the Cloud shell.
 
 ```sh
 source ./env.sh
 ```
-3. Run the following script - `./create-connector.sh`
+3. Run the following script
+```sh
+./create-connector.sh
+```
 
 NOTE: This will take a few minutes to provision
 
-3. Once the connector is provisioned, login to GCP console, navigate to Integration Connectors and then click on the “Authorize Connection” blade in your connection details, which will open up a pop up. In that pop up, copy the redirect URL provided (something along the lines of https://console.cloud.google.com/connectors/oauth) and paste it into the Redirect URL settings available to your previously registered ServiceNow application (`Application Registry -> Select pertinent application -> Redirect URL -> Update`)
-4. Once the Redirect URL is copy/pasted, click Authorize - which will ask for consent for your Admin credentials to authorize the underlying application set. Please make sure you are consenting on behalf of your Admin (ie: registration credentials), and if needed perform this grant/consent in an incognito window
-5. At this point in time, your connection should be considered in an `Active` state
+4. Once the connector is provisioned, login to GCP console, navigate to Integration Connectors and then click on the “Authorize Connection” blade in your connection details, which will open up a pop up. In that pop up, copy the redirect URL provided (something along the lines of https://console.cloud.google.com/connectors/oauth) and paste it into the Redirect URL settings available to your previously registered ServiceNow application (`Application Registry -> Select pertinent application -> Redirect URL -> Update`)
+5. Once the Redirect URL is copy/pasted, click Authorize - which will ask for consent for your Admin credentials to authorize the underlying application set. Please make sure you are consenting on behalf of your Admin (ie: registration credentials), and if needed perform this grant/consent in an incognito window
+6. At this point in time, your connection should be considered in an `Active` state
    
 ---
 
 ## Application Integration Process Set Up
 
-1. Run the following script - `./create-integration.sh`
+1. Run the following script 
+```sh
+./create-integration.sh
+```
 2. Once this is complete, navigate to `Application Integration` in GCP console to find the `ExecuteConnection` integration created and published
 
 ---

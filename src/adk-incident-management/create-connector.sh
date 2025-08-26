@@ -52,12 +52,12 @@ curl -L https://raw.githubusercontent.com/GoogleCloudPlatform/application-integr
 export PATH=$PATH:$HOME/.integrationcli/bin
 
 cp adk-incident-management-snow-connector.json adk-incident-management-snow-connector-tmp.json
-sed -i '' "s/SNOW_CLIENT_ID/$SNOW_CLIENT_ID/g" adk-incident-management-snow-connector-tmp.json
-sed -i '' "s/PROJECT_NUMBER/$PROJECT_NUMBER/g" adk-incident-management-snow-connector-tmp.json
-sed -i '' "s/SNOW_INSTANCE_NAME/$SNOW_INSTANCE_NAME/g" adk-incident-management-snow-connector-tmp.json
+sed -i "s/SNOW_CLIENT_ID/$SNOW_CLIENT_ID/g" adk-incident-management-snow-connector-tmp.json
+sed -i "s/PROJECT_NUMBER/$PROJECT_NUMBER/g" adk-incident-management-snow-connector-tmp.json
+sed -i "s/SNOW_INSTANCE_NAME/$SNOW_INSTANCE_NAME/g" adk-incident-management-snow-connector-tmp.json
 
 echo "Creating ServiceNow Connector"
-integrationcli connectors create -n dynamic-snow2 -f adk-incident-management-snow-connector-tmp.json -p "$PROJECT_ID" -r "$REGION" -t "$TOKEN" -g --wait
+integrationcli connectors create -n dynamic-snow -f adk-incident-management-snow-connector-tmp.json -p "$PROJECT_ID" -r "$REGION" -t "$TOKEN" -g --wait
 
 rm adk-incident-management-snow-connector-tmp.json
 echo "ServiceNow Connector created successfully"
