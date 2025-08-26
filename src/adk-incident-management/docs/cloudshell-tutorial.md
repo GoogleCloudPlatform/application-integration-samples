@@ -6,7 +6,7 @@ This agent sample showcases the utilization of dynamic identity propagation with
 
 ### Agent Architecture
 
-![architecture](../adk-incident-management-arch-flow.png)
+![architecture](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/adk-sample/src/adk-incident-management/adk-incident-management-arch-flow.png?raw=true)
 
 ## Setup and Installation
 
@@ -34,7 +34,7 @@ Let's get started!
 
 ---
 
-### ServiceNow Account Setup
+## ServiceNow Account Setup
 
 *Note: This is assuming the end user does not already have access to a ServiceNow instance. If you already have access to a trial/paid organization (with elevated credentials to create Incidents), you can skip this step*
 
@@ -54,7 +54,7 @@ Let's get started!
 
 ---
 
-### Integration Connector Setup
+## Integration Connector Setup
 
 1. Navigate to the 'adk-incident-management' directory in the Cloud shell.
 ```sh
@@ -79,7 +79,7 @@ NOTE: This will take a few minutes to provision
    
 ---
 
-### Application Integration Process Set Up
+## Application Integration Process Set Up
 
 1. Run the following script - `./create-integration.sh`
 2. Once this is complete, navigate to `Application Integration` in GCP console to find the `ExecuteConnection` integration created and published
