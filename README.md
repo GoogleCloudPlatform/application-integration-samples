@@ -67,6 +67,8 @@ failed integration. For more information, see
 | [upload-download-gcs-sftp](src/upload-download-gcs-sftp) | Sample to upload/download to GCS/SFTP |
 | [vertex-ai-task](src/vertex-ai-task) | Sample to work with the Vertex AI task |                   |
 | [vertex-agents-bigquery](src/vertex-agents-bigquery) | Using Application Integration & Vertex Agents to activate BigQuery Data |                   |
+| [adk-incident-management](src/adk-incident-management) | This agent sample showcases the utilization of dynamic identity propagation with ServiceNow |
+
 
 ## Getting help
 

@@ -1,0 +1,62 @@
+{
+	"connectorDetails": {
+		"name": "servicenow",
+		"provider": "servicenow",
+		"version": 1
+	},
+	"configVariables": [
+		{
+			"key": "include_system_tables",
+			"boolValue": false
+		},
+		{
+			"key": "filter_tables"
+		},
+		{
+			"key": "display_value"
+		},
+		{
+			"key": "proxy_enabled",
+			"boolValue": false
+		}
+	],
+	"authConfig": {
+		"authType": "OAUTH2_AUTH_CODE_FLOW",
+		"oauth2AuthCodeFlow": {
+				"clientId": "SNOW_CLIENT_ID",
+				"clientSecret": {
+					"secretVersion": "projects/PROJECT_NUMBER/secrets/snow-secret/versions/1"
+				},
+				"scopes": [
+                    "useraccount"
+				],
+				"authUri": "https://SNOW_INSTANCE_NAME.service-now.com/oauth_auth.do"
+		},
+		"authKey": "oauth"
+	},
+	"authOverrideEnabled": true,
+    "destinationConfigs": [
+        {
+            "key": "host_url",
+            "destinations": [
+                    {
+                        "host": "https://SNOW_INSTANCE_NAME.service-now.com"
+                    }
+            ]
+        }
+    ],
+	"nodeConfig": {
+		"minNodeCount": 2,
+		"maxNodeCount": 5
+	},
+	"logConfig": {
+		"enabled": true,
+		"level": "INFO"
+	},
+	"sslConfig": {
+		"privateServerCertificate": {},
+		"clientCertificate": {},
+		"clientPrivateKey": {},
+		"clientPrivateKeyPass": {}
+	}
+}
