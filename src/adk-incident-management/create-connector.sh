@@ -44,14 +44,6 @@ TOKEN=$(gcloud auth print-access-token)
 echo "Assigning roles to Default compute service account"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
     --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
-    --role="roles/integrations.integrationAdmin"
-
-gcloud projects add-iam-policy-binding "$PROJECT_ID" \
-    --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
-    --role="roles/connectors.admin"
-
-gcloud projects add-iam-policy-binding "$PROJECT_ID" \
-    --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
     --role="roles/secretmanager.viewer"
 
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
