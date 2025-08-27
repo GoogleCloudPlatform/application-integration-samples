@@ -41,6 +41,15 @@ fi
 
 TOKEN=$(gcloud auth print-access-token)
 
+echo "Assigning roles to Default compute service account"
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/integrations.integrationAdmin"
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/connectors.admin"
+
 SECRET_ID=snow-secret
 echo "Creating Secret $SECRET_ID in Project $PROJECT_ID"
 gcloud secrets create "$SECRET_ID" --replication-policy="automatic" --project "$PROJECT_ID"
