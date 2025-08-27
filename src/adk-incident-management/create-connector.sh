@@ -50,6 +50,14 @@ gcloud projects add-iam-policy-binding "$PROJECT_ID" \
     --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
     --role="roles/connectors.admin"
 
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/secretmanager.viewer"
+
+gcloud projects add-iam-policy-binding "$PROJECT_ID" \
+    --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
+    --role="roles/secretmanager.secretAccessor"
+
 SECRET_ID=snow-secret
 echo "Creating Secret $SECRET_ID in Project $PROJECT_ID"
 gcloud secrets create "$SECRET_ID" --replication-policy="automatic" --project "$PROJECT_ID"
