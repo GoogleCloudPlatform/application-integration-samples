@@ -18,6 +18,6 @@ export PROJECT_ID="PROJECT_ID_TO_SET"
 PROJECT_NUMBER="$(gcloud projects describe $PROJECT_ID --format="value(projectNumber)")"
 export PROJECT_NUMBER
 export REGION="REGION_TO_SET"
-export SNOW_INSTANCE_NAME="SNOW_INSTANCE_NAME_TO_SET"
+export SNOW_INSTANCE_NAME="SNOW_INSTANCE_NAME_TO_SET" #for ex dev######. Do not include the hostname here
 export SNOW_CLIENT_ID="SNOW_CLIENT_ID_TO_SET"
 export SNOW_CLIENT_SECRET="SNOW_CLIENT_SECRET_TO_SET"

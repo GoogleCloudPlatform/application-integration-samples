@@ -25,9 +25,11 @@ Once you have created your project, [install the Google Cloud SDK](https://cloud
 ```bash
 gcloud auth login
 ```
+
 You also need to enable certain APIs. Run the following command to enable:
 ```bash
-gcloud services enable aiplatform.googleapis.com
+export PROJECT_ID=<set-project-id>
+gcloud services enable aiplatform.googleapis.com --project "$PROJECT_ID"
 ```
 
 ### ServiceNow Account Setup
