@@ -1,0 +1,26 @@
+{
+	"connection_overrides": [
+		{
+			"taskId": "4",
+			"task": "GenericConnectorTask",
+			"parameters": {
+				"connectionName": "bq-orders"
+			}
+		},
+		{
+			"taskId": "6",
+			"task": "GenericConnectorTask",
+			"parameters": {
+				"connectionName": "bq-orders"
+			}
+		}
+	],
+	"integration_overrides": {
+		"databasePersistencePolicy": "DATABASE_PERSISTENCE_ASYNC",
+		"enableVariableMasking": false,
+		"cloudLoggingDetails": {
+			"cloudLoggingSeverity": "CLOUD_LOGGING_SEVERITY_UNSPECIFIED",
+			"enableCloudLogging": false
+		}
+	}
+}

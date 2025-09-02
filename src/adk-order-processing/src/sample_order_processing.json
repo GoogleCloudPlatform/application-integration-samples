@@ -1,0 +1,633 @@
+{
+	"snapshotNumber": "2",
+	"triggerConfigs": [
+		{
+			"label": "API Trigger",
+			"triggerType": "API",
+			"triggerNumber": "1",
+			"triggerId": "api_trigger/sample_order_processing",
+			"startTasks": [
+				{
+					"taskId": "3"
+				}
+			],
+			"properties": {
+				"Trigger name": "sample_order_processing"
+			}
+		}
+	],
+	"taskConfigs": [
+		{
+			"task": "FieldMappingTask",
+			"taskId": "10",
+			"parameters": {
+				"FieldMappingConfigTaskParameterKey": {
+					"key": "FieldMappingConfigTaskParameterKey",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"literalValue\": {\n            \"stringValue\": \"Success\"\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$orderOutput.status$\",\n      \"fieldType\": \"STRING_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+					}
+				}
+			},
+			"displayName": "Set Status Toggle",
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "FieldMappingTask",
+			"taskId": "3",
+			"parameters": {
+				"FieldMappingConfigTaskParameterKey": {
+					"key": "FieldMappingConfigTaskParameterKey",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\",\n  \"mappedFields\": [{\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"baseFunction\": {\n            \"functionType\": {\n              \"baseFunction\": {\n                \"functionName\": \"GET_UUID\"\n              }\n            }\n          }\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.order_id$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$orderDetails.quantity$\"\n        },\n        \"transformationFunctions\": [{\n          \"functionType\": {\n            \"intFunction\": {\n              \"functionName\": \"TO_STRING\"\n            }\n          }\n        }]\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.quantity$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$orderDetails.product$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.product$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$orderDetails.customer_name$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.customer_name$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }, {\n    \"inputField\": {\n      \"fieldType\": \"STRING_VALUE\",\n      \"transformExpression\": {\n        \"initialValue\": {\n          \"referenceValue\": \"$orderDetails.shipping_address$\"\n        }\n      }\n    },\n    \"outputField\": {\n      \"referenceKey\": \"$`Task_4_connectorInputPayload`.shipping_address$\",\n      \"fieldType\": \"JSON_VALUE\",\n      \"cardinality\": \"OPTIONAL\"\n    }\n  }]\n}"
+					}
+				},
+				"suspensionExpiration": {
+					"key": "suspensionExpiration",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.SuspensionExpiration\",\n  \"expireAfterMs\": 172800000\n}"
+					}
+				}
+			},
+			"displayName": "Data Mapping, Order Input to BQ Target",
+			"nextTasks": [
+				{
+					"taskId": "6",
+					"condition": "$orderDetails.quantity$ \u003c= 100"
+				},
+				{
+					"taskId": "9",
+					"condition": "$orderDetails.quantity$ \u003e100"
+				}
+			],
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "GenericConnectorTask",
+			"taskId": "4",
+			"parameters": {
+				"actionName": {
+					"key": "actionName",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"authOverrideEnabled": {
+					"key": "authOverrideEnabled",
+					"value": {
+						"booleanValue": false
+					}
+				},
+				"config": {
+					"key": "config",
+					"value": {}
+				},
+				"connectionName": {
+					"key": "connectionName",
+					"value": {
+						"stringValue": "projects/PROJECT_ID/locations/REGION/connections/bq-orders"
+					}
+				},
+				"connectionVersion": {
+					"key": "connectionVersion",
+					"value": {
+						"stringValue": "projects/PROJECT_ID/locations/global/providers/gcp/connectors/bigquery/versions/1"
+					}
+				},
+				"connectorInputPayload": {
+					"key": "connectorInputPayload",
+					"value": {
+						"stringValue": "$`Task_4_connectorInputPayload`$"
+					}
+				},
+				"connectorOutputPayload": {
+					"key": "connectorOutputPayload",
+					"value": {
+						"stringValue": "$`Task_4_connectorOutputPayload`$"
+					}
+				},
+				"dynamicAuthConfig": {
+					"key": "dynamicAuthConfig",
+					"value": {
+						"jsonValue": "null"
+					}
+				},
+				"enableDynamicConnection": {
+					"key": "enableDynamicConnection",
+					"value": {
+						"booleanValue": false
+					}
+				},
+				"entityId": {
+					"key": "entityId",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"entityType": {
+					"key": "entityType",
+					"value": {
+						"stringValue": "orders"
+					}
+				},
+				"executeQueryRequestConfig": {
+					"key": "executeQueryRequestConfig",
+					"value": {}
+				},
+				"filterClause": {
+					"key": "filterClause",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"host": {
+					"key": "host",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"listEntitiesPageSize": {
+					"key": "listEntitiesPageSize",
+					"value": {
+						"intValue": "0"
+					}
+				},
+				"listEntitiesPageToken": {
+					"key": "listEntitiesPageToken",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"listEntitiesSortByColumns": {
+					"key": "listEntitiesSortByColumns",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"operation": {
+					"key": "operation",
+					"value": {
+						"stringValue": "CREATE_ENTITY"
+					}
+				},
+				"serviceName": {
+					"key": "serviceName",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"timeout": {
+					"key": "timeout",
+					"value": {
+						"intValue": "0"
+					}
+				},
+				"useHttpHeaderForDynamicAuthConfig": {
+					"key": "useHttpHeaderForDynamicAuthConfig",
+					"value": {}
+				}
+			},
+			"displayName": "Write Order to BQ",
+			"nextTasks": [
+				{
+					"taskId": "8"
+				}
+			],
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "GenericConnectorTask",
+			"taskId": "6",
+			"parameters": {
+				"actionName": {
+					"key": "actionName",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"authOverrideEnabled": {
+					"key": "authOverrideEnabled",
+					"value": {
+						"booleanValue": false
+					}
+				},
+				"config": {
+					"key": "config",
+					"value": {}
+				},
+				"connectionName": {
+					"key": "connectionName",
+					"value": {
+						"stringValue": "projects/PROJECT_ID/locations/REGION/connections/bq-orders"
+					}
+				},
+				"connectionVersion": {
+					"key": "connectionVersion",
+					"value": {
+						"stringValue": "projects/PROJECT_ID/locations/global/providers/gcp/connectors/bigquery/versions/1"
+					}
+				},
+				"connectorInputPayload": {
+					"key": "connectorInputPayload",
+					"value": {
+						"stringValue": "$`Task_4_connectorInputPayload`$"
+					}
+				},
+				"connectorOutputPayload": {
+					"key": "connectorOutputPayload",
+					"value": {
+						"stringValue": "$`Task_4_connectorOutputPayload`$"
+					}
+				},
+				"dynamicAuthConfig": {
+					"key": "dynamicAuthConfig",
+					"value": {
+						"jsonValue": "null"
+					}
+				},
+				"enableDynamicConnection": {
+					"key": "enableDynamicConnection",
+					"value": {
+						"booleanValue": false
+					}
+				},
+				"entityId": {
+					"key": "entityId",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"entityType": {
+					"key": "entityType",
+					"value": {
+						"stringValue": "orders"
+					}
+				},
+				"executeQueryRequestConfig": {
+					"key": "executeQueryRequestConfig",
+					"value": {}
+				},
+				"filterClause": {
+					"key": "filterClause",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"host": {
+					"key": "host",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"listEntitiesPageSize": {
+					"key": "listEntitiesPageSize",
+					"value": {
+						"intValue": "0"
+					}
+				},
+				"listEntitiesPageToken": {
+					"key": "listEntitiesPageToken",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"listEntitiesSortByColumns": {
+					"key": "listEntitiesSortByColumns",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"operation": {
+					"key": "operation",
+					"value": {
+						"stringValue": "CREATE_ENTITY"
+					}
+				},
+				"serviceName": {
+					"key": "serviceName",
+					"value": {
+						"stringValue": ""
+					}
+				},
+				"timeout": {
+					"key": "timeout",
+					"value": {
+						"intValue": "0"
+					}
+				},
+				"useHttpHeaderForDynamicAuthConfig": {
+					"key": "useHttpHeaderForDynamicAuthConfig",
+					"value": {}
+				}
+			},
+			"displayName": "Write Order to BQ",
+			"nextTasks": [
+				{
+					"taskId": "7"
+				}
+			],
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "EmailTask",
+			"taskId": "7",
+			"parameters": {
+				"AttachmentPath": {
+					"key": "AttachmentPath",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"Bcc": {
+					"key": "Bcc",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"BodyFormat": {
+					"key": "BodyFormat",
+					"value": {
+						"stringValue": "html"
+					}
+				},
+				"Cc": {
+					"key": "Cc",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"EmailConfigInput": {
+					"key": "EmailConfigInput",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.EmailConfig\"\n}"
+					}
+				},
+				"Subject": {
+					"key": "Subject",
+					"value": {
+						"stringValue": "Order $`Task_4_connectorInputPayload`.order_id$ confirmed!"
+					}
+				},
+				"TextBody": {
+					"key": "TextBody",
+					"value": {
+						"stringValue": "\u003chtml\u003e\n\u003cbody\u003e\nGreat news, your order has been processed and confirmed!. Further details can be seen below:\n\u003cp\u003e\u003cb\u003eOrder ID: \u003c/b\u003e\u003c/p\u003e $`Task_4_connectorInputPayload`.order_id$\n\u003cp\u003e\u003cb\u003eOrder Quantity: \u003c/b\u003e\u003c/p\u003e $orderDetails.quantity$\n\u003cp\u003e\u003cb\u003eOrder Product: \u003c/b\u003e\u003c/p\u003e $orderDetails.product$\n\u003c/body\u003e\n\u003c/html\u003e"
+					}
+				},
+				"ThrowNoRequiredInputException": {
+					"key": "ThrowNoRequiredInputException",
+					"value": {
+						"booleanValue": true
+					}
+				},
+				"To": {
+					"key": "To",
+					"value": {
+						"stringArray": {
+							"stringValues": [
+								"replaceme@testing.com"
+							]
+						}
+					}
+				},
+				"suspensionExpiration": {
+					"key": "suspensionExpiration",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.SuspensionExpiration\",\n  \"expireAfterMs\": 172800000\n}"
+					}
+				}
+			},
+			"displayName": "Send Email",
+			"nextTasks": [
+				{
+					"taskId": "10"
+				}
+			],
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "EmailTask",
+			"taskId": "8",
+			"parameters": {
+				"AttachmentPath": {
+					"key": "AttachmentPath",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"Bcc": {
+					"key": "Bcc",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"BodyFormat": {
+					"key": "BodyFormat",
+					"value": {
+						"stringValue": "html"
+					}
+				},
+				"Cc": {
+					"key": "Cc",
+					"value": {
+						"stringArray": {}
+					}
+				},
+				"EmailConfigInput": {
+					"key": "EmailConfigInput",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.EmailConfig\"\n}"
+					}
+				},
+				"GmrEmailResponseOutput": {
+					"key": "GmrEmailResponseOutput",
+					"value": {
+						"stringArray": {
+							"stringValues": [
+								"$`Task_8_GmrEmailResponseOutput`$"
+							]
+						}
+					}
+				},
+				"Subject": {
+					"key": "Subject",
+					"value": {
+						"stringValue": "Order $`Task_4_connectorInputPayload`.order_id$ confirmed!"
+					}
+				},
+				"TextBody": {
+					"key": "TextBody",
+					"value": {
+						"stringValue": "\u003chtml\u003e\n\u003cbody\u003e\nGreat news, your order has been processed and confirmed!. Further details can be seen below:\n\u003cp\u003e\u003cb\u003eOrder ID: \u003c/b\u003e\u003c/p\u003e $`Task_4_connectorInputPayload`.order_id$\n\u003cp\u003e\u003cb\u003eOrder Quantity: \u003c/b\u003e\u003c/p\u003e $orderDetails.quantity$\n\u003cp\u003e\u003cb\u003eOrder Product: \u003c/b\u003e\u003c/p\u003e $orderDetails.product$\n\u003c/body\u003e\n\u003c/html\u003e"
+					}
+				},
+				"ThrowNoRequiredInputException": {
+					"key": "ThrowNoRequiredInputException",
+					"value": {
+						"booleanValue": true
+					}
+				},
+				"To": {
+					"key": "To",
+					"value": {
+						"stringArray": {
+							"stringValues": [
+								"replaceme@testing.com"
+							]
+						}
+					}
+				}
+			},
+			"displayName": "Send Email",
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"externalTaskType": "NORMAL_TASK"
+		},
+		{
+			"task": "SuspensionTask",
+			"taskId": "9",
+			"parameters": {
+				"customMessage": {
+					"key": "customMessage",
+					"value": {
+						"stringValue": "Hello! $orderDetails.customer_name$ would like to purchase $orderDetails.quantity$ of the following Product: $orderDetails.product$. If this is not a mistake, please approve. Thank you for your time!"
+					}
+				},
+				"isApproved": {
+					"key": "isApproved",
+					"value": {
+						"stringArray": {
+							"stringValues": [
+								"$`Task_9_isApproved`$"
+							]
+						}
+					}
+				},
+				"notifications": {
+					"key": "notifications",
+					"value": {
+						"jsonValue": "{\n  \"protoValues\": [{\n    \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.Notification\",\n    \"emailAddress\": {\n      \"email\": \"replaceme@testing.com\"\n    }\n  }]\n}"
+					}
+				},
+				"suspensionExpiration": {
+					"key": "suspensionExpiration",
+					"value": {
+						"jsonValue": "{\n  \"@type\": \"type.googleapis.com/enterprise.crm.eventbus.proto.SuspensionExpiration\",\n  \"remindAfterMs\": 86400000,\n  \"expireAfterMs\": 172800000\n}"
+					}
+				}
+			},
+			"displayName": "Approval",
+			"nextTasks": [
+				{
+					"taskId": "4"
+				}
+			],
+			"taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+			"successPolicy": {
+				"finalState": "SUSPENDED"
+			},
+			"externalTaskType": "NORMAL_TASK"
+		}
+	],
+	"integrationParameters": [
+		{
+			"key": "`ExecutionMode`",
+			"dataType": "STRING_VALUE",
+			"defaultValue": {
+				"stringValue": ""
+			},
+			"isTransient": true
+		},
+		{
+			"key": "`ErrorInfo`",
+			"dataType": "JSON_VALUE",
+			"defaultValue": {
+				"jsonValue": "{\n  \"message\": \"\",\n  \"code\": 0.0\n}"
+			},
+			"isTransient": true,
+			"jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"code\": {\n      \"type\": \"number\"\n    },\n    \"message\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+		},
+		{
+			"key": "`ExecutionId`",
+			"dataType": "STRING_VALUE",
+			"defaultValue": {
+				"stringValue": ""
+			},
+			"isTransient": true
+		},
+		{
+			"key": "`IntegrationName`",
+			"dataType": "STRING_VALUE",
+			"defaultValue": {
+				"stringValue": ""
+			},
+			"isTransient": true
+		},
+		{
+			"key": "`Region`",
+			"dataType": "STRING_VALUE",
+			"defaultValue": {
+				"stringValue": ""
+			},
+			"isTransient": true
+		},
+		{
+			"key": "`ProjectId`",
+			"dataType": "STRING_VALUE",
+			"defaultValue": {
+				"stringValue": ""
+			},
+			"isTransient": true
+		},
+		{
+			"key": "`Task_4_connectorInputPayload`",
+			"dataType": "JSON_VALUE",
+			"producer": "1_4",
+			"jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"shipping_address\": {\n      \"type\": [\"string\", \"null\"]\n    },\n    \"order_id\": {\n      \"type\": [\"string\", \"null\"]\n    },\n    \"quantity\": {\n      \"type\": [\"string\", \"null\"]\n    },\n    \"product\": {\n      \"type\": [\"string\", \"null\"]\n    },\n    \"customer_name\": {\n      \"type\": [\"string\", \"null\"]\n    }\n  }\n}"
+		},
+		{
+			"key": "`Task_4_connectorOutputPayload`",
+			"dataType": "JSON_VALUE",
+			"isTransient": true,
+			"producer": "1_4"
+		},
+		{
+			"key": "`Task_8_GmrEmailResponseOutput`",
+			"dataType": "PROTO_VALUE",
+			"isTransient": true,
+			"producer": "1_8"
+		},
+		{
+			"key": "`Task_9_isApproved`",
+			"dataType": "BOOLEAN_VALUE",
+			"isTransient": true,
+			"producer": "1_9"
+		},
+		{
+			"key": "orderOutput",
+			"dataType": "JSON_VALUE",
+			"defaultValue": {
+				"jsonValue": "{\n  \"status\": \"In Progress\"\n}"
+			},
+			"inputOutputType": "OUT",
+			"jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"status\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+		},
+		{
+			"key": "orderDetails",
+			"dataType": "JSON_VALUE",
+			"defaultValue": {
+				"jsonValue": "{\n  \"quantity\": 10.0,\n  \"product\": \"Google Pixel 9\",\n  \"customer_name\": \"Test User\",\n  \"shipping_address\": \"100 Testing Avenue\"\n}"
+			},
+			"inputOutputType": "IN",
+			"jsonSchema": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"product\": {\n      \"type\": \"string\"\n    },\n    \"quantity\": {\n      \"type\": \"integer\"\n    },\n    \"customer_name\": {\n      \"type\": \"string\"\n    },\n    \"shipping_address\": {\n      \"type\": \"string\"\n    }\n  }\n}"
+		}
+	],
+	"databasePersistencePolicy": "DATABASE_PERSISTENCE_ASYNC",
+	"cloudLoggingDetails": {
+		"cloudLoggingSeverity": "",
+		"enableCloudLogging": false
+	}
+}

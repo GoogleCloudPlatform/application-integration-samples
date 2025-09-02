@@ -1,0 +1,40 @@
+{
+	"connectorDetails": {
+		"name": "bigquery",
+		"provider": "gcp",
+		"version": 1
+	},
+	"configVariables": [
+		{
+			"key": "project_id",
+			"stringValue": "PROJECT_ID"
+		},
+		{
+			"key": "dataset_id",
+			"stringValue": "order_sample_data"
+		},
+		{
+			"key": "support_native_data_type",
+			"boolValue": false
+		},
+		{
+			"key": "proxy_enabled",
+			"boolValue": false
+		}
+	],
+	"authConfig": {},
+	"nodeConfig": {
+		"minNodeCount": 2,
+		"maxNodeCount": 5
+	},
+	"logConfig": {
+		"enabled": true,
+		"level": "ERROR"
+	},
+	"sslConfig": {
+		"privateServerCertificate": {},
+		"clientCertificate": {},
+		"clientPrivateKey": {},
+		"clientPrivateKeyPass": {}
+	}
+}
