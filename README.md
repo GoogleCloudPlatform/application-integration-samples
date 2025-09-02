@@ -68,6 +68,8 @@ failed integration. For more information, see
 | [vertex-ai-task](src/vertex-ai-task) | Sample to work with the Vertex AI task |                   |
 | [vertex-agents-bigquery](src/vertex-agents-bigquery) | Using Application Integration & Vertex Agents to activate BigQuery Data |                   |
 | [adk-incident-management](src/adk-incident-management) | This agent sample showcases the utilization of dynamic identity propagation with ServiceNow |
+| [adk-order-processing](src/adk-order-processing) | This agent sample showcases order processing with human in the loop for approving orders that have higher quantity |
+
 
 
 ## Getting help
