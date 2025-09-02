@@ -17,6 +17,7 @@
 # in the README file in the root of the repository.
 
 set -e
+shopt -s nullglob
 
 ERRORS=""
 
