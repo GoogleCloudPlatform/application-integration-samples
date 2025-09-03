@@ -57,3 +57,9 @@ source env.sh
 5. Similarly, navigate to Application Integration and find `sample_order_processing` created and published
    
 ---
+
+## Conclusion
+
+<walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
+
+Congratulations! You've successfully deployed the Application Integration Assets. If you plan to deploy the ADK agent, please go back to [sample](https://github.com/ssvaidyanathan/adk-samples/tree/main/python/agents/order-processing)
