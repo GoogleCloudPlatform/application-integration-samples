@@ -33,7 +33,7 @@ for dir in "$PWD"/src/*; do
     # For example if the sample is "sample", the integration jsons could be "sample.json" or "sample-sub.json"  
     for file in $PWD/src/$F/*.json; do
       filename="$(basename $file)" 
-      if [[ "$filename" == $F.json || "$filename" == $F-*.json ]];
+      if [[ "$filename" == "*.json" || "$filename" == $F.json || "$filename" == $F-*.json ]];
       then 
         true;
       else 
@@ -45,7 +45,7 @@ for dir in "$PWD"/src/*; do
     # For example if the sample is "sample", the integration pngs could be "sample.png" or "sample-sub.png"  
     for file in $PWD/src/$F/*.png; do
       filename="$(basename $file)" 
-      if [[ "$filename" == $F-flow.png || "$filename" == $F-*-flow.png ]];
+      if [[ "$filename" == "*.png" || "$filename" == $F-flow.png || "$filename" == $F-*-flow.png ]];
       then 
         true;
       else 
