@@ -62,4 +62,4 @@ source env.sh
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
-Congratulations! You've successfully deployed the Application Integration Assets. If you plan to deploy the ADK agent, please go back to [sample](https://github.com/ssvaidyanathan/adk-samples/tree/main/python/agents/order-processing)
+Congratulations! You've successfully deployed the Application Integration Assets. If you plan to deploy the ADK agent, please go back to [sample](https://github.com/ssvaidyanathan/adk-samples/tree/main/python/agents/order-processing#agent-setup)

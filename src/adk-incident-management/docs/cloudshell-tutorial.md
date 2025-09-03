@@ -97,4 +97,4 @@ NOTE: This will take a few minutes to provision
 
 <walkthrough-conclusion-trophy></walkthrough-conclusion-trophy>
 
-Congratulations! You've successfully deployed the Application Integration Assets. If you plan to deploy the ADK agent, please go back to [sample](https://github.com/ssvaidyanathan/adk-samples/tree/main/python/agents/incident-management)
+Congratulations! You've successfully deployed the Application Integration Assets. If you plan to deploy the ADK agent, please go back to [sample](https://github.com/ssvaidyanathan/adk-samples/tree/main/python/agents/incident-management#agent-setup)
