@@ -42,15 +42,15 @@ Let's get started!
 ## Application Integration Setup
 
 1. Navigate to the 'adk-order-processing' directory in your terminal
-```
+```sh
 cd src/adk-order-processing
 ```
 2. Click <walkthrough-editor-open-file filePath="src/adk-order-processing/env.sh">here</walkthrough-editor-open-file> to open the file in the editor. Update the `env.sh` file with the appropriate values and run 
-```
+```sh
 source env.sh
 ```
 3. Run the following command (NOTE: This will take a few minutes to provision)
-```
+```sh
 ./deploy-integration.sh
 ```
 4. Once the script has completed running, you can login to the GCP console and navigate to `Integration Connectors` to find a connnector called `bq-orders`
