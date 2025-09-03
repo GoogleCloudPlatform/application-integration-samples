@@ -11,9 +11,9 @@ This agent sample showcases the art of the possible using the [ADK](https://goog
 
 ![architecture](https://github.com/GoogleCloudPlatform/application-integration-samples/blob/main/src/adk-order-processing/adk-order-processing-arch-flow.png?raw=true)
 
-## Setup and Installation
+### Setup and Installation
 
-### Prerequisites
+#### Prerequisites
 
 - Google Cloud Project with the following roles assigned
   - Application Integrations Admin
@@ -31,7 +31,7 @@ gcloud auth login
 ```
 You also need to enable certain APIs. Run the following command to enable:
 ```bash
-export PROJECT_ID=<set-project-id>
+export PROJECT_ID=<walkthrough-project-id/>
 gcloud services enable bigquery.googleapis.com --project "$PROJECT_ID"
 ```
 
@@ -41,20 +41,19 @@ Let's get started!
 
 ## Application Integration Setup
 
-1. Clone the repo by running the following command
+1. Navigate to the 'adk-order-processing' directory in your terminal
 ```
-git clone https://github.com/GoogleCloudPlatform/application-integration-samples.git
+cd src/adk-order-processing
 ```
-2. Navigate to the 'adk-order-processing' directory in your terminal
+2. Update the `env.sh` file with the appropriate values and run 
 ```
-cd application-integration-samples/src/adk-order-processing
+source env.sh
 ```
-3. Update the `env.sh` file with the approriate values and run `source env.sh`
-4. Run the following command (NOTE: This will take a few minutes to provision)
+3. Run the following command (NOTE: This will take a few minutes to provision)
 ```
 ./deploy-integration.sh
 ```
-5. Once the script has completed running, you can login to the GCP console and navigate to `Integration Connectors` to find a connnector called `bq-orders`
-6. Similarly, navigate to Application Integration and find `sample_order_processing` created and published
+4. Once the script has completed running, you can login to the GCP console and navigate to `Integration Connectors` to find a connnector called `bq-orders`
+5. Similarly, navigate to Application Integration and find `sample_order_processing` created and published
    
 ---
