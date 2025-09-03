@@ -45,7 +45,7 @@ Let's get started!
 ```
 cd src/adk-order-processing
 ```
-2. Update the `env.sh` file with the appropriate values and run 
+2. Click <walkthrough-editor-open-file filePath="src/adk-order-processing/env.sh">here</walkthrough-editor-open-file> to open the file in the editor. Update the `env.sh` file with the appropriate values and run 
 ```
 source env.sh
 ```
