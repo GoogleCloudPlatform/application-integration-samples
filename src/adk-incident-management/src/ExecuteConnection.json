@@ -397,9 +397,9 @@
 			"inputOutputType": "IN"
 		}
 	],
-	"databasePersistencePolicy": "",
+	"databasePersistencePolicy": "DATABASE_PERSISTENCE_POLICY_UNSPECIFIED",
 	"cloudLoggingDetails": {
-		"cloudLoggingSeverity": "",
+		"cloudLoggingSeverity": "CLOUD_LOGGING_SEVERITY_UNSPECIFIED",
 		"enableCloudLogging": false
 	}
 }
