@@ -26,6 +26,8 @@ fi
 
 TOKEN=$(gcloud auth print-access-token)
 
+gcloud config set project "$PROJECT_ID"
+
 echo "Assigning roles to Default compute service account"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" \
     --member="serviceAccount:$PROJECT_NUMBER-compute@developer.gserviceaccount.com" \
